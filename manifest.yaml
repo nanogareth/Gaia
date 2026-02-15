@@ -1,0 +1,31 @@
+# manifest.yaml — Registry of all connected repos
+repos:
+  - name: MiniLang
+    github: gareth/minilang
+    domain: ai-projects
+    status: active
+    description: Compositional generalization research
+
+  - name: SET
+    github: gareth/spatial-equivariant-transformer
+    domain: ai-projects
+    status: active
+    description: Spatial Equivariant Transformer for 3D reasoning
+
+  - name: 3D-Viz-MCP
+    github: gareth/3d-viz-mcp
+    domain: ai-projects
+    status: active
+    description: 3D visualization MCP server for LLM agents
+
+  - name: FlowForge
+    github: gareth/flowforge
+    domain: work-projects
+    status: active
+    description: GitHub project scaffolding tool
+
+  - name: Edify
+    github: gareth/edify
+    domain: work-projects
+    status: active
+    description: AI learning content generator

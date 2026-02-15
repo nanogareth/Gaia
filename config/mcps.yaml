@@ -1,0 +1,28 @@
+# MCP Server Configuration
+# See spec § 6.2 for details on each integration
+
+# mcps:
+#   - name: GitHub MCP
+#     purpose: Repo status, issues, PRs across all projects
+#     priority: high
+#     status: not-configured
+#
+#   - name: Google Calendar MCP
+#     purpose: Read/write calendar events for scheduling
+#     priority: high
+#     status: not-configured
+#
+#   - name: Filesystem MCP
+#     purpose: Local file access for Obsidian vault
+#     priority: medium
+#     status: not-configured
+#
+#   - name: Obsidian MCP
+#     purpose: Direct Obsidian API access
+#     priority: medium
+#     status: not-configured
+#
+#   - name: Memory/RAG MCP
+#     purpose: Custom knowledge retrieval
+#     priority: low
+#     status: not-configured
