@@ -71,15 +71,28 @@ Obsidian Dataview-powered aggregated views. Query YAML frontmatter across domain
 - Edit "Current State", "Active Goals", "Habits & Routines", "Notes", "Links" freely
 - Avoid editing "Recent Activity" manually — it's hook-managed
 
-## Key Skills and Commands
+## Slash Commands
 
-- `/plan` — Morning planning: reads all domains + calendar, generates `temporal/today.md`
-- `/reflect` — Evening reflection: summarises day, flags incomplete items, drafts tomorrow's priorities
-- `/status [domain]` — Show current state of one or all domains
-- `/update [domain]` — Interactive domain state update
-- `/review [weekly|monthly]` — Periodic review generation
-- `/inbox` — Route unstructured notes/ideas to appropriate domain files
-- `/link [project]` — Register a new repo in `manifest.yaml`
+All commands live in `.claude/commands/` and are invoked via `/command-name`.
+
+| Command    | Args                | Description                                                                          |
+| ---------- | ------------------- | ------------------------------------------------------------------------------------ |
+| `/plan`    | —                   | Morning planning: reads all domains, generates `temporal/today.md` and journal entry |
+| `/reflect` | —                   | Evening reflection: summarizes day vs plan, flags carry-forward items                |
+| `/status`  | `[domain]`          | Show current state of one domain or summary table of all domains (read-only)         |
+| `/update`  | `<domain>`          | Interactive walk-through of a domain's editable sections                             |
+| `/review`  | `<weekly\|monthly>` | Generate periodic review from journal entries and domain activity                    |
+| `/inbox`   | `<note text>`       | Route freeform text to the appropriate domain's Notes section                        |
+| `/link`    | `<project>`         | Register a new repo in `manifest.yaml` and link it to a domain                       |
+| `/sync`    | `[summary]`         | Manual session sync — update domain state after working in a project repo            |
+
+### Command behaviour notes
+
+- `/plan` and `/reflect` commit changes automatically
+- `/status` is read-only — safe to run anytime
+- `/update` uses interactive prompts to walk through editable sections; never touches Recent Activity
+- `/sync` is designed to work from **outside** the Gaia repo (from a project repo) and pushes after committing
+- All write commands follow the write protocol: pull before write, append-only for Recent Activity
 
 ## Important Constraints
 
