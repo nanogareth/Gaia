@@ -557,21 +557,21 @@ Morning/Evening routines
 
 ---
 
-## 11. Open Questions
+## 11. Answers
 
-1. **Obsidian vault structure:** Should `Gaia` be the vault root, a subfolder of an existing vault, or a separate vault entirely? Trade-off between isolation and cross-referencing with existing notes.
+1. **Obsidian vault structure:** `Gaia` is a subfolder of an existing vault, Alexandria. 
 
-2. **Hook implementation detail:** Claude Code hooks are currently bash scripts. The post-session hook needs to invoke Claude to generate summaries — what's the cleanest way to do this? Inline Claude Code call, or a separate script that calls the API?
+2. **Hook implementation detail:** Claude Code hooks are currently powershell scripts. The post-session hook needs to invoke Claude via Inline Claude Code call
 
 3. **Calendar MCP maturity:** Need to audit available Google Calendar MCPs for reliability and feature coverage before committing to that integration path.
 
-4. **Claude.ai → GitHub write path:** Currently Claude.ai can't directly push to GitHub. The user must manually transfer updates. Is there an MCP or connector that bridges this gap today?
+4. **The correct path is Claude Code → GitHub write path** 
 
-5. **Mobile Git reliability:** Obsidian Git on mobile (especially Android) has known limitations with large repos. How large will `Gaia` get, and will this become a problem?
+5. **Mobile Git reliability:** Via Obsidian Sync.
 
-6. **Privacy and sensitivity:** Some domains (health, finances, relationships) contain sensitive data. The GitHub repo should be private, but are there additional precautions needed?
+6. **Privacy and sensitivity:** Some domains (health, finances, relationships) contain sensitive data. The GitHub repo should be private.
 
-7. **Gareth's daily device flow:** Still TBD — will refine the interface layer once this is understood.
+7. **Gareth's daily device flow:**  The Gaia alarm goes off and presents me with my morning rountine: quote of the day, water and tablets reminder, 5 minute meditation, 10 minute stretching, 15 minute cardio, 20 minute coffee and breakfast with morning personal review of day's line-up and chat with agentic AI for planning and prep. This populates to-do list items, creates drafts of emails and meeting requests, carries out research, populates drafts of documents and schedules time to review each of the outputs. Then I start work and my copilot keeps me on schedule and prepared for each to-do item. It triggers tools to transcribe, diarize and summarise meetings, and schedules follow-up events and to-do items from the summarisations. Out of the blue I have an idea and need to quickly jot it down or sketch it out. Ideas like this are like golddust not just because they are valuable but also because they are shiny (i.e. distracting) and take a lot of work to extract. So I need a super quick way to ideate and label them to associate an idea with the right topics or projects and then to defer further ideation until I have time to dedicate to it -> maybe Create Flow state periods throughout the day/week. Back to work. Getting through the morning's to-dos. A meeting is coming up tomorrow morning - a research project update. My Gaia app has my notes on the project that includes a summary of tasks I have been working on since the last meeting on this project. An LLM has summarised the notes and extracted points to include on the agenda discuss and, given the project context, has drafted some next steps that I can work on in advance of the meeting and/or edit during the meeting tomorrow before sharing with the rest of the group. Product development - pomodoro technique - no work distractions. Integration with MS outlook and teams needed. If some internal contact sends a message via teams or outlook, my Gaia should autorespond, saying what I am currently working on and let them know when I will next have time to review their message. Gaia should also trigger 20 minute timers 5 minute intervals for the duration of the product development phase. Gaia will also need to coordinate ideas boards, mind maps, and track web-based research. Project management - Gaia must have templates and integrations for project ideation, planning, scheduling, resource management, communication, engagement, monitoring and oversight. That way I can use it to manage across all work and personal projects. After work, in the gym, Gaia reminds me what exercise groups we are doing (legs and shoulders; biceps, chest and core or triceps, back and core), it queues up a targeted dynamic warmup, what exercise I need to do next (sets, reps, and weights) and times the reps' concentric and eccentric phases, times rest between sets, tracks actual vs target total volume, and schedules progressive overload, then it guides me through a HIIT cardio routine and stretching program. On the way home I hit the supermarket for groceries, and Gaia guides me on what to buy based on what is in my fridge and store cupboards, then how to cut up fresh produce to prepare the next meals. While preparing dinner, I dictate messages to friends and family for Gaia to send off and Gaia captures details to add to that person's mindmap. After dinner each weekday evening, Gaia reserves 2 hours for personal hobbies and projects, cycling through my range of interests, including drawing, painting, sculpture, reading, learning languages, programming, electronics, modelling. This is the day-to-day functionality of Gaia.
 
 ---
 
