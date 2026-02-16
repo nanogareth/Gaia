@@ -1,9 +1,18 @@
 ---
 description: "Morning planning — reads all domains + calendar, generates today's plan"
-allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash"]
+allowed-tools:
+  [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "Bash",
+    "mcp__google-calendar__list_events",
+  ]
 ---
 
-# /plan — Morning Planning
+# /gaia-plan — Morning Planning
 
 Generate a prioritized daily plan by synthesizing all domain states, calendar events, and carry-forward items.
 
@@ -13,11 +22,13 @@ Generate a prioritized daily plan by synthesizing all domain states, calendar ev
 
 2. **Check for carry-forward items** — Read `temporal/today.md`. If it exists and has content from a previous day, extract any items marked incomplete or listed under "Carry-Forward".
 
-3. **Check today's journal** — Read `journal/YYYY/MM/YYYY-MM-DD.md` (using today's date: $CURRENT_DATE). If it exists, note any pre-existing entries.
+3. **Check today's calendar** — Use the Google Calendar MCP `list_events` tool to fetch today's events. Include them in the Schedule section of the daily plan. If the MCP is unavailable (not configured or auth expired), skip this step and note "Calendar: unavailable" in the Schedule section.
 
-4. **Read manifest for project context** — Read `manifest.yaml` to understand active projects and their domains.
+4. **Check today's journal** — Read `journal/YYYY/MM/YYYY-MM-DD.md` (using today's date: $CURRENT_DATE). If it exists, note any pre-existing entries.
 
-5. **Generate the daily plan** — Write `temporal/today.md` with this structure:
+5. **Read manifest for project context** — Read `manifest.yaml` to understand active projects and their domains.
+
+6. **Generate the daily plan** — Write `temporal/today.md` with this structure:
 
 ```markdown
 ---
@@ -52,7 +63,7 @@ type: morning-plan
 <!-- Context, reminders, or things to keep in mind -->
 ```
 
-6. **Create/update journal entry** — Write to `journal/YYYY/MM/YYYY-MM-DD.md` (create year/month directories if needed). If the file doesn't exist, create it with:
+7. **Create/update journal entry** — Write to `journal/YYYY/MM/YYYY-MM-DD.md` (create year/month directories if needed). If the file doesn't exist, create it with:
 
 ```markdown
 ---
@@ -69,7 +80,7 @@ type: journal
 
 If it already exists, append a "## Morning Plan Summary" section.
 
-7. **Commit changes** — Stage `temporal/today.md` and the journal entry, then commit:
+8. **Commit changes** — Stage `temporal/today.md` and the journal entry, then commit:
    ```
    git add temporal/today.md journal/
    git commit -m "plan: morning plan for YYYY-MM-DD"
@@ -82,3 +93,4 @@ If it already exists, append a "## Morning Plan Summary" section.
 - If a domain has items in "Next Actions" with dates, include any due today
 - Keep the plan concise — it's a working document, not a report
 - Use real dates, not template placeholders
+- Calendar events should appear in the Schedule section with times, providing structure for the day

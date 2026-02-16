@@ -4,7 +4,7 @@ argument-hint: "<domain-name>"
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Bash", "AskUserQuestion"]
 ---
 
-# /update — Interactive Domain Update
+# /gaia-update — Interactive Domain Update
 
 Walk through a domain file's editable sections interactively, allowing the user to update each one.
 

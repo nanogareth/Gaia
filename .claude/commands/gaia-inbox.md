@@ -5,7 +5,7 @@ allowed-tools:
   ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
-# /inbox — Route Notes to Domains
+# /gaia-inbox — Route Notes to Domains
 
 Analyse freeform text input and route it to the appropriate domain file's Notes section.
 

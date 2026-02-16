@@ -3,7 +3,7 @@ description: "Evening reflection — summarizes the day, flags incomplete items,
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash"]
 ---
 
-# /reflect — Evening Reflection
+# /gaia-reflect — Evening Reflection
 
 Summarize the day's accomplishments against the morning plan, flag incomplete items, and draft preliminary priorities for tomorrow.
 

@@ -5,7 +5,7 @@ allowed-tools:
   ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
-# /sync — Manual Session Sync
+# /gaia-sync — Manual Session Sync
 
 Update Gaia's domain state after a work session in a project repo. This is the manual precursor to the automatic post-session hook.
 

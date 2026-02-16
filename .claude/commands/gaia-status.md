@@ -1,10 +1,18 @@
 ---
 description: "Show current state of one or all domains"
 argument-hint: "[domain-name]"
-allowed-tools: ["Read", "Glob", "Grep"]
+allowed-tools:
+  [
+    "Read",
+    "Glob",
+    "Grep",
+    "mcp__github__search_repositories",
+    "mcp__github__list_issues",
+    "mcp__github__get_pull_request",
+  ]
 ---
 
-# /status — Domain Status Overview
+# /gaia-status — Domain Status Overview
 
 Display a formatted summary of domain state. Read-only — no file writes.
 
@@ -23,6 +31,12 @@ Display a formatted summary of domain state. Read-only — no file writes.
    - **Next Actions:** list from the Next Actions section
    - **Recent Activity:** last 5 entries from Recent Activity section
    - **Notes:** any content in the Notes section
+
+3. **Project Pulse (for project domains)** — If the domain is `ai-projects` or `work-projects`, read `manifest.yaml` and find all projects registered under this domain. For each project, use the GitHub MCP to fetch:
+   - Open pull request count
+   - Recent open issues (last 5)
+
+   Display as a "### Project Pulse" subsection after the main status. If the GitHub MCP is unavailable, skip this subsection silently.
 
 Format output as readable markdown with clear headers.
 
@@ -51,3 +65,4 @@ Format output as readable markdown with clear headers.
 - Extract "Key Active Items" from the first non-empty entry in Active Goals or Next Actions
 - If a domain file can't be found, report that clearly rather than failing silently
 - Keep output scannable — users invoke this for a quick overview
+- GitHub MCP data is supplementary — the command must work fully without it

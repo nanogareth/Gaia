@@ -4,7 +4,7 @@ argument-hint: "<project-name or github-path>"
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Bash", "AskUserQuestion"]
 ---
 
-# /link — Register a Project Repo
+# /gaia-link — Register a Project Repo
 
 Add a new project repository to `manifest.yaml` and cross-reference it in the appropriate domain file.
 
