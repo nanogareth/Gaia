@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"%CLAUDE_PROJECT_DIR%\\.claude\\hooks\\session-start.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "The tool is about to edit a file. If the file is a domains/*.md file AND the edit removes or overwrites existing entries in the '## Recent Activity' section (rather than appending new entries at the end), respond {\"ok\": false, \"reason\": \"Recent Activity is append-only\"}. Otherwise respond {\"ok\": true}. Input: $ARGUMENTS",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

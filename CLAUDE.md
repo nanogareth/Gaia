@@ -94,6 +94,51 @@ All commands live in `.claude/commands/` and are invoked via `/command-name`.
 - `/sync` is designed to work from **outside** the Gaia repo (from a project repo) and pushes after committing
 - All write commands follow the write protocol: pull before write, append-only for Recent Activity
 
+## Hooks & Automation
+
+Phase 2 adds three hooks that automate the sync loop and enrich sessions with domain context.
+
+### SessionStart — Context injection (project-level)
+
+**Fires:** Every session start/resume/compact in the Gaia repo.
+
+Injects into Claude's context:
+
+- Today's plan summary (first 20 lines of `temporal/today.md`)
+- Domain snapshot: `domain`, `status`, `updated`, `next_review` from each `domains/*.md` frontmatter
+- Flags any domains with overdue `next_review`
+
+No need to run `/status` at session start — the hook provides awareness automatically.
+
+### PreToolUse — Write protocol enforcement (project-level)
+
+**Fires:** Before any `Edit` or `Write` tool call in the Gaia repo.
+
+A prompt-type hook that checks if an edit to a `domains/*.md` file removes or overwrites existing entries in the `## Recent Activity` section. Recent Activity is **append-only** — the hook blocks destructive edits and allows appends.
+
+### SessionEnd — Automatic post-session sync (global)
+
+**Fires:** Every session end, in any repo.
+
+The hook (`~/.claude/hooks/gaia-session-sync.ps1`):
+
+1. Reads `cwd` from the session input
+2. Checks `manifest.yaml` to see if `cwd` matches a registered project (by directory name or git remote)
+3. If no match → exits silently (not a Gaia project)
+4. If match:
+   - Pulls latest Gaia state (`git pull --rebase`)
+   - Appends to `domains/<domain>.md` Recent Activity: `- **[YYYY-MM-DD]** <project>: <last commit msg>`
+   - Updates frontmatter `updated` timestamp and `updated_by: claude-code-hook`
+   - Appends to `temporal/today.md` under `## Session Log`
+   - Commits and pushes
+5. On push failure → writes to `.pending/<timestamp>.md` for manual retry
+
+This automates what `/sync` does manually. Every project session automatically updates Gaia's state.
+
+### `.pending/` directory
+
+Failed sync pushes write to `.pending/` with details of the failed operation. This directory is git-ignored. Check and retry pending syncs manually when needed.
+
 ## Important Constraints
 
 - This repo must remain **private** (contains sensitive personal data across health, finances, relationships)
