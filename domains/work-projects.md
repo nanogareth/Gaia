@@ -1,7 +1,7 @@
 ---
 domain: work-projects
-updated: 2026-02-15T00:00:00Z
-updated_by: manual
+updated: 2026-02-16T14:03:22Z
+updated_by: claude-code-hook
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
@@ -24,7 +24,9 @@ tags: [professional, work]
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks â€” last 5-10 relevant entries -->
+
+- **[2026-02-16]** FlowForge: fix: use Express v5 wildcard syntax for OPTIONS handler
 
 ## Next Actions
 
@@ -32,7 +34,7 @@ tags: [professional, work]
 
 ## Notes
 
-<!-- Freeform — ideas, observations, things to revisit -->
+<!-- Freeform â€” ideas, observations, things to revisit -->
 
 ## Links
 
