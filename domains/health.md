@@ -1,6 +1,6 @@
 ---
 domain: health
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,27 @@ tags: [personal, wellbeing]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Current fitness level, any active issues or conditions, general energy and wellness narrative.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Fitness targets (strength, endurance, body composition)
+- Nutrition targets (dietary goals, meal prep consistency)
+- Sleep and recovery goals
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+- **Morning routine:** 5-min meditation, 10-min stretching, 15-min cardio
+- **Gym sessions:** 3-day rotation:
+  1. Legs + Shoulders
+  2. Biceps + Chest + Core
+  3. Triceps + Back + Core
+- **Cardio:** HIIT routine post-weights, stretching program cool-down
+- **Nutrition:** Meal prep approach, grocery planning, fresh produce prep
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -36,4 +44,6 @@ tags: [personal, wellbeing]
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- Gym schedule synced with [calendar](calendar.md)
+- Energy levels affecting [work productivity](work-projects.md)
+- Weight/fitness targets linked to [goals](goals.md)

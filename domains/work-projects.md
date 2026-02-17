@@ -12,19 +12,32 @@ tags: [professional, work]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Two active projects:
+
+### FlowForge
+
+- **Status:** Active
+- **Focus:** GitHub project scaffolding tool
+- **Repo:** [gareth/flowforge](https://github.com/gareth/flowforge)
+
+### Edify
+
+- **Status:** Active
+- **Focus:** AI learning content generator
+- **Repo:** [gareth/edify](https://github.com/gareth/edify)
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Define next milestone for FlowForge
+- Define next milestone for Edify
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+Work blocks scheduled during weekday working hours (see [calendar](calendar.md)).
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks â€” last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 - **[2026-02-16]** FlowForge: fix: use Express v5 wildcard syntax for OPTIONS handler
 
@@ -34,8 +47,10 @@ tags: [professional, work]
 
 ## Notes
 
-<!-- Freeform â€” ideas, observations, things to revisit -->
+<!-- Freeform — ideas, observations, things to revisit -->
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- [FlowForge](https://github.com/gareth/flowforge)
+- [Edify](https://github.com/gareth/edify)
+- Related: [ai-projects](ai-projects.md), [goals](goals.md)

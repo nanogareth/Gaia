@@ -1,6 +1,6 @@
 ---
 domain: business-ideas
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,23 @@ tags: [professional, entrepreneurship]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Pipeline of business concepts at various stages — from raw ideas to validated concepts to active pursuits.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Capture and label ideas quickly (avoid distraction during focus time)
+- Evaluate ideas on a regular cycle (not in the moment)
+- Move promising ideas to validation stage with concrete next steps
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+- **Capture:** Quick ideation via `/gaia-inbox` — tag and defer for later review
+- **Weekly review:** Assess idea pipeline, prioritize for deeper exploration
+- **Dedicated sessions:** Scheduled ideation/validation blocks (see [calendar](calendar.md))
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -32,8 +36,22 @@ tags: [professional, entrepreneurship]
 
 ## Notes
 
-<!-- Freeform — ideas, observations, things to revisit -->
+### Idea Pipeline
+
+**Raw Ideas** (captured, not yet evaluated)
+
+- _Use `/gaia-inbox` to add ideas here_
+
+**Under Evaluation** (being researched/validated)
+
+- _Move promising ideas here during weekly review_
+
+**Parked** (interesting but not now)
+
+- _Ideas deferred to a future quarter_
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- May spawn repos tracked in [work-projects](work-projects.md) or [ai-projects](ai-projects.md)
+- Business targets tracked in [goals](goals.md)
+- Ideation schedule on [calendar](calendar.md)

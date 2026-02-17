@@ -1,6 +1,6 @@
 ---
 domain: finances
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,24 @@ tags: [personal, money]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Overview of current financial position — savings, investments, debts, monthly cash flow.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Savings targets (emergency fund, specific goals)
+- Investment strategy and portfolio targets
+- Debt reduction milestones (if applicable)
+- Budget adherence targets
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+- **Weekly:** Review transactions and budget vs actual
+- **Monthly:** Portfolio review, bill payments, savings transfers
+- **Quarterly:** Rebalance investments, review financial goals
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -36,4 +41,5 @@ tags: [personal, money]
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- Budget targets linked to [goals](goals.md)
+- Major purchases synced with [calendar](calendar.md)

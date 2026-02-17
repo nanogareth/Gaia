@@ -1,6 +1,6 @@
 ---
 domain: calendar
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,31 @@ tags: [cross-cutting, scheduling]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Google Calendar MCP is configured for automated reads via `/gaia-plan`. Calendar events are pulled into morning planning and reflected in `temporal/today.md`.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Maintain consistent daily rhythm
+- Protect focus blocks from fragmentation
+- Balance work, personal, and creative time
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+**Daily rhythm:**
+
+- **Morning:** Alarm, water & tablets, 5-min meditation, 10-min stretching, 15-min cardio, 20-min coffee & breakfast with AI planning session
+- **Work blocks:** Focused pomodoro sessions with auto-responses during deep work
+- **Gym:** Post-work session (rotation per [health](health.md))
+- **Evening:** Dinner prep, 2-hour hobby/project rotation, wind-down
+
+**Weekly patterns:**
+
+- Recurring meetings and project syncs
+- Weekly review session (Sunday, via `/gaia-review weekly`)
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -36,4 +48,8 @@ tags: [cross-cutting, scheduling]
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- Morning/evening routines: [health](health.md)
+- Work blocks: [work-projects](work-projects.md)
+- Evening hobby rotation: [creative](creative.md), [languages](languages.md)
+- Goal deadlines: [goals](goals.md)
+- Social events: [social](social.md)

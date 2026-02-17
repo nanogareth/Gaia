@@ -1,6 +1,6 @@
 ---
 domain: languages
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,23 @@ tags: [personal, learning]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Languages being studied, current proficiency levels, and learning methods in use.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Target proficiency levels per language (e.g., CEFR levels)
+- Vocabulary milestones
+- Conversation practice targets
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+- **Daily:** App-based practice (Duolingo, Anki, etc.)
+- **Evening rotation:** Dedicated language sessions within the 2-hour hobby block (see [calendar](calendar.md))
+- **Immersion:** Podcasts, media, reading in target language
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -36,4 +40,5 @@ tags: [personal, learning]
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- Part of evening hobby rotation with [creative](creative.md)
+- Milestones tracked in [goals](goals.md)

@@ -1,6 +1,6 @@
 ---
 domain: social
-updated: 2026-02-15T00:00:00Z
+updated: 2026-02-16T00:00:00Z
 updated_by: manual
 status: active
 review_cycle: weekly
@@ -12,19 +12,23 @@ tags: [personal, relationships]
 
 ## Current State
 
-<!-- Brief narrative of where things stand right now -->
+Key relationships — family, close friends, professional network. General social wellbeing.
 
 ## Active Goals
 
-<!-- What you're working toward, with measurable targets where possible -->
+- Stay connected with key people (regular catch-ups)
+- Strengthen specific relationships
+- Social events and gatherings to plan/attend
 
 ## Habits & Routines
 
-<!-- Recurring commitments and their current adherence -->
+- **Daily:** Message friends/family during dinner prep (dictated via Gaia)
+- **Weekly:** Dedicated catch-up calls or meetups
+- **Per contact:** Mindmap of conversation details and important dates
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — last 5-10 relevant entries -->
+<!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
 
@@ -36,4 +40,5 @@ tags: [personal, relationships]
 
 ## Links
 
-<!-- Cross-references to other domains, repos, or resources -->
+- Social events on [calendar](calendar.md)
+- Relationship goals in [goals](goals.md)
