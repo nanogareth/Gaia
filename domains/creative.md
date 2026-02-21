@@ -1,18 +1,20 @@
 ---
 domain: creative
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-02-21T15:23:32.801Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
-tags: [personal, hobbies]
+tags:
+  - personal
+  - hobbies
 ---
 
 # Creative Projects
 
 ## Current State
-
 Active creative pursuits and their current status. Rotating through interests during evening hobby blocks.
+The list looks good. Need to include languages: imagine a creative project in another language!
 
 ## Active Goals
 

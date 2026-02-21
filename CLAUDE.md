@@ -172,6 +172,14 @@ Uses `@cocal/google-calendar-mcp` via stdio transport. Requires Google Cloud OAu
 
 All MCP-dependent features are optional. Commands work fully without MCP access — they skip the MCP steps and note the data as unavailable. This ensures commands never fail due to expired auth or missing MCP configuration.
 
+## Obsidian Plugin
+
+- Plugin source: `C:\GitHub\obsidian-gaia-plugin\` (separate repo, registered in `manifest.yaml`)
+- Obsidian vault: `C:\Vaults\Alexandria\` — Gaia is accessible via directory junction at `Alexandria\Gaia\` → `C:\GitHub\Gaia\`
+- Build artifacts install to: `C:\Vaults\Alexandria\.obsidian\plugins\gaia\` (main.js, manifest.json, styles.css)
+- Build: `npm run build` in plugin repo, then copy the 3 files to the vault plugins dir
+- Stack: TypeScript + Svelte 5 + esbuild, `isDesktopOnly: false` (mobile-compatible)
+
 ## Important Constraints
 
 - This repo must remain **private** (contains sensitive personal data across health, finances, relationships)

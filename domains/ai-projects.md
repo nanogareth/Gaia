@@ -1,18 +1,21 @@
 ---
 domain: ai-projects
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-02-21T15:13:22.054Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
-tags: [professional, research]
+tags:
+  - professional
+  - research
 ---
 
 # AI & Research Projects
 
 ## Current State
 
-Three active projects in the research pipeline:
+Four active projects in the research pipeline. 
+Test:
 
 ### MiniLang
 
@@ -32,11 +35,17 @@ Three active projects in the research pipeline:
 - **Focus:** 3D visualization MCP server for LLM agents
 - **Repo:** [gareth/3d-viz-mcp](https://github.com/gareth/3d-viz-mcp)
 
+### AI foundational 
+
+- **Status:** Active
+- **Focus:** 3D visualization MCP server for LLM agents
+- **Repo:** [gareth/3d-viz-mcp](https://github.com/gareth/3d-viz-mcp)
 ## Active Goals
 
 - Define next milestone for MiniLang
 - Define next milestone for SET
 - Define next milestone for 3D-Viz-MCP
+- Add new projects
 
 ## Habits & Routines
 
@@ -51,8 +60,10 @@ Regular research sessions scheduled within evening hobby rotation (see [calendar
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
-
 <!-- Freeform — ideas, observations, things to revisit -->
+- **[2026-02-21]** Testing inline notes
+- **[2026-02-21]** Second note
+- **[2026-02-21]** This note was added by clicking the +
 
 ## Links
 

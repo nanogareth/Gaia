@@ -590,7 +590,7 @@ Morning/Evening routines
 
 ## 11. Answers
 
-1. **Obsidian vault structure:** `Gaia` is a subfolder of an existing vault, Alexandria.
+1. **Obsidian vault structure:** `Gaia` is a subfolder of an existing vault, Alexandria, in C:\Vaults.
 
 2. **Hook implementation detail:** Claude Code hooks are currently powershell scripts. The post-session hook needs to invoke Claude via Inline Claude Code call
 

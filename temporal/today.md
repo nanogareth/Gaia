@@ -8,14 +8,13 @@ type: morning-plan
 ## Schedule
 
 - **Morning:** Water & tablets, 5-min meditation, 10-min stretching, 15-min cardio, coffee & breakfast with planning
-- **Work blocks:** Focused pomodoro sessions — see Priorities below
+- **Work blocks:** Focused pomodoro sessions — see Priorities below. 
 - **Gym:** Post-work session (today's rotation: check which day in the Legs+Shoulders / Biceps+Chest+Core / Triceps+Back+Core cycle)
 - **Evening:** Dinner prep, 2-hour hobby/project rotation, wind-down
 
 Calendar: unavailable (Google Calendar MCP not connected this session)
 
 ## Priorities
-
 1. **[goals]** Define Q1 2026 targets — all domain goals are currently placeholders. Pick 2-3 domains and set concrete, measurable targets via `/gaia-update goals` and the respective domain files
 2. **[ai-projects]** Define next milestone for at least one AI project (MiniLang, SET, or 3D-Viz-MCP) — update via `/gaia-update ai-projects`
 3. **[work-projects]** Define next milestone for FlowForge and Edify — last activity was Feb 16 (Express v5 fix for FlowForge)

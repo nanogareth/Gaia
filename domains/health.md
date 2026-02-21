@@ -1,18 +1,21 @@
 ---
 domain: health
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-02-21T15:52:55.099Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
-tags: [personal, wellbeing]
+tags:
+  - personal
+  - wellbeing
 ---
 
 # Health & Fitness
 
 ## Current State
-
-Current fitness level, any active issues or conditions, general energy and wellness narrative.
+Strong-ish but slightly overweight. 
+Need to improve flexibility
+Need to improve cardiovascular fitness
 
 ## Active Goals
 
@@ -39,8 +42,8 @@ Current fitness level, any active issues or conditions, general energy and welln
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
-
 <!-- Freeform — ideas, observations, things to revisit -->
+- **[2026-02-21]** Need to review gym membership
 
 ## Links
 

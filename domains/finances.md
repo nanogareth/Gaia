@@ -1,11 +1,13 @@
 ---
 domain: finances
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-02-21T15:59:13.941Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
-tags: [personal, money]
+tags:
+  - personal
+  - money
 ---
 
 # Finances & Investments
@@ -15,7 +17,6 @@ tags: [personal, money]
 Overview of current financial position — savings, investments, debts, monthly cash flow.
 
 ## Active Goals
-
 - Savings targets (emergency fund, specific goals)
 - Investment strategy and portfolio targets
 - Debt reduction milestones (if applicable)

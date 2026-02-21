@@ -1,24 +1,26 @@
 ---
 domain: work-projects
-updated: 2026-02-16T14:03:22Z
-updated_by: claude-code-hook
+updated: 2026-02-21T15:55:19.670Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
-tags: [professional, work]
+tags:
+  - professional
+  - work
 ---
 
 # Work Projects
 
 ## Current State
-
 Two active projects:
 
-### FlowForge
+
+### SmartLabs
 
 - **Status:** Active
-- **Focus:** GitHub project scaffolding tool
-- **Repo:** [gareth/flowforge](https://github.com/gareth/flowforge)
+- **Focus:** Experiential learning platform
+- **Repo:** [gareth/flowforge](https://github.com/gareth/smartlabs)
 
 ### Edify
 

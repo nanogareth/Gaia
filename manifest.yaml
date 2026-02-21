@@ -29,3 +29,9 @@ repos:
     domain: work-projects
     status: active
     description: AI learning content generator
+
+  - name: obsidian-gaia-plugin
+    github: gareth/obsidian-gaia-plugin
+    domain: ai-projects
+    status: active
+    description: Obsidian plugin providing visual UI for Gaia ecosystem
