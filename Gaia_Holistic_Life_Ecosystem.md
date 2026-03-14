@@ -10,9 +10,23 @@
 
 ## 1. Vision
 
-A meta-management system that orchestrates existing tools (Claude.ai, Claude Code, Obsidian, GitHub, Google Calendar) into a unified, cross-device system for managing all domains of life: work, research, health, finances, learning, creativity, relationships, scheduling, goals, and business ideas.
+A coordination and life management system that orchestrates existing tools (Claude.ai, Claude Code, Cowork, Obsidian, GitHub, Google Calendar) into a unified, cross-device system for managing all domains of life: work, research, health, finances, learning, creativity, relationships, scheduling, goals, and business ideas.
+
+Gaia is evolving from passive state tracking into an active **coordination layer** that schedules and orchestrates Claude Code usage across multiple projects, maximises subscription utilisation, and captures results back into its state store.
 
 The system does not build custom backends. It treats Claude (across all interfaces) as the intelligence layer and GitHub as the canonical state store, with Obsidian as the primary human interface for reading and light editing across devices.
+
+### Core Triad
+
+Gaia is one of three architecturally separate projects that address the same underlying problem: **Claude's context is fragile, session-scoped, and requires manual labour to maintain.**
+
+| Project | Role | Description |
+|---------|------|-------------|
+| **Gaia** | Coordination layer | Schedules work, tracks state across all life domains, orchestrates planning/reflection |
+| **claudecodemeta** | Cross-interface memory | Persistent corrections, user profiles, shared state across Claude Code / Claude.ai / Cowork |
+| **FlowForge** | Context bootstrapping | Sets up CLAUDE.md, hooks, MCPs, sandbox, Gaia registration for new projects |
+
+These start as independent repos and may converge once natural boundaries reveal themselves through use. State sharing is via the filesystem. See `project-briefs-core-triad.md` for detailed briefs.
 
 ---
 
@@ -20,7 +34,7 @@ The system does not build custom backends. It treats Claude (across all interfac
 
 1. **GitHub is the source of truth.** All state lives in version-controlled files. Every change is traceable.
 2. **Obsidian is the window.** Full read-write sync via Git plugin. State files use YAML frontmatter + Markdown body — native to Obsidian's properties system.
-3. **Claude is the intelligence.** Claude Code (desktop), Claude.ai (any device), and Claude's memory system collectively provide the reasoning, planning, and reflection layer.
+3. **Claude is the intelligence.** Claude Code (desktop), Claude.ai (any device), Cowork (scheduled automation), and Claude's memory system collectively provide the reasoning, planning, and reflection layer.
 4. **Orchestrate, don't build.** Prefer existing MCPs, plugins, skills, and hooks over custom infrastructure.
 5. **Graceful degradation.** Every device gets the best experience it can support. Mobile gets read/edit/ideate. Desktop gets full agentic capability.
 6. **Temporal awareness.** The system adapts its behaviour to time of day and context — morning planning, active work support, evening reflection.
@@ -30,26 +44,29 @@ The system does not build custom backends. It treats Claude (across all interfac
 ## 3. Architecture Overview
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    LAYER 5: TEMPORAL                         │
-│         Morning Planning · Active Support · Evening Review   │
-│         (Claude Code commands + Claude.ai prompts)           │
-├─────────────────────────────────────────────────────────────┤
-│                    LAYER 4: INTERFACE                        │
-│  Desktop: Claude Code    Mobile: Obsidian    Any: Claude.ai  │
-│  (full agentic)          (read/write/ideate)  (memory-aware) │
-├─────────────────────────────────────────────────────────────┤
-│                    LAYER 3: INTEGRATION                      │
-│     MCPs · Hooks · Skills · Google Calendar · GitHub API     │
-├─────────────────────────────────────────────────────────────┤
-│                    LAYER 2: DOMAIN MODULES                   │
-│  Health · Finance · Languages · Social · Creative · Calendar │
-│  Goals · Work Projects · AI Projects · Business Ideas        │
-├─────────────────────────────────────────────────────────────┤
-│                    LAYER 1: STATE STORE                      │
-│              GitHub: Gaia (central index)                 │
-│              + distributed project repos                     │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                  LAYER 5: SCHEDULING & TEMPORAL                    │
+│   Cowork Scheduled Tasks · Usage-Aware Work Queues · Reflections  │
+│   (Cowork automation + Claude Code commands + Claude.ai prompts)  │
+├──────────────────────────────────────────────────────────────────┤
+│                  LAYER 4: INTERFACE                                │
+│  Desktop: Claude Code  Cowork: Scheduled   Mobile: Obsidian       │
+│  + Cowork (agent)      tasks (automation)  (read/write/ideate)    │
+│  Browser: Web Dashboard (planned)          Any: Claude.ai          │
+├──────────────────────────────────────────────────────────────────┤
+│                  LAYER 3: INTEGRATION                              │
+│   MCPs · Hooks · Skills · Google Calendar · GitHub API · Cowork   │
+│   claudecodemeta (cross-interface) · FlowForge (bootstrapping)    │
+├──────────────────────────────────────────────────────────────────┤
+│                  LAYER 2: DOMAIN MODULES                           │
+│  Health · Finance · Languages · Social · Creative · Calendar      │
+│  Goals · Work Projects · AI Projects · Business Ideas             │
+│  Anthropic Application                                            │
+├──────────────────────────────────────────────────────────────────┤
+│                  LAYER 1: STATE STORE                              │
+│            GitHub: Gaia (central index + coordination)             │
+│            + distributed project repos (via manifest)              │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -224,6 +241,7 @@ Each domain has specific concerns but follows the universal schema above.
 | Work Projects          | Professional  | `domains/work-projects.md`  | Multiple (via manifest) |
 | AI/Research Projects   | Professional  | `domains/ai-projects.md`    | Multiple (via manifest) |
 | Business Ideas         | Professional  | `domains/business-ideas.md` | —                       |
+| Anthropic Application  | Programme     | `domains/anthropic-application.md` | Core triad repos   |
 
 ### 5.2 Cross-Domain References
 
@@ -383,12 +401,13 @@ Claude.ai participates in the system through two channels:
 
 ### 7.1 Device Matrix
 
-| Device          | Primary Tools                              | Capabilities                            | Typical Use                     |
-| --------------- | ------------------------------------------ | --------------------------------------- | ------------------------------- |
-| Windows Desktop | Claude Code + VS Code, Obsidian, GitHub    | Full agentic: code, hooks, MCPs, skills | Deep work, coding, system admin |
-| Windows Laptop  | Claude Code + VS Code, Obsidian, GitHub    | Full agentic (same as desktop)          | Portable deep work              |
-| iPad            | Obsidian (Git sync), Claude.ai, GitHub web | Read/write state, ideate, plan          | Review, light editing, ideation |
-| Android         | Obsidian (Git sync), Claude.ai, GitHub app | Read/write state, ideate, capture       | Quick capture, mobile review    |
+| Device          | Primary Tools                                       | Capabilities                               | Typical Use                     |
+| --------------- | --------------------------------------------------- | ------------------------------------------ | ------------------------------- |
+| Windows Desktop | Claude Code, Cowork, Obsidian, GitHub                | Full agentic + scheduled automation         | Deep work, coding, system admin |
+| Windows Laptop  | Claude Code, Cowork, Obsidian, GitHub                | Full agentic + scheduled (same as desktop)  | Portable deep work              |
+| iPad            | Obsidian (Git sync), Claude.ai, GitHub web           | Read/write state, ideate, plan              | Review, light editing, ideation |
+| Android         | Obsidian (Git sync), Claude.ai, GitHub app           | Read/write state, ideate, capture           | Quick capture, mobile review    |
+| Browser         | Gaia Web Dashboard (planned), GitHub                 | Read/write domains, temporal views          | Cross-device access via React UI |
 
 ### 7.2 Obsidian Configuration
 
@@ -461,19 +480,42 @@ SORT next_review ASC
 
 ---
 
-## 8. Layer 5 — Temporal Awareness
+## 8. Layer 5 — Scheduling & Temporal Awareness
 
-### 8.1 Daily Rhythm
+### 8.1 Cowork Scheduled Tasks
 
-The system adapts to time of day. This is implemented through Claude Code commands and Claude.ai conversation patterns, not a custom scheduler.
+Cowork (Claude Desktop agent) runs on Windows with full feature parity. Scheduled tasks automate the daily/weekly Gaia rhythm without manual intervention.
 
-#### Morning Planning (via `/gaia-plan` or Claude.ai conversation)
+| Task | Cadence | What It Does |
+|------|---------|-------------|
+| Morning Plan | Daily, 07:00 | Reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
+| Evening Reflect | Daily, 21:00 | Compares plan vs actual, flags carry-forwards, appends to journal |
+| Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
+| Gap Tracker | Monday, 08:00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
+
+**Status:** Not yet configured. This is a Week 0 priority.
+
+### 8.2 Usage-Aware Multi-Project Scheduling
+
+Max 5x ($100/mo) has two interlocking constraints: ~225 messages per 5-hour rolling window and a weekly quota shared across all models and interfaces (Claude.ai, Claude Code, Cowork).
+
+`/gaia-plan` outputs a structured work queue in `temporal/today.md` aligned to reset windows:
+
+- **Window 1 (morning):** Cowork morning plan (cheap) → Claude Code deep work → Claude.ai ideation. Front-load token-intensive tasks.
+- **Window 2 (afternoon):** Start with deliberate first prompt at window boundary. Second Claude Code dev block.
+- **Window 3 (evening):** Light usage — personal projects, reflection. Cowork evening reflect (cheap).
+
+Weekly rhythm: Days 1–3 after reset are intensive (Opus for complex tasks). Days 4–5 monitor consumption, shift to Sonnet for routine tasks if approaching cap. Days 6–7 are lighter, let buffer rebuild.
+
+### 8.3 Daily Rhythm
+
+#### Morning Planning (via Cowork scheduled task or `/gaia-plan`)
 
 1. Pull latest state from all domains
 2. Check Google Calendar for today's commitments
 3. Review yesterday's incomplete items (`temporal/today.md` from previous day)
 4. Review active goals and deadlines across domains
-5. Generate prioritised plan for the day
+5. Generate prioritised plan with usage-aware work queue and window boundaries
 6. Write to `temporal/today.md` and `journal/YYYY/MM/YYYY-MM-DD.md`
 
 #### Active Work Support (via hooks and skills)
@@ -481,22 +523,24 @@ The system adapts to time of day. This is implemented through Claude Code comman
 1. Post-session hooks keep state current throughout the day
 2. Claude Code skill can be queried mid-session for cross-domain context
 3. Claude.ai conversations can reference structured state for decisions
+4. claudecodemeta provides cross-interface memory continuity
 
-#### Evening Reflection (via `/gaia-reflect` or Claude.ai conversation)
+#### Evening Reflection (via Cowork scheduled task or `/gaia-reflect`)
 
 1. Review today's plan against actual activity (from hook-generated logs)
-2. Summarise accomplishments and note incomplete items
-3. Flag items that need to carry forward
-4. Optionally update domain "Current State" narratives
-5. Draft preliminary priorities for tomorrow
-6. Append reflection to journal entry
+2. Track actual usage vs budget (messages consumed per window)
+3. Summarise accomplishments and note incomplete items
+4. Flag items that need to carry forward
+5. Optionally update domain "Current State" narratives
+6. Draft preliminary priorities for tomorrow
+7. Append reflection to journal entry
 
-### 8.2 Periodic Reviews
+### 8.4 Periodic Reviews
 
 | Cycle     | Trigger                             | Scope                                        | Output                              |
 | --------- | ----------------------------------- | -------------------------------------------- | ----------------------------------- |
-| Daily     | Morning `/gaia-plan`                | All domains, today's calendar                | `temporal/today.md` + journal entry |
-| Weekly    | Sunday `/gaia-review weekly`        | All domains, week's journal entries          | `temporal/weekly-review.md`         |
+| Daily     | Cowork 07:00 / `/gaia-plan`        | All domains, today's calendar, work queue    | `temporal/today.md` + journal entry |
+| Weekly    | Cowork Sunday / `/gaia-review`     | All domains, week's journal entries          | `temporal/weekly-review.md`         |
 | Monthly   | 1st of month `/gaia-review monthly` | All domains, month's weeklies, goal progress | `temporal/monthly-review.md`        |
 | Quarterly | Manual                              | Goal reassessment, domain priority shifts    | Updated `domains/goals.md`          |
 
@@ -508,9 +552,14 @@ The system adapts to time of day. This is implemented through Claude Code comman
 
 ```
 Claude Code session in any project
-  → post-session hook fires
+  → post-session hook fires (SessionEnd — when wired)
   → hook identifies domain via manifest
   → pulls Gaia, updates domain file + today.md
+  → commits and pushes
+
+Cowork scheduled task
+  → reads Gaia state files directly (morning plan, evening reflect)
+  → generates temporal artifacts (plan, reflection, work queue)
   → commits and pushes
 
 Obsidian edit (any device)
@@ -520,36 +569,39 @@ Obsidian edit (any device)
 Claude.ai conversation
   → user and Claude discuss updates
   → user manually edits in Obsidian or triggers via Claude Code
-  → (future: Claude.ai → GitHub MCP direct write)
+  → (medium term: Cowork syncs Claude.ai memory edits from Gaia state)
 
 Google Calendar change
-  → Calendar MCP detects change (polled or webhook)
+  → Calendar MCP detects change (polled at plan time)
   → Updates domains/calendar.md
-  → (future: triggers re-plan if significant schedule change)
 ```
 
 ### 9.2 Read Paths (How State Gets Consumed)
 
 ```
 Claude Code session starts
-  → CLAUDE.md references Gaia repo
-  → skill loads relevant domain state
+  → SessionStart hook injects domain snapshot + today's plan
+  → claudecodemeta provides cross-interface memory
   → full project context + life context available
 
+Cowork scheduled task starts
+  → reads context files from Gaia folder automatically
+  → has access to all domain state, temporal files, journal
+
 Claude.ai conversation
-  → memory system provides high-level context
+  → memory system provides high-level context (synced from Gaia)
   → past chat search provides conversation history
   → user can share specific state files if needed
-  → (future: Claude.ai reads from GitHub directly)
 
 Obsidian (any device)
   → Git plugin pulls latest state
-  → Dataview renders dashboards
+  → Gaia plugin renders domain dashboard
+  → Dataview renders cross-domain queries
   → user browses/edits directly
 
-Morning/Evening routines
-  → Claude reads all domains + calendar + journal
-  → generates temporal artifacts (plan, reflection)
+Morning/Evening routines (automated via Cowork)
+  → reads all domains + calendar + journal
+  → generates temporal artifacts (plan, reflection, work queue)
 ```
 
 ---
@@ -596,8 +648,20 @@ Morning/Evening routines
 - [x] Build custom Obsidian plugin (`obsidian-gaia-plugin`) with domain dashboard and quick-edit UI
 - [ ] Optimise based on daily use friction
 - [ ] Add new domains or split existing ones as needed
-- [ ] Explore direct Claude.ai → GitHub write path
 - [ ] Investigate fitness/finance API integrations
+
+### Phase 5: Coordination Layer (new — see `vision-anthropic-programme.md`)
+
+- [ ] Configure Cowork scheduled tasks (morning plan, evening reflect, weekly review, gap tracker)
+- [ ] Wire SessionEnd hook in global settings
+- [ ] Create `domains/anthropic-application.md` — gap analysis tracking
+- [ ] Implement usage-aware work queue in `/gaia-plan` output
+- [ ] Build Gaia Web Dashboard (React/TypeScript/Next.js) — read-only domain overview + temporal view
+- [ ] Add write capability to Web Dashboard — domain editing, daily plan view
+- [ ] Integrate claudecodemeta shared state into `/gaia-status` and `/gaia-plan`
+- [ ] Define sandbox architecture and permission templates per project type
+- [ ] Prepare for public release — redact sensitive content, security audit
+- [ ] Cross-interface state sharing via Cowork → Claude.ai memory sync
 
 ---
 
@@ -613,7 +677,7 @@ Morning/Evening routines
 
 5. **Mobile Git reliability:** Via Obsidian Sync.
 
-6. **Privacy and sensitivity:** Some domains (health, finances, relationships) contain sensitive data. The GitHub repo should be private.
+6. **Privacy and sensitivity:** Some domains (health, finances, relationships) contain sensitive data. The repo is currently private but targeted for public release after redacting sensitive content (see `vision-anthropic-programme.md` Appendix B).
 
 7. **Gareth's daily device flow:** The Gaia alarm goes off and presents me with my morning rountine: quote of the day, water and tablets reminder, 5 minute meditation, 10 minute stretching, 15 minute cardio, 20 minute coffee and breakfast with morning personal review of day's line-up and chat with agentic AI for planning and prep. This populates to-do list items, creates drafts of emails and meeting requests, carries out research, populates drafts of documents and schedules time to review each of the outputs. Then I start work and my copilot keeps me on schedule and prepared for each to-do item. It triggers tools to transcribe, diarize and summarise meetings, and schedules follow-up events and to-do items from the summarisations. Out of the blue I have an idea and need to quickly jot it down or sketch it out. Ideas like this are like golddust not just because they are valuable but also because they are shiny (i.e. distracting) and take a lot of work to extract. So I need a super quick way to ideate and label them to associate an idea with the right topics or projects and then to defer further ideation until I have time to dedicate to it -> maybe Create Flow state periods throughout the day/week. Back to work. Getting through the morning's to-dos. A meeting is coming up tomorrow morning - a research project update. My Gaia app has my notes on the project that includes a summary of tasks I have been working on since the last meeting on this project. An LLM has summarised the notes and extracted points to include on the agenda discuss and, given the project context, has drafted some next steps that I can work on in advance of the meeting and/or edit during the meeting tomorrow before sharing with the rest of the group. Product development - pomodoro technique - no work distractions. Integration with MS outlook and teams needed. If some internal contact sends a message via teams or outlook, my Gaia should autorespond, saying what I am currently working on and let them know when I will next have time to review their message. Gaia should also trigger 20 minute timers 5 minute intervals for the duration of the product development phase. Gaia will also need to coordinate ideas boards, mind maps, and track web-based research. Project management - Gaia must have templates and integrations for project ideation, planning, scheduling, resource management, communication, engagement, monitoring and oversight. That way I can use it to manage across all work and personal projects. After work, in the gym, Gaia reminds me what exercise groups we are doing (legs and shoulders; biceps, chest and core or triceps, back and core), it queues up a targeted dynamic warmup, what exercise I need to do next (sets, reps, and weights) and times the reps' concentric and eccentric phases, times rest between sets, tracks actual vs target total volume, and schedules progressive overload, then it guides me through a HIIT cardio routine and stretching program. On the way home I hit the supermarket for groceries, and Gaia guides me on what to buy based on what is in my fridge and store cupboards, then how to cut up fresh produce to prepare the next meals. While preparing dinner, I dictate messages to friends and family for Gaia to send off and Gaia captures details to add to that person's mindmap. After dinner each weekday evening, Gaia reserves 2 hours for personal hobbies and projects, cycling through my range of interests, including drawing, painting, sculpture, reading, learning languages, programming, electronics, modelling. This is the day-to-day functionality of Gaia.
 
@@ -628,9 +692,13 @@ Morning/Evening routines
 | Hook trigger          | Automatic post-session               | Reduces friction, ensures state stays current                      | 2026-02-10 |
 | Obsidian coupling     | Full read-write Git sync             | Maximum utility on mobile, native editing experience               | 2026-02-10 |
 | Intelligence layer    | Claude (all interfaces)              | No custom ML backend — orchestrate existing capabilities           | 2026-02-10 |
-| Cowork                | Excluded (macOS only)                | User is on Windows/iPad/Android — revisit if Windows support ships | 2026-02-10 |
+| Cowork                | ~~Excluded~~ → **Included**          | Windows support shipped 2026-02-10. Now the scheduling backbone for Layer 5 | 2026-03-14 |
 | Vault access          | Directory junction (not submodule)   | `Alexandria\Gaia\` → `C:\GitHub\Gaia\` — simpler than git submodule | 2026-02-15 |
 | Obsidian plugin stack | Svelte 5 + TypeScript + esbuild      | Modern reactive framework, mobile-compatible, fast builds          | 2026-02-16 |
 | Command prefix        | `gaia-` prefix on all commands       | Avoids collision with built-in Claude Code skills                  | 2026-02-15 |
 | Hook language         | PowerShell (`.ps1`)                  | Native on Windows 11, works with Claude Code hook protocol         | 2026-02-16 |
 | Write protocol        | Append-only for Recent Activity      | Prevents hook/human edit conflicts; enforced at hook + UI layer    | 2026-02-16 |
+| Coordination role     | Gaia as active coordinator           | Not just state tracking — schedules Claude Code work, maximises subscription | 2026-03-14 |
+| Core Triad            | Gaia + claudecodemeta + FlowForge    | Three independent projects addressing context fragility from different angles | 2026-03-14 |
+| Web Dashboard         | React + TypeScript + Next.js         | Addresses React/TS gap, provides browser-based cross-device access | 2026-03-14 |
+| Subscription model    | Max 5x, personal/work separation     | Clear IP boundary; usage-aware scheduling across all Claude interfaces | 2026-03-14 |

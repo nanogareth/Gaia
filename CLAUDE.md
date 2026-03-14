@@ -4,17 +4,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repo Is
 
-Gaia is a **state-only** repository — no application code, no builds, no tests. It is the central index of a holistic life management ecosystem where GitHub is the source of truth, Obsidian is the read/write interface, and Claude (Code + .ai) is the intelligence layer.
+Gaia is a **state-and-coordination** repository — the central index of a holistic life management ecosystem where GitHub is the source of truth, Obsidian is the read/write interface, and Claude (Code, .ai, Cowork) is the intelligence layer.
+
+Gaia is evolving from passive state tracking into an active **coordination layer** that schedules and orchestrates Claude Code usage across multiple projects, maximises subscription utilisation, and captures results back into its state store.
 
 All state lives in version-controlled YAML-frontmatter Markdown files. There is no custom backend.
+
+### Core Triad
+
+Gaia is one of three architecturally separate projects that address the same underlying problem: **Claude's context is fragile, session-scoped, and requires manual labour to maintain.**
+
+| Project | Role | Repo |
+|---------|------|------|
+| **Gaia** | Coordination layer — schedules work, tracks state, orchestrates planning/reflection | This repo |
+| **claudecodemeta** | Cross-interface memory — persistent corrections, user profiles, shared state across Claude Code / Claude.ai / Cowork | `C:\GitHub\claudecodemeta` |
+| **FlowForge** | Context bootstrapping — sets up CLAUDE.md, hooks, MCPs, sandbox, Gaia registration for new projects | `C:\GitHub\flowforge` |
+
+These start independent and may converge once natural boundaries reveal themselves through use. State sharing is via the filesystem: each writes to known paths, others read.
 
 ## Architecture (5 Layers)
 
 1. **State Store** — This repo (`Gaia`) + distributed project repos registered in `manifest.yaml`
-2. **Domain Modules** — `domains/*.md` files covering health, finances, languages, social, creative, calendar, goals, work-projects, ai-projects, business-ideas
-3. **Integration** — Claude Code hooks, skills, MCPs (GitHub, Google Calendar, Filesystem)
-4. **Interface** — Desktop (Claude Code), Mobile (Obsidian + Git sync), Any device (Claude.ai)
-5. **Temporal** — Morning planning, active work support, evening reflection via `/gaia-plan` and `/gaia-reflect` commands
+2. **Domain Modules** — `domains/*.md` files covering health, finances, languages, social, creative, calendar, goals, work-projects, ai-projects, business-ideas, anthropic-application
+3. **Integration** — Claude Code hooks, skills, MCPs (GitHub, Google Calendar), Cowork scheduled tasks
+4. **Interface** — Desktop (Claude Code + Cowork), Mobile (Obsidian + Git sync), Any device (Claude.ai), Browser (Gaia Web Dashboard — planned)
+5. **Scheduling & Temporal** — Cowork scheduled tasks (morning plan, evening reflect, weekly review, gap tracker), usage-aware multi-project work queues, `/gaia-plan` and `/gaia-reflect` commands
 
 ## File Conventions
 
@@ -77,7 +91,7 @@ All commands live in `.claude/commands/` and are invoked via `/gaia-<command>`. 
 
 | Command         | Args                | Description                                                                            |
 | --------------- | ------------------- | -------------------------------------------------------------------------------------- |
-| `/gaia-plan`    | —                   | Morning planning: reads all domains + calendar, generates `temporal/today.md`          |
+| `/gaia-plan`    | —                   | Morning planning: reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
 | `/gaia-reflect` | —                   | Evening reflection: summarizes day vs plan, flags carry-forward items                  |
 | `/gaia-status`  | `[domain]`          | Show current state of one domain or summary table (+ GitHub pulse for project domains) |
 | `/gaia-update`  | `<domain>`          | Interactive walk-through of a domain's editable sections                               |
@@ -174,6 +188,28 @@ Uses `@cocal/google-calendar-mcp` via stdio transport. Requires Google Cloud OAu
 
 All MCP-dependent features are optional. Commands work fully without MCP access — they skip the MCP steps and note the data as unavailable. This ensures commands never fail due to expired auth or missing MCP configuration.
 
+## Cowork Scheduled Tasks
+
+Cowork (Claude Desktop agent) runs on Windows with full feature parity. Scheduled tasks automate the daily/weekly Gaia rhythm.
+
+| Task | Cadence | What It Does |
+|------|---------|-------------|
+| Morning Plan | Daily, 07:00 | Reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
+| Evening Reflect | Daily, 21:00 | Compares plan vs actual, flags carry-forwards, appends to journal |
+| Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
+| Gap Tracker | Monday, 08:00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
+
+**Status:** Not yet configured. Cowork needs to be pointed at the Gaia folder.
+
+### Subscription constraints
+
+Max 5x ($100/mo) has two interlocking constraints: ~225 messages per 5-hour rolling window and a weekly quota shared across all models and interfaces (Claude.ai, Claude Code, Cowork).
+
+`/gaia-plan` should output a structured work queue with window boundaries in `temporal/today.md`:
+- **Window 1 (morning):** Cowork morning plan (cheap) → Claude Code deep work → Claude.ai ideation
+- **Window 2 (afternoon):** Second Claude Code dev block, front-loaded
+- **Window 3 (evening):** Light usage, personal projects, Cowork evening reflect
+
 ## Obsidian Plugin
 
 - Plugin source: `C:\GitHub\obsidian-gaia-plugin\` (separate repo, registered in `manifest.yaml`)
@@ -184,7 +220,8 @@ All MCP-dependent features are optional. Commands work fully without MCP access 
 
 ## Important Constraints
 
-- This repo must remain **private** (contains sensitive personal data across health, finances, relationships)
+- This repo is **private** but targeted for **public release** after redacting sensitive domain content (health, finances, relationships). See `vision-anthropic-programme.md` §Appendix B for the visibility plan.
 - Obsidian Git syncs every 5-10 minutes on mobile — avoid rapid successive commits that could cause conflicts
 - Domain files are designed for Obsidian's properties panel — keep frontmatter keys consistent across all domain files
 - The `.obsidian/workspace.json` and other local Obsidian config should be in `.gitignore`
+- Claude.ai, Claude Code, and Cowork all draw from the same subscription pool — Gaia must be usage-aware when scheduling work
