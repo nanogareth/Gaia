@@ -493,7 +493,7 @@ Cowork (Claude Desktop agent) runs on Windows with full feature parity. Schedule
 | Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
 | Gap Tracker | Monday, 08:00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
 
-**Status:** Not yet configured. This is a Week 0 priority.
+**Status:** SKILL.md files created at `~/.claude/scheduled-tasks/`. Schedule, model, and working folder must be configured via Claude Desktop UI.
 
 ### 8.2 Usage-Aware Multi-Project Scheduling
 

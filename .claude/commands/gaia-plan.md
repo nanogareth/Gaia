@@ -28,7 +28,15 @@ Generate a prioritized daily plan by synthesizing all domain states, calendar ev
 
 5. **Read manifest for project context** — Read `manifest.yaml` to understand active projects and their domains.
 
-6. **Generate the daily plan** — Write `temporal/today.md` with this structure:
+6. **Build the usage-aware work queue** — Using the manifest, domain priorities (especially `anthropic-application.md` if it exists), carry-forward items, and calendar events, construct a work queue structured around three 5-hour rolling windows (~225 messages each from the Max 5x plan). Scheduling principles:
+   - Front-load token-intensive tasks (Claude Code dev sessions with large codebases) into Windows 1–2
+   - Cowork morning plan (07:00) and evening reflect (21:00) are fixed cheap tasks (~5 msgs each)
+   - Calendar events constrain scheduling — block those time slots
+   - Estimate per-task message budgets: light (5–10 msgs), medium (30–60 msgs), heavy (80–120 msgs)
+   - Source project priorities from `anthropic-application.md` Active Goals (gap-closing work takes priority), manifest active projects, and carry-forward items
+   - The work queue is a recommendation, not a rigid schedule — the user adjusts as the day unfolds
+
+7. **Generate the daily plan** — Write `temporal/today.md` with this structure:
 
 ```markdown
 ---
@@ -50,6 +58,26 @@ type: morning-plan
 2. **[domain]** Priority item
 3. **[domain]** Priority item
 
+## Work Queue
+
+### Window 1 (07:00–12:00)
+- **07:00** Cowork: Morning plan (auto, ~5 msgs)
+- **[time]** [Interface]: [Project] — [specific task] (~N msgs)
+- Budget: ~X/225 messages. Reserve Y for ad-hoc.
+
+### Window 2 (12:00–17:00)
+- **[time]** [Interface]: [Project] — [specific task] (~N msgs)
+- Budget: ~X/225 messages.
+
+### Window 3 (17:00–22:00)
+- **21:00** Cowork: Evening reflection (auto, ~5 msgs)
+- Budget: ~X/225 messages. Light window by design.
+
+### Weekly Budget
+- Reset: [date or "unknown — check manually"]
+- Estimated weekly consumption: [assessment based on planned tasks]
+- Recommendation: [model guidance if approaching weekly cap]
+
 ## Carry-Forward
 
 <!-- Items incomplete from yesterday, if any -->
@@ -63,7 +91,7 @@ type: morning-plan
 <!-- Context, reminders, or things to keep in mind -->
 ```
 
-7. **Create/update journal entry** — Write to `journal/YYYY/MM/YYYY-MM-DD.md` (create year/month directories if needed). If the file doesn't exist, create it with:
+8. **Create/update journal entry** — Write to `journal/YYYY/MM/YYYY-MM-DD.md` (create year/month directories if needed). If the file doesn't exist, create it with:
 
 ```markdown
 ---
@@ -80,7 +108,7 @@ type: journal
 
 If it already exists, append a "## Morning Plan Summary" section.
 
-8. **Commit changes** — Stage `temporal/today.md` and the journal entry, then commit:
+9. **Commit changes** — Stage `temporal/today.md` and the journal entry, then commit:
    ```
    git add temporal/today.md journal/
    git commit -m "plan: morning plan for YYYY-MM-DD"

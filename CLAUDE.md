@@ -99,6 +99,7 @@ All commands live in `.claude/commands/` and are invoked via `/gaia-<command>`. 
 | `/gaia-inbox`   | `<note text>`       | Route freeform text to the appropriate domain's Notes section                          |
 | `/gaia-link`    | `<project>`         | Register a new repo in `manifest.yaml` and link it to a domain                         |
 | `/gaia-sync`    | `[summary]`         | Manual session sync — update domain state after working in a project repo              |
+| `/gaia-gap-tracker` | —              | Weekly gap progress report — checks core triad repos, assesses five application gaps   |
 
 ### Command behaviour notes
 
@@ -130,11 +131,9 @@ No need to run `/gaia-status` at session start — the hook provides awareness a
 
 A prompt-type hook that checks if an edit to a `domains/*.md` file removes or overwrites existing entries in the `## Recent Activity` section. Recent Activity is **append-only** — the hook blocks destructive edits and allows appends.
 
-### SessionEnd — Automatic post-session sync (global) — NOT YET WIRED
+### SessionEnd — Automatic post-session sync (global)
 
-**Status:** The script exists at `~/.claude/hooks/gaia-session-sync.ps1` but is **not configured** in `~/.claude/settings.json` hooks. It needs a `SessionEnd` entry in global settings to fire automatically.
-
-**Intended behaviour:** Fires every session end, in any repo.
+**Fires:** Every session end, in any repo. Configured in `~/.claude/settings.json` (global scope).
 
 The hook (`~/.claude/hooks/gaia-session-sync.ps1`):
 
@@ -199,7 +198,7 @@ Cowork (Claude Desktop agent) runs on Windows with full feature parity. Schedule
 | Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
 | Gap Tracker | Monday, 08:00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
 
-**Status:** Not yet configured. Cowork needs to be pointed at the Gaia folder.
+**Status:** SKILL.md files created at `~/.claude/scheduled-tasks/`. Schedule, model, and working folder must be configured via Claude Desktop UI.
 
 ### Subscription constraints
 
