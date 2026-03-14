@@ -96,7 +96,7 @@ All commands live in `.claude/commands/` and are invoked via `/gaia-<command>`. 
 
 ## Hooks & Automation
 
-Phase 2 adds three hooks that automate the sync loop and enrich sessions with domain context.
+Three hooks automate the sync loop and enrich sessions with domain context.
 
 ### SessionStart — Context injection (project-level)
 
@@ -116,9 +116,11 @@ No need to run `/gaia-status` at session start — the hook provides awareness a
 
 A prompt-type hook that checks if an edit to a `domains/*.md` file removes or overwrites existing entries in the `## Recent Activity` section. Recent Activity is **append-only** — the hook blocks destructive edits and allows appends.
 
-### SessionEnd — Automatic post-session sync (global)
+### SessionEnd — Automatic post-session sync (global) — NOT YET WIRED
 
-**Fires:** Every session end, in any repo.
+**Status:** The script exists at `~/.claude/hooks/gaia-session-sync.ps1` but is **not configured** in `~/.claude/settings.json` hooks. It needs a `SessionEnd` entry in global settings to fire automatically.
+
+**Intended behaviour:** Fires every session end, in any repo.
 
 The hook (`~/.claude/hooks/gaia-session-sync.ps1`):
 
@@ -141,7 +143,7 @@ Failed sync pushes write to `.pending/` with details of the failed operation. Th
 
 ## MCP Integrations
 
-Phase 3 connects Gaia to external services via MCP (Model Context Protocol) servers.
+Gaia connects to external services via MCP (Model Context Protocol) servers.
 
 ### GitHub MCP (user scope)
 

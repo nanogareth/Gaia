@@ -2,4 +2,4 @@
 .pending/
 *.pending
 .claude/settings.local.json
-journal/
+node_modules/

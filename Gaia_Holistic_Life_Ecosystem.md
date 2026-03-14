@@ -1,10 +1,10 @@
 # Gaia: Holistic Life Management Ecosystem
 
-## Architecture Specification v0.1
+## Architecture Specification v0.3
 
 **Author:** Gareth Clarke
-**Date:** 2026-02-10  
-**Status:** Draft — Design Phase
+**Date:** 2026-03-14
+**Status:** Operational — Phases 0–2 complete, Phase 3–4 in progress
 
 ---
 
@@ -62,11 +62,13 @@ This repo contains no application code. It is pure state, configuration, and cro
 
 ```
 Gaia/
-├── README.md                          # System overview + quick status
 ├── CLAUDE.md                          # Claude Code project instructions
+├── Gaia_Holistic_Life_Ecosystem.md    # This architecture spec
 ├── manifest.yaml                      # Registry of all connected repos
+├── .mcp.json                          # MCP server configuration (project scope)
+├── .claudeignore                      # Files excluded from Claude context
 │
-├── domains/                           # Domain state files
+├── domains/                           # Domain state files (all 10 populated)
 │   ├── health.md
 │   ├── finances.md
 │   ├── languages.md
@@ -90,20 +92,28 @@ Gaia/
 ├── journal/                           # Daily logs (append-only)
 │   └── 2026/
 │       └── 02/
-│           ├── 2026-02-10.md
+│           ├── 2026-02-15.md
 │           └── ...
 │
-├── dashboards/                        # Aggregated views for Obsidian
+├── dashboards/                        # Aggregated views for Obsidian (Dataview)
 │   ├── overview.md                    # Cross-domain summary
 │   ├── active-projects.md             # All active work across domains
 │   └── upcoming.md                    # Next 7 days across all domains
 │
-├── .claude/                           # Claude Code configuration
-│   ├── commands/                      # gaia-* slash commands
-│   ├── hooks/                         # Project-level hooks
-│   └── settings.local.json           # Local settings (gitignored)
-│
-└── .mcp.json                          # MCP server configuration (project scope)
+└── .claude/                           # Claude Code configuration
+    ├── commands/                      # gaia-* slash commands (8 commands)
+    │   ├── gaia-plan.md
+    │   ├── gaia-reflect.md
+    │   ├── gaia-status.md
+    │   ├── gaia-update.md
+    │   ├── gaia-review.md
+    │   ├── gaia-inbox.md
+    │   ├── gaia-link.md
+    │   └── gaia-sync.md
+    ├── hooks/
+    │   └── session-start.ps1          # SessionStart context injection
+    ├── settings.json                  # Project hooks config (SessionStart, PreToolUse)
+    └── settings.local.json            # Local settings (gitignored)
 ```
 
 ### 4.2 Manifest (Connected Repos Registry)
@@ -141,7 +151,11 @@ repos:
     status: active
     description: AI learning content generator
 
-  # ... additional repos
+  - name: obsidian-gaia-plugin
+    github: gareth/obsidian-gaia-plugin
+    domain: ai-projects
+    status: active
+    description: Obsidian plugin providing visual UI for Gaia ecosystem
 ```
 
 ### 4.3 Domain State File Schema
@@ -270,22 +284,43 @@ updated: 2026-02-10
 
 ### 6.1 Claude Code Hooks
 
-#### Post-Session Sync Hook
+#### SessionStart — Context Injection (project-level)
 
-This is the primary automation. After every Claude Code session in any project, the hook updates the central `Gaia` repo.
+**Fires:** Every session start/resume/compact in the Gaia repo (configured in `.claude/settings.json`).
 
-**Trigger:** Post-session (automatic)
+**Implementation:** `.claude/hooks/session-start.ps1` (PowerShell)
 
-**Behaviour:**
+Injects into Claude's context:
+- Today's plan summary (first 20 lines of `temporal/today.md`)
+- Domain snapshot: `domain`, `status`, `updated`, `next_review` from each `domains/*.md` frontmatter
+- Flags any domains with overdue `next_review`
 
-1. Identify which domain the current project belongs to (via `manifest.yaml` lookup or `CLAUDE.md` metadata)
-2. Generate a session summary: what was done, what changed, what's next
-3. Update the relevant `domains/*.md` file in `Gaia`:
-   - Update `updated` timestamp in frontmatter
-   - Append to "Recent Activity" section
-   - Update "Next Actions" if they changed
-4. Update `temporal/today.md` with the session entry
-5. Commit and push to `Gaia` repo
+#### PreToolUse — Write Protocol Enforcement (project-level)
+
+**Fires:** Before any `Edit` or `Write` tool call in the Gaia repo (configured in `.claude/settings.json`).
+
+**Implementation:** Prompt-type hook (inline in settings, no script file).
+
+Checks if an edit to a `domains/*.md` file removes or overwrites existing entries in `## Recent Activity`. Blocks destructive edits, allows appends.
+
+#### SessionEnd — Post-Session Sync (global) — NOT YET WIRED
+
+**Status:** The script exists at `~/.claude/hooks/gaia-session-sync.ps1` but is **not configured** in `~/.claude/settings.json` hooks. Needs a `SessionEnd` entry in global settings to fire automatically.
+
+**Implementation:** `~/.claude/hooks/gaia-session-sync.ps1` (PowerShell)
+
+**Intended behaviour:**
+
+1. Reads `cwd` from session input
+2. Checks `manifest.yaml` to see if `cwd` matches a registered project
+3. If no match → exits silently
+4. If match:
+   - Pulls latest Gaia state (`git pull --rebase`)
+   - Appends to `domains/<domain>.md` Recent Activity: `- **[YYYY-MM-DD]** <project>: <last commit msg>`
+   - Updates frontmatter `updated` timestamp and `updated_by: claude-code-hook`
+   - Appends to `temporal/today.md` under `## Session Log`
+   - Commits and pushes
+5. On push failure → writes to `.pending/<timestamp>.md` for manual retry
 
 **Conflict avoidance strategy:**
 
@@ -294,80 +329,38 @@ This is the primary automation. After every Claude Code session in any project, 
 - Uses append-only pattern for Recent Activity (no overwrites)
 - If a merge conflict is detected, the hook stages the update as a `.pending` file and flags it for manual resolution
 
-```bash
-# hooks/post-session-sync.sh (conceptual — actual implementation TBD)
-#!/bin/bash
-
-# 1. Determine current project context
-PROJECT_NAME=$(basename $(pwd))
-GAIA_PATH="$HOME/repos/Gaia"
-
-# 2. Pull latest state
-cd "$GAIA_PATH" && git pull --rebase
-
-# 3. Invoke Claude to generate session summary and update files
-# (This would use Claude Code's own capabilities via a skill)
-
-# 4. Commit and push
-git add -A
-git commit -m "auto: session update from $PROJECT_NAME $(date -Iseconds)"
-git push
-```
-
 ### 6.2 MCP Servers
 
-| MCP                 | Purpose                                      | Priority |
-| ------------------- | -------------------------------------------- | -------- |
-| GitHub MCP          | Repo status, issues, PRs across all projects | High     |
-| Google Calendar MCP | Read/write calendar events for scheduling    | High     |
-| Filesystem MCP      | Local file access for Obsidian vault         | Medium   |
-| Obsidian MCP        | Direct Obsidian API access (if available)    | Medium   |
-| Memory/RAG MCP      | Custom knowledge retrieval (future)          | Low      |
+| MCP                 | Purpose                                      | Status      | Scope   |
+| ------------------- | -------------------------------------------- | ----------- | ------- |
+| GitHub MCP          | Repo status, issues, PRs across all projects | Configured  | User    |
+| Google Calendar MCP | Read/write calendar events for scheduling    | Configured  | Project |
+| Serena              | Semantic code analysis and editing           | Configured  | Plugin  |
 
 ### 6.3 Claude Code Commands
 
 #### `gaia-` Prefixed Commands
 
-Commands live in `.claude/commands/` and use the `gaia-` prefix to avoid collision with built-in Claude Code skills.
+All 8 commands are implemented as markdown prompt files in `.claude/commands/` and invoked via `/gaia-<command>`.
 
-```markdown
-# Gaia Commands
+| Command         | Args                | Description                                                                            |
+| --------------- | ------------------- | -------------------------------------------------------------------------------------- |
+| `/gaia-plan`    | —                   | Morning planning: reads all domains + calendar (via Google Calendar MCP), generates `temporal/today.md` |
+| `/gaia-reflect` | —                   | Evening reflection: summarizes day vs plan, flags carry-forward items                  |
+| `/gaia-status`  | `[domain]`          | Show current state of one domain or summary table (+ GitHub pulse for project domains) |
+| `/gaia-update`  | `<domain>`          | Interactive walk-through of a domain's editable sections                               |
+| `/gaia-review`  | `<weekly\|monthly>` | Generate periodic review from journal entries, domain activity, and GitHub data        |
+| `/gaia-inbox`   | `<note text>`       | Route freeform text to the appropriate domain's Notes section                          |
+| `/gaia-link`    | `<project>`         | Register a new repo in `manifest.yaml` and link it to a domain                         |
+| `/gaia-sync`    | `[summary]`         | Manual session sync — update domain state after working in a project repo              |
 
-### /gaia-plan
-
-Generate or review today's plan based on current state across all domains.
-Reads: domains/\*.md, temporal/today.md, calendar integration (Google Calendar MCP)
-
-### /gaia-reflect
-
-Run evening reflection — summarise accomplishments, flag incomplete items,
-draft tomorrow's priorities.
-Reads: temporal/today.md, journal/today's entry, domains/\*.md
-
-### /gaia-status [domain]
-
-Show current state of a specific domain or all domains.
-
-### /gaia-update <domain>
-
-Interactively update a domain's state file.
-
-### /gaia-review <weekly|monthly>
-
-Generate periodic review from accumulated daily entries.
-
-### /gaia-inbox <note text>
-
-Route unstructured notes/ideas into appropriate domain files.
-
-### /gaia-link <project>
-
-Register a new project repo in the manifest and create initial domain entry.
-
-### /gaia-sync [summary]
-
-Manual session sync — update domain state after working in a project repo.
-```
+**Behaviour notes:**
+- `/gaia-plan` and `/gaia-reflect` commit changes automatically
+- `/gaia-status` is read-only — safe to run anytime
+- `/gaia-update` uses interactive prompts; never touches Recent Activity
+- `/gaia-sync` works from **outside** the Gaia repo (from a project repo) and pushes after committing
+- All write commands follow the write protocol: pull before write, append-only for Recent Activity
+- All MCP-dependent features degrade gracefully if MCP auth is unavailable
 
 ### 6.4 Claude.ai Integration
 
@@ -399,7 +392,7 @@ Claude.ai participates in the system through two channels:
 
 ### 7.2 Obsidian Configuration
 
-The `Gaia` repo should be cloned as a **subfolder within the Obsidian vault** (or the vault root, depending on preference). This gives Obsidian native access to all state files.
+Gaia is accessible within the Obsidian vault (Alexandria) via a directory junction: `C:\Vaults\Alexandria\Gaia\` → `C:\GitHub\Gaia\`.
 
 **Required Obsidian plugins:**
 
@@ -407,6 +400,7 @@ The `Gaia` repo should be cloned as a **subfolder within the Obsidian vault** (o
 - **Dataview** — query YAML frontmatter across domain files for dashboard views
 - **Templater** — template-driven file creation (morning plan, journal entries, new project entries)
 - **Calendar** — visual navigation of journal entries
+- **Gaia Plugin** — custom plugin providing domain dashboard, quick-edit, and mobile-optimised UI (see §7.3)
 
 **Git sync settings (conflict mitigation):**
 
@@ -423,7 +417,26 @@ The `Gaia` repo should be cloned as a **subfolder within the Obsidian vault** (o
 - Different edit targets minimise collision probability
 - On conflict: `.pending` files from hooks are flagged for manual merge in Obsidian
 
-### 7.3 Dashboard Views (Obsidian Dataview)
+### 7.3 Custom Obsidian Plugin (Gaia Plugin)
+
+**Source:** `C:\GitHub\obsidian-gaia-plugin\` (registered in `manifest.yaml`)
+**Install path:** `C:\Vaults\Alexandria\.obsidian\plugins\gaia\`
+**Stack:** TypeScript + Svelte 5 + esbuild, `isDesktopOnly: false` (mobile-compatible)
+**Build:** `npm run build` → copies `main.js`, `manifest.json`, `styles.css` to install path
+
+**Features:**
+- Domain dashboard view with status overview
+- Quick-edit for editable domain sections (respects write protocol — Recent Activity is read-only)
+- Mobile-optimised UI (16px font inputs to prevent iOS zoom)
+- File reactivity via `onGaiaChange()` event bus, scoped to Gaia folder, debounced 500ms
+- Theme-compatible using Obsidian CSS variables
+
+**Architecture notes:**
+- View state passing uses `setState()` on ItemView + `pendingDomain` on plugin instance for synchronous pre-setState
+- `MarkdownRenderer.render()` needs a `Component` instance for lifecycle — create, load, then unload on cleanup
+- Write protocol enforced at both UI layer (no edit button for Recent Activity) and service layer (strips non-editable sections)
+
+### 7.4 Dashboard Views (Obsidian Dataview)
 
 Example Dataview query for `dashboards/overview.md`:
 
@@ -543,7 +556,7 @@ Morning/Evening routines
 
 ## 10. Implementation Roadmap
 
-### Phase 0: Foundation (Week 1)
+### Phase 0: Foundation ✓
 
 - [x] Create `Gaia` GitHub repo with directory structure
 - [x] Write initial `CLAUDE.md` for the repo
@@ -552,7 +565,7 @@ Morning/Evening routines
 - [x] Write initial state for 2-3 domains (start with most active)
 - [x] Configure Obsidian Git sync to `Gaia` repo
 
-### Phase 1: Core Loop (Weeks 2-3)
+### Phase 1: Core Loop ✓
 
 - [x] Implement `gaia-` prefixed Claude Code commands (`/gaia-plan`, `/gaia-reflect`, `/gaia-status`, `/gaia-update`, `/gaia-review`, `/gaia-inbox`, `/gaia-link`, `/gaia-sync`)
 - [x] Implement post-session sync hook (basic version — manual trigger first)
@@ -560,31 +573,31 @@ Morning/Evening routines
 - [x] Configure Obsidian Dataview dashboards
 - [ ] Run the morning/evening cycle manually for 1 week to test
 
-### Phase 2: Automation (Weeks 3-4)
+### Phase 2: Automation (partially complete)
 
-- [x] Upgrade post-session hook to automatic trigger (SessionEnd hook)
 - [x] Integrate Google Calendar MCP (project-scope via `.mcp.json`)
 - [x] Integrate GitHub MCP for repo status queries (user-scope via CLI)
 - [x] Implement conflict detection and `.pending` file protocol
-- [x] Populate remaining domain state files
+- [x] Populate remaining domain state files (all 10 domains seeded)
+- [ ] **Wire SessionEnd hook** — script exists at `~/.claude/hooks/gaia-session-sync.ps1` but is not configured in `~/.claude/settings.json`
 
-### Phase 3: Intelligence (Weeks 5-8)
+### Phase 3: Intelligence (in progress)
 
 - [x] Implement weekly and monthly review commands (`/gaia-review`)
+- [x] Implement `/gaia-inbox` for unstructured capture → domain routing
 - [ ] Build cross-domain analysis (e.g., "health impacts on productivity" correlations)
 - [ ] Tune Claude.ai memory edits to reflect Gaia state
-- [x] Implement `/gaia-inbox` for unstructured capture → domain routing
 - [ ] Build Obsidian templates (Templater) for common operations
 
-### Phase 4: Refinement (Ongoing)
+### Phase 4: Refinement (in progress)
 
 - [x] Clean up stale Phase 0 scaffolding (removed `hooks/`, `skills/`, `config/`)
 - [x] Seed all domain files with structural content
+- [x] Build custom Obsidian plugin (`obsidian-gaia-plugin`) with domain dashboard and quick-edit UI
 - [ ] Optimise based on daily use friction
 - [ ] Add new domains or split existing ones as needed
 - [ ] Explore direct Claude.ai → GitHub write path
 - [ ] Investigate fitness/finance API integrations
-- [ ] Build custom Obsidian views for specific workflows
 
 ---
 
@@ -592,9 +605,9 @@ Morning/Evening routines
 
 1. **Obsidian vault structure:** `Gaia` is a subfolder of an existing vault, Alexandria, in C:\Vaults.
 
-2. **Hook implementation detail:** Claude Code hooks are currently powershell scripts. The post-session hook needs to invoke Claude via Inline Claude Code call
+2. **Hook implementation detail:** Claude Code hooks are PowerShell scripts (`.ps1`). Project-level hooks are in `.claude/hooks/` and configured in `.claude/settings.json`. Global hooks are in `~/.claude/hooks/` and configured in `~/.claude/settings.json`. The SessionStart and PreToolUse hooks are wired and operational. The SessionEnd sync hook script exists but needs wiring.
 
-3. **Calendar MCP maturity:** Need to audit available Google Calendar MCPs for reliability and feature coverage before committing to that integration path.
+3. **Calendar MCP:** Using `@cocal/google-calendar-mcp` via stdio transport, configured in `.mcp.json`. Requires `GOOGLE_OAUTH_CREDENTIALS` env var.
 
 4. **The correct path is Claude Code → GitHub write path**
 
@@ -616,3 +629,8 @@ Morning/Evening routines
 | Obsidian coupling     | Full read-write Git sync             | Maximum utility on mobile, native editing experience               | 2026-02-10 |
 | Intelligence layer    | Claude (all interfaces)              | No custom ML backend — orchestrate existing capabilities           | 2026-02-10 |
 | Cowork                | Excluded (macOS only)                | User is on Windows/iPad/Android — revisit if Windows support ships | 2026-02-10 |
+| Vault access          | Directory junction (not submodule)   | `Alexandria\Gaia\` → `C:\GitHub\Gaia\` — simpler than git submodule | 2026-02-15 |
+| Obsidian plugin stack | Svelte 5 + TypeScript + esbuild      | Modern reactive framework, mobile-compatible, fast builds          | 2026-02-16 |
+| Command prefix        | `gaia-` prefix on all commands       | Avoids collision with built-in Claude Code skills                  | 2026-02-15 |
+| Hook language         | PowerShell (`.ps1`)                  | Native on Windows 11, works with Claude Code hook protocol         | 2026-02-16 |
+| Write protocol        | Append-only for Recent Activity      | Prevents hook/human edit conflicts; enforced at hook + UI layer    | 2026-02-16 |
