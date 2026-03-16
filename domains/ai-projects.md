@@ -14,8 +14,7 @@ tags:
 
 ## Current State
 
-Four active projects in the research pipeline. 
-Test:
+Six active projects in the research pipeline.
 
 ### MiniLang
 
@@ -46,6 +45,12 @@ Test:
 - **Status:** Active
 - **Focus:** EU research funding intelligence tool
 - **Repo:** [nanogareth/eudaemon](https://github.com/nanogareth/eudaemon)
+
+### metis
+
+- **Status:** Active
+- **Focus:** Personal investment research platform for advanced technology sectors
+- **Repo:** [nanogareth/metis](https://github.com/nanogareth/metis)
 
 ## Active Goals
 

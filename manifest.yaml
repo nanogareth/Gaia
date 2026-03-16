@@ -47,3 +47,9 @@ repos:
     domain: ai-projects
     status: active
     description: EU research funding intelligence tool
+
+  - name: metis
+    github: nanogareth/metis
+    domain: ai-projects
+    status: active
+    description: Personal investment research platform for advanced technology sectors
