@@ -3,3 +3,5 @@
 *.pending
 .claude/settings.local.json
 journal/
+scheduling/logs/
+session-*.md

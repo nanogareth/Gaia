@@ -26,9 +26,9 @@ These start independent and may converge once natural boundaries reveal themselv
 
 1. **State Store** — This repo (`Gaia`) + distributed project repos registered in `manifest.yaml`
 2. **Domain Modules** — `domains/*.md` files covering health, finances, languages, social, creative, calendar, goals, work-projects, ai-projects, business-ideas, anthropic-application
-3. **Integration** — Claude Code hooks, skills, MCPs (GitHub, Google Calendar), Cowork scheduled tasks
+3. **Integration** — Claude Code hooks, skills, MCPs (GitHub, Google Calendar), Windows Task Scheduler automation
 4. **Interface** — Desktop (Claude Code + Cowork), Mobile (Obsidian + Git sync), Any device (Claude.ai), Browser (Gaia Web Dashboard — planned)
-5. **Scheduling & Temporal** — Cowork scheduled tasks (morning plan, evening reflect, weekly review, gap tracker), usage-aware multi-project work queues, `/gaia-plan` and `/gaia-reflect` commands
+5. **Scheduling & Temporal** — Windows Task Scheduler + Claude Code CLI (`claude -p`) for automated tasks, usage-aware multi-project work queues, `/gaia-plan` and `/gaia-reflect` commands
 
 ## File Conventions
 
@@ -177,7 +177,7 @@ Authenticates via browser-based OAuth (`/mcp` in Claude Code).
 
 Uses `@cocal/google-calendar-mcp` via stdio transport. Requires Google Cloud OAuth credentials.
 
-**Prerequisite:** Set the `GOOGLE_OAUTH_CREDENTIALS` environment variable to point to your Google OAuth credentials JSON file (e.g., `C:/Users/nanog/.config/google-calendar-mcp/credentials.json`). This can be set in `~/.claude/settings.json` under `env`.
+**Prerequisite:** Set the `GOOGLE_OAUTH_CREDENTIALS` environment variable to point to your Google OAuth credentials JSON file (e.g., `~/.config/google-calendar-mcp/credentials.json`). This can be set in `~/.claude/settings.json` under `env`.
 
 **Used by:**
 
@@ -187,27 +187,79 @@ Uses `@cocal/google-calendar-mcp` via stdio transport. Requires Google Cloud OAu
 
 All MCP-dependent features are optional. Commands work fully without MCP access — they skip the MCP steps and note the data as unavailable. This ensures commands never fail due to expired auth or missing MCP configuration.
 
-## Cowork Scheduled Tasks
+## Scheduling Layer (v2)
 
-Cowork (Claude Desktop agent) runs on Windows with full feature parity. Scheduled tasks automate the daily/weekly Gaia rhythm.
+Automated tasks use **Windows Task Scheduler + Claude Code CLI** (`claude -p`). This replaces Cowork scheduled tasks as the primary scheduling backbone (Cowork remains available as a supplementary option).
 
-| Task | Cadence | What It Does |
-|------|---------|-------------|
-| Morning Plan | Daily, 07:00 | Reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
-| Evening Reflect | Daily, 21:00 | Compares plan vs actual, flags carry-forwards, appends to journal |
-| Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
-| Gap Tracker | Monday, 08:00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
+### Why not Cowork alone?
 
-**Setup:** Open a Cowork conversation in Claude Desktop and paste the prompt from `.claude/cowork-setup-prompt.md` to register all 4 tasks at once. Task metadata (schedule, model, working folder) is stored in Claude Desktop's internal registry — not in files.
+Cowork scheduled tasks have two severe limitations: (1) no programmatic task creation — tasks can only be created via UI, (2) requires machine awake with Claude Desktop open — missed runs get one catch-up within 7 days. Windows Task Scheduler solves both: programmatic via `schtasks` / PowerShell, supports wake timers, and runs independently of any application.
+
+### Architecture
+
+```
+scheduling/
+  run-task.sh           # Bash wrapper: reads prompt, invokes claude -p, logs output
+  prompts/              # One .md file per task — the prompt passed to claude -p
+    morning-plan.md
+    evening-reflect.md
+    weekly-review.md
+    gap-tracker.md
+  setup-scheduler.ps1   # PowerShell: registers/removes/queries Task Scheduler tasks
+  logs/                 # gitignored — timestamped output logs per task run
+```
+
+### Registered Tasks
+
+| Task | Cadence | Model | Budget | What It Does |
+|------|---------|-------|--------|-------------|
+| Morning Plan | Daily, 07:00 | Sonnet | $2.00 | Reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
+| Evening Reflect | Daily, 21:00 | Sonnet | $2.00 | Compares plan vs actual, flags carry-forwards, appends to journal |
+| Weekly Review | Sunday, 10:00 | Opus | $5.00 | Compiles week's journal entries into `temporal/weekly-review.md` |
+| Gap Tracker | Monday, 08:00 | Sonnet | $3.00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
+
+### Setup & Management
+
+```powershell
+# Register all tasks (idempotent — re-registers if already present)
+.\scheduling\setup-scheduler.ps1
+
+# Check task status (last run, next run, result)
+.\scheduling\setup-scheduler.ps1 -Status
+
+# Remove all tasks
+.\scheduling\setup-scheduler.ps1 -Remove
+```
+
+### Task execution flow
+
+1. Task Scheduler fires → runs `bash -l run-task.sh <name> <model> <budget>`
+2. Runner does `git pull --rebase`, reads prompt from `scheduling/prompts/<name>.md`
+3. Invokes `claude -p "<prompt>" --model <model> --max-budget-usd <budget> --dangerously-skip-permissions`
+4. Claude reads the corresponding `/gaia-*` command file and executes all steps
+5. Output logged to `scheduling/logs/<name>-<timestamp>.log`
+6. On failure, writes to `.pending/<name>-<timestamp>.md` for manual retry
+
+### Key features
+
+- **Wake timers** — Task Scheduler can wake the machine from sleep to run tasks
+- **Catch-up** — `StartWhenAvailable` setting runs missed tasks when the machine next wakes
+- **Budget caps** — `--max-budget-usd` prevents runaway spend on any single run
+- **15-minute timeout** — tasks are killed if they exceed 15 minutes
+- **Log rotation** — logs older than 30 days are auto-pruned
+
+### Cowork (supplementary)
+
+The 4 original Cowork scheduled tasks remain registered in Claude Desktop but are supplementary. The `gaia-tasks` and `gaia-test-task` Cowork entries are deprecated. To set up Cowork tasks, use `.claude/cowork-setup-prompt.md`.
 
 ### Subscription constraints
 
 Max 5x ($100/mo) has two interlocking constraints: ~225 messages per 5-hour rolling window and a weekly quota shared across all models and interfaces (Claude.ai, Claude Code, Cowork).
 
 `/gaia-plan` should output a structured work queue with window boundaries in `temporal/today.md`:
-- **Window 1 (morning):** Cowork morning plan (cheap) → Claude Code deep work → Claude.ai ideation
+- **Window 1 (morning):** Automated morning plan (cheap) → Claude Code deep work → Claude.ai ideation
 - **Window 2 (afternoon):** Second Claude Code dev block, front-loaded
-- **Window 3 (evening):** Light usage, personal projects, Cowork evening reflect
+- **Window 3 (evening):** Light usage, personal projects, automated evening reflect
 
 ## Obsidian Plugin
 

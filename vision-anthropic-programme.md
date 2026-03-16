@@ -71,19 +71,20 @@ Use Gaia (the life management system) as both:
 
 Every morning, Gaia generates a plan. Every evening, Gaia generates a reflection. Every week, Gaia generates a review. The gap analysis is a domain file in Gaia. Progress against it is tracked, reflected on, and published.
 
-### 3.2 The Scheduling Layer (New — Unlocked by Recent Features)
+### 3.2 The Scheduling Layer
 
-Gaia's design decision log from 2026-02-10 excluded Cowork as macOS-only. But Cowork launched on Windows that same day with full feature parity. With the Max subscription ($100/mo), the full scheduling capability is now available.
+**Primary: Windows Task Scheduler + Claude Code CLI (`claude -p`)**
 
-**Cowork Scheduled Tasks (personal subscription — Claude Desktop on Windows):**
+Cowork scheduled tasks were the initial approach but have two limitations: no programmatic task creation (UI-only), and require machine awake with Claude Desktop open. The scheduling layer now uses Windows Task Scheduler, which supports wake timers, catch-up runs, and programmatic management. See `scheduling/` directory for implementation.
 
-| Task | Cadence | What It Does |
-|------|---------|-------------|
-| Morning Plan | Daily, 07:00 | Runs Gaia's morning planning logic: reads all domain state, checks calendar, generates `temporal/today.md` |
-| Evening Reflect | Daily, 21:00 | Runs Gaia's evening reflection: compares plan vs actual, flags carry-forwards, appends to journal |
-| Weekly Review | Sunday, 10:00 | Compiles week's journal entries into `temporal/weekly-review.md` |
-| Gap Tracker | Weekly, Monday 08:00 | Reads the gap analysis domain file, checks recent commits across flagship repos, generates progress report |
-| Anthropic Watch | Weekly, Wednesday | Web search for Education Labs updates, new Anthropic product features, relevant job postings |
+| Task | Cadence | Model | What It Does |
+|------|---------|-------|-------------|
+| Morning Plan | Daily, 07:00 | Sonnet | Reads all domain state, checks calendar, generates `temporal/today.md` with usage-aware work queue |
+| Evening Reflect | Daily, 21:00 | Sonnet | Compares plan vs actual, flags carry-forwards, appends to journal |
+| Weekly Review | Sunday, 10:00 | Opus | Compiles week's journal entries into `temporal/weekly-review.md` |
+| Gap Tracker | Monday, 08:00 | Sonnet | Reads gap analysis domain file, checks recent commits across flagship repos, generates progress report |
+
+Cowork scheduled tasks remain registered as a supplementary fallback. The `Anthropic Watch` task (weekly web search) is planned but not yet implemented in the Task Scheduler layer.
 
 **Claude Code `/loop` (development workflow):**
 
@@ -134,13 +135,13 @@ Personal site or Substack. Cross-post summaries to LinkedIn. Each piece links to
 
 ### Week 0 (Now): Foundation
 
-- [ ] **Update Gaia design decision:** Cowork is now available on Windows. Revise architecture to incorporate Cowork scheduled tasks into Layer 5.
-- [ ] **Set up Cowork scheduled tasks:** Morning plan, evening reflect, weekly review. Point Cowork at the Gaia folder.
-- [ ] **Wire the SessionEnd hook** (Phase 2 incomplete item) — this is the highest-impact automation gap in Gaia.
-- [ ] **Security audit:** Rotate the HuggingFace token in whisperScripts. Scan all repos targeted for public release.
-- [ ] **Add gap analysis as a Gaia domain file** (`domains/anthropic-application.md`) so it's tracked in the daily/weekly cycle.
-- [ ] **Update Claude.ai memory edits** to reflect current programme state.
-- [ ] **Reassess FlowForge scope.** The original repo provisioning pain is partially obsolete. Define the reframed scope: project scaffolding, CLAUDE.md generation, hook/MCP bootstrapping, Gaia manifest registration.
+- [x] **Update Gaia design decision:** ~~Cowork~~ → Windows Task Scheduler + Claude Code CLI (`claude -p`). Architecture updated in CLAUDE.md and this doc.
+- [x] **Set up scheduled tasks:** 4 tasks registered via `scheduling/setup-scheduler.ps1`. Cowork tasks kept as supplementary.
+- [x] **Wire the SessionEnd hook** — Global hook in `~/.claude/settings.json`, auto-syncs project sessions to Gaia state.
+- [x] **Security audit:** Scanned Gaia, claudecodemeta, FlowForge. Findings: (1) FlowForge GitHub OAuth secret in local `.env` — untracked but needs rotation, (2) work email in claudecodemeta git history — rewrite before public, (3) session export and old journal files removed from tracking, (4) `nanog` username path in CLAUDE.md fixed. HuggingFace token in whisperScripts still needs rotation (separate repo).
+- [x] **Add gap analysis as a Gaia domain file** — `domains/anthropic-application.md` created with 5-gap tracking.
+- [ ] **Update Claude.ai memory edits** — requires Claude.ai web session (cannot do from Claude Code).
+- [x] **Reassess FlowForge scope.** Assessment: mobile app deprioritised. Reframed core is `/flowforge-init` slash command (already exists) + template composition engine. Terminal server (`flowforge-server`) is independently useful. See FlowForge architecture docs for details.
 
 ### Week 1: Make the Triad Visible
 
@@ -200,7 +201,7 @@ Taken together, this body of work shows:
 | Scope creep — trying to do everything | High | The sequencing is designed to produce a viable application by Week 3. Everything after that is bonus. |
 | InnoGlobal IP leakage | Medium | Clear subscription separation. No InnoGlobal code in personal repos. Reference in essays only. |
 | React port quality — shallow understanding exposed | Medium | Learn by building, not by reading. Use Claude Code as pair programmer but understand every line. Write about what you learn. |
-| Cowork scheduling unreliable (research preview) | Medium | Fall back to manual Claude Code commands. The infrastructure (Gaia commands) already works without Cowork. |
+| Scheduling layer failure (Task Scheduler + CLI) | Low | Task Scheduler is mature Windows infrastructure. Claude Code CLI `-p` mode is stable. Cowork remains as supplementary fallback. Manual `/gaia-plan` and `/gaia-reflect` always work. |
 | Role filled before application ready | Real | Week 1 deliverables (public repos + first essay) are sufficient for an initial application. The rest strengthens it. |
 | Burnout — parallel programme on top of day job | High | Gaia's evening reflection is designed to catch this. Be honest in the reflections. Adjust scope down, not quality. |
 
