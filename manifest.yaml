@@ -41,3 +41,9 @@ repos:
     domain: ai-projects
     status: active
     description: Cross-interface persistent memory for Claude Code
+
+  - name: eudaemon
+    github: nanogareth/eudaemon
+    domain: ai-projects
+    status: active
+    description: EU research funding intelligence tool

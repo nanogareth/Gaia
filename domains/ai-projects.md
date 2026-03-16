@@ -41,6 +41,12 @@ Test:
 - **Focus:** Cross-interface persistent memory for Claude Code
 - **Repo:** [nanogareth/claudecodemeta](https://github.com/nanogareth/claudecodemeta)
 
+### eudaemon
+
+- **Status:** Active
+- **Focus:** EU research funding intelligence tool
+- **Repo:** [nanogareth/eudaemon](https://github.com/nanogareth/eudaemon)
+
 ## Active Goals
 
 - Define next milestone for MiniLang
