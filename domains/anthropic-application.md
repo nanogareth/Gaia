@@ -1,7 +1,7 @@
 ---
 domain: anthropic-application
-updated: 2026-03-14T00:00:00Z
-updated_by: manual
+updated: 2026-03-16T08:00:00Z
+updated_by: claude-code-hook
 status: active
 review_cycle: weekly
 next_review: 2026-03-21
@@ -68,6 +68,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 ## Recent Activity
 
 <!-- Auto-appended by hooks — do not edit manually -->
+- **[2026-03-16]** Gap Tracker: Infrastructure week (35 claudecodemeta commits, FlowForge release prep); Published Thinking (0/5 essays) needs most urgent attention next week
 
 ## Next Actions
 
