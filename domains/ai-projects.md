@@ -35,11 +35,12 @@ Test:
 - **Focus:** 3D visualization MCP server for LLM agents
 - **Repo:** [gareth/3d-viz-mcp](https://github.com/gareth/3d-viz-mcp)
 
-### AI foundational 
+### claudecodemeta
 
 - **Status:** Active
-- **Focus:** 3D visualization MCP server for LLM agents
-- **Repo:** [gareth/3d-viz-mcp](https://github.com/gareth/3d-viz-mcp)
+- **Focus:** Cross-interface persistent memory for Claude Code
+- **Repo:** [nanogareth/claudecodemeta](https://github.com/nanogareth/claudecodemeta)
+
 ## Active Goals
 
 - Define next milestone for MiniLang

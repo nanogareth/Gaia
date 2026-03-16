@@ -35,3 +35,9 @@ repos:
     domain: ai-projects
     status: active
     description: Obsidian plugin providing visual UI for Gaia ecosystem
+
+  - name: claudecodemeta
+    github: nanogareth/claudecodemeta
+    domain: ai-projects
+    status: active
+    description: Cross-interface persistent memory for Claude Code
