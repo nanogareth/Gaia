@@ -92,3 +92,21 @@ From 2026-03-16 evening reflection:
 ## Session Log
 
 _No sessions logged via hooks today._
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:**
+- `claudecodemeta` README (Gap 4 — urgent, Q1 deadline)
+- "The Fragmented Claude Problem" first 500 words (Gap 5)
+- `/gaia-review weekly` (3+ weeks overdue)
+- Q1 fitness target in `domains/health.md` (13 days left)
+- Finances weekly transaction review (3 days overdue)
+- Task Scheduler verification
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` README — must ship this week for Q1
+2. "The Fragmented Claude Problem" — first 500 words, even rough
+3. Finances review — 3 days overdue, do this first if <30 mins
