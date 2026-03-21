@@ -92,3 +92,23 @@ From 2026-03-19 evening reflection (6th consecutive null execution day):
 ## Session Log
 
 _No sessions logged via hooks today._
+
+---
+
+## Reflection (Evening) — 2026-03-21
+
+_Note: today.md is stale (dated 2026-03-20). No morning plan was generated for 2026-03-21. Reflection produced from domain Recent Activity only._
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:**
+- `claudecodemeta` README — write, secrets audit, publish (7th consecutive null day, Q1 deadline: 10 days)
+- "The Fragmented Claude Problem" — first 500 words
+- Finances weekly review — 9+ days overdue
+- `/gaia-review weekly` — 5+ weeks overdue
+- Define Q1 fitness target in `domains/health.md`
+- Verify Task Scheduler registration
+
+**Tomorrow's preliminary focus:**
+1. Open `claudecodemeta` repo — write README and run secrets audit (non-negotiable)
+2. Finances weekly review — manual, <30 mins, do at lunch
+3. "The Fragmented Claude Problem" — first 500 words rough draft
