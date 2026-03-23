@@ -53,3 +53,9 @@ repos:
     domain: ai-projects
     status: active
     description: Personal investment research platform for advanced technology sectors
+
+  - name: language_tutor
+    github: nanogareth/language_tutor
+    domain: ai-projects
+    status: active
+    description: LLM-based language learning assistant using Claude, starting with French
