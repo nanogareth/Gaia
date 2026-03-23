@@ -1,7 +1,7 @@
 ---
 domain: ai-projects
-updated: 2026-02-21T15:13:22.054Z
-updated_by: gaia-plugin
+updated: 2026-03-23T20:48:32Z
+updated_by: claude-code-hook
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
@@ -65,14 +65,16 @@ Regular research sessions scheduled within evening hobby rotation (see [calendar
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — do not edit manually -->
+<!-- Auto-appended by hooks â€” do not edit manually -->
+
+- **[2026-03-23]** claudecodemeta: chore: release v1.0.0
 
 ## Next Actions
 
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
-<!-- Freeform — ideas, observations, things to revisit -->
+<!-- Freeform â€” ideas, observations, things to revisit -->
 - **[2026-02-21]** Testing inline notes
 - **[2026-02-21]** Second note
 - **[2026-02-21]** This note was added by clicking the +

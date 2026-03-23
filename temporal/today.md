@@ -89,3 +89,4 @@ From 2026-03-22 evening reflection:
 ## Session Log
 
 _No sessions logged via hooks today._
+- **[20:48]** claudecodemeta: chore: release v1.0.0
