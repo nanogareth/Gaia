@@ -1,64 +1,63 @@
 ---
-date: 2026-03-23
+date: 2026-03-24
 type: morning-plan
 ---
 
-# Today's Plan — 2026-03-23 (Monday)
+# Today's Plan — 2026-03-24 (Tuesday)
 
 ## Schedule
 
 Calendar: unavailable (Google Calendar MCP not connected)
 
-- **08:00** Gap Tracker auto-fires (Cowork, ~5 msgs — no action needed)
+- **07:00** Automated morning plan (auto, ~5 msgs — this run)
 - **Morning** Water & tablets, 5-min meditation, 10-min stretching, 15-min cardio
 - **Lunch** Finances transaction review (manual, <30 mins — browser/app only)
-- **21:00** Automated evening reflect (Cowork, ~5 msgs — no action needed)
+- **21:00** Automated evening reflect (auto, ~5 msgs)
 
 ## Priorities
 
-1. **[anthropic-application]** `claudecodemeta` README — secrets audit, write, publish (**9th consecutive null day — Q1 deadline: 8 days left**)
-2. **[finances]** Weekly transaction review — 10+ days overdue, manual, <30 mins at lunch
-3. **[health]** Define Q1 fitness target in `domains/health.md` — Q1 ends 2026-03-31 (8 days)
-4. **[anthropic-application]** "The Fragmented Claude Problem" — first 500 words rough draft (if time permits after #1)
-5. **[anthropic-application]** Verify Task Scheduler registration (`setup-scheduler.ps1 -Status`)
+1. **[anthropic-application]** Complete `claudecodemeta` README + secrets audit + make repo public (**Gap 4 — Q1 deadline: 7 days left**; v1.0.0 released yesterday — finish the job)
+2. **[anthropic-application]** "The Fragmented Claude Problem" — write first 500 words rough draft (Gap 5 — 0/5 essays, 4th consecutive null week)
+3. **[finances]** Weekly transaction review — **11+ days overdue**, manual, <30 mins at lunch
+4. **[health]** Define Q1 fitness target in `domains/health.md` — Q1 ends 2026-03-31 (7 days)
+5. **[anthropic-application]** Verify Task Scheduler registration (`.\scheduling\setup-scheduler.ps1 -Status`)
 
 ## Work Queue
 
 ### Window 1 (07:00–12:00)
 
 - **07:00** Automated morning plan (auto, ~5 msgs, this run)
-- **08:00** Gap Tracker auto-fires (Cowork, auto, ~5 msgs)
-- **09:00** Claude Code: `claudecodemeta` — open repo, run secrets audit (`git log --all --full-history`, check for credentials/keys), write README (problem/architecture/quick-start/install), set repo public (~90 msgs, heavy — must front-load today)
-- Budget: ~100/225 messages. This is the single most important task of the day.
+- **09:00** Claude Code: `claudecodemeta` — secrets audit (`git log --all --full-history` for credentials/keys), write README (problem/architecture/quick-start/install), set repo public (~80 msgs, heavy — front-loaded)
+- Budget: ~85/225 messages. Single most important task of the day.
 
 ### Window 2 (12:00–17:00)
 
 - **12:00** Manual: Finances weekly transaction review (no Claude — browser/app only, <30 mins)
-- **13:00** Claude Code: Gaia — define Q1 fitness target in `domains/health.md` + `/gaia-update health` (~15 msgs)
-- **14:00** Writing session: "The Fragmented Claude Problem" — first 500 words rough draft (~15 msgs for structure assist)
+- **13:00** Writing session: "The Fragmented Claude Problem" — first 500 words rough draft (~15 msgs for structure assist)
+- **14:30** Claude Code: Gaia — define Q1 fitness target in `domains/health.md` + `/gaia-update health` (~10 msgs)
 - **15:30** Claude Code: Gaia — verify Task Scheduler (`.\scheduling\setup-scheduler.ps1 -Status`) + `/gaia-update anthropic-application` (~10 msgs)
-- Budget: ~40/225 messages.
+- Budget: ~35/225 messages.
 
 ### Window 3 (17:00–22:00)
 
-- **17:00** Personal/hobby time — light or no Claude usage
+- **17:00** Personal/hobby time — language learning session (language_tutor project, light or no Claude)
 - **21:00** Automated evening reflect (auto, ~5 msgs)
 - Budget: ~10/225 messages. Light window by design.
 
 ### Weekly Budget
 
 - Reset: unknown — check manually in Claude.ai account settings
-- Today: Gap Tracker auto (~5 msgs) + claudecodemeta README (~90 msgs) + afternoon tasks (~40 msgs) + auto reflect (~5 msgs) ≈ 140 msgs
-- Estimated weekly consumption: ~300–350 msgs (claudecodemeta heavy + daily automated tasks)
-- Recommendation: Sonnet throughout — README and essay writing don't need Opus. Reserve Opus only for deep synthesis tasks.
+- Today: Morning plan auto (~5 msgs) + claudecodemeta README (~80 msgs) + afternoon tasks (~35 msgs) + auto reflect (~5 msgs) ≈ 125 msgs
+- Estimated weekly consumption: ~350–400 msgs (README completion + essay drafting + daily automated tasks)
+- Recommendation: Sonnet throughout — README writing and essay drafting do not require Opus. Reserve Opus only for deep synthesis.
 
 ## Carry-Forward
 
-From 2026-03-22 evening reflection:
+From 2026-03-23 (yesterday):
 
-- [ ] `claudecodemeta` README — write, secrets audit, publish (**critical: Gap 4, Q1 deadline — 8 days left**)
-- [ ] "The Fragmented Claude Problem" — first 500 words
-- [ ] Finances weekly transaction review — **10+ days overdue**
+- [ ] `claudecodemeta` README — secrets audit, write, make public (**Gap 4 — v1.0.0 released yesterday, README still pending**)
+- [ ] "The Fragmented Claude Problem" — first 500 words (**Gap 5 — 4th consecutive null week**)
+- [ ] Finances weekly transaction review — **11+ days overdue**
 - [ ] Define Q1 fitness target in `domains/health.md`
 - [ ] Verify Task Scheduler registration (`setup-scheduler.ps1 -Status`)
 
@@ -66,13 +65,13 @@ From 2026-03-22 evening reflection:
 
 | Domain | Status | Last Updated | Next Review | Key Note |
 |--------|--------|-------------|-------------|----------|
-| anthropic-application | active | 2026-03-16 | **OVERDUE** (2026-03-21) | Gap-closing programme, 9 days stalled — Q1 ends in 8 days |
-| ai-projects | active | 2026-02-21 | **OVERDUE** | claudecodemeta critical path; milestones undefined across other projects |
-| work-projects | active | 2026-02-21 | **OVERDUE** | SmartLabs + Edify, milestones undefined |
-| goals | active | 2026-02-16 | **OVERDUE** | All Q1 targets still placeholders — 8 days left |
+| anthropic-application | active | 2026-03-23 | **OVERDUE** (2026-03-21) | v1.0.0 released; README + essay still pending — Q1 ends in 7 days |
+| ai-projects | active | 2026-03-23 | **OVERDUE** | claudecodemeta v1.0.0 released; milestones undefined for MiniLang/SET/3D-Viz-MCP |
+| work-projects | active | 2026-02-21 | **OVERDUE** | SmartLabs + Edify active, milestones undefined |
+| goals | active | 2026-02-16 | **OVERDUE** | All Q1 targets still placeholders — 7 days left |
 | health | active | 2026-02-21 | **OVERDUE** | No concrete targets; gym membership review pending |
-| finances | active | 2026-02-21 | **OVERDUE** | Weekly review 10+ days overdue |
-| languages | active | 2026-02-16 | **OVERDUE** | Needs language specifics |
+| finances | active | 2026-02-21 | **OVERDUE** | Weekly review 11+ days overdue |
+| languages | active | 2026-02-16 | **OVERDUE** | language_tutor project registered; proficiency targets undefined |
 | social | active | 2026-02-16 | **OVERDUE** | Needs contact details |
 | creative | active | 2026-02-16 | **OVERDUE** | 7-discipline rotation defined |
 | calendar | active | 2026-02-16 | **OVERDUE** | Daily rhythm documented |
@@ -80,13 +79,12 @@ From 2026-03-22 evening reflection:
 
 ## Notes
 
-- **Q1 countdown: 8 days left** (ends 2026-03-31). Must-ship before Q1: `claudecodemeta` public + 1 essay draft.
-- **Execution crisis: day 9.** Nine consecutive null days on the primary gap-closing task. The plan is simple: open `C:\GitHub\claudecodemeta` and don't leave until the README is written and the repo is public.
-- **Monday = Gap Tracker day.** Auto-fires at 08:00. Review the report when it arrives — it will surface the same gaps, confirming what today needs to address.
-- **Essay after README.** "The Fragmented Claude Problem" can only be written credibly once claudecodemeta has a public README to link to. Sequence matters.
-- **Finances is 10+ days overdue.** Do it at lunch — it's 30 minutes, no Claude needed, no excuses.
+- **Q1 countdown: 7 days left** (ends 2026-03-31). Must-ship before Q1: `claudecodemeta` public + 1 essay draft.
+- **claudecodemeta v1.0.0 shipped yesterday.** That's Gap 4 progress — now finish it: README, secrets audit, make public. The release exists; the visibility doesn't yet.
+- **Essay sequencing matters.** "The Fragmented Claude Problem" is the highest-value essay and can now be written with claudecodemeta as a concrete example. Don't wait for perfection — ship 500 rough words.
+- **Finances is 11+ days overdue.** Do it at lunch — 30 minutes, no Claude, no excuses.
+- **language_tutor registered** — French LLM learning assistant, active project. Include in evening hobby block.
 
 ## Session Log
 
 _No sessions logged via hooks today._
-- **[20:48]** claudecodemeta: chore: release v1.0.0
