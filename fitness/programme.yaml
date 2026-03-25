@@ -1,0 +1,209 @@
+# programme.yaml — Current training programme
+# Source of truth for Iron app. Edit here, Iron pulls on sync.
+
+programme:
+  name: "3-Day Rotation"
+  created: 2026-03-25
+  updated: 2026-03-25
+  cycle_type: rotating  # rotating | fixed_weekly
+  deload_every: 4  # weeks
+
+days:
+  - day: 1
+    label: "Legs + Shoulders"
+    exercises:
+      - name: Barbell Back Squat
+        category: barbell_compound
+        muscle_groups: [quads, glutes, hamstrings]
+        sets: 4
+        rep_range: [6, 10]
+        rest_seconds: 120
+        increment_kg: 2.5
+        form_cues: "Brace core, knees track toes, depth to parallel or below"
+
+      - name: Romanian Deadlift
+        category: barbell_compound
+        muscle_groups: [hamstrings, glutes, lower_back]
+        sets: 3
+        rep_range: [8, 12]
+        rest_seconds: 90
+        increment_kg: 2.5
+        form_cues: "Hinge at hips, soft knee bend, bar stays close to legs"
+
+      - name: Leg Press
+        category: machine
+        muscle_groups: [quads, glutes]
+        sets: 3
+        rep_range: [10, 15]
+        rest_seconds: 90
+        increment_kg: 5.0
+        form_cues: "Feet shoulder-width, full range of motion, don't lock knees"
+
+      - name: Overhead Press
+        category: barbell_compound
+        muscle_groups: [shoulders, triceps]
+        sets: 4
+        rep_range: [6, 10]
+        rest_seconds: 90
+        increment_kg: 2.5
+        form_cues: "Brace core, bar path straight up, full lockout overhead"
+
+      - name: Lateral Raise
+        category: dumbbell
+        muscle_groups: [shoulders]
+        sets: 3
+        rep_range: [12, 15]
+        rest_seconds: 60
+        increment_kg: 1.0
+        form_cues: "Slight forward lean, lead with elbows, controlled descent"
+
+      - name: Calf Raise
+        category: machine
+        muscle_groups: [calves]
+        sets: 4
+        rep_range: [12, 20]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Full stretch at bottom, pause at top, slow eccentric"
+
+  - day: 2
+    label: "Biceps + Chest + Core"
+    exercises:
+      - name: Barbell Bench Press
+        category: barbell_compound
+        muscle_groups: [chest, triceps, shoulders]
+        sets: 4
+        rep_range: [6, 10]
+        rest_seconds: 120
+        increment_kg: 2.5
+        form_cues: "Retract scapulae, arch upper back, bar to mid-chest, drive feet"
+
+      - name: Incline Dumbbell Press
+        category: dumbbell
+        muscle_groups: [chest, shoulders]
+        sets: 3
+        rep_range: [8, 12]
+        rest_seconds: 90
+        increment_kg: 2.0
+        form_cues: "30-degree incline, control the eccentric, full stretch at bottom"
+
+      - name: Cable Fly
+        category: cable
+        muscle_groups: [chest]
+        sets: 3
+        rep_range: [12, 15]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Slight elbow bend, squeeze at centre, slow return"
+
+      - name: Barbell Curl
+        category: barbell_compound
+        muscle_groups: [biceps]
+        sets: 3
+        rep_range: [8, 12]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Elbows pinned to sides, full extension, controlled negative"
+
+      - name: Dumbbell Hammer Curl
+        category: dumbbell
+        muscle_groups: [biceps, forearms]
+        sets: 3
+        rep_range: [10, 15]
+        rest_seconds: 60
+        increment_kg: 2.0
+        form_cues: "Neutral grip, no swinging, squeeze at top"
+
+      - name: Cable Crunch
+        category: cable
+        muscle_groups: [abs]
+        sets: 3
+        rep_range: [12, 20]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Curl spine, don't pull with arms, pause at contraction"
+
+      - name: Hanging Leg Raise
+        category: bodyweight
+        muscle_groups: [abs, hip_flexors]
+        sets: 3
+        rep_range: [8, 15]
+        rest_seconds: 60
+        increment_kg: 0
+        form_cues: "Controlled movement, avoid swinging, curl pelvis up"
+
+  - day: 3
+    label: "Triceps + Back + Core"
+    exercises:
+      - name: Barbell Deadlift
+        category: barbell_compound
+        muscle_groups: [back, hamstrings, glutes, traps]
+        sets: 4
+        rep_range: [5, 8]
+        rest_seconds: 150
+        increment_kg: 2.5
+        form_cues: "Brace hard, hips and shoulders rise together, bar against shins"
+
+      - name: Barbell Row
+        category: barbell_compound
+        muscle_groups: [back, biceps]
+        sets: 4
+        rep_range: [8, 12]
+        rest_seconds: 90
+        increment_kg: 2.5
+        form_cues: "45-degree torso, pull to lower chest, squeeze shoulder blades"
+
+      - name: Lat Pulldown
+        category: cable
+        muscle_groups: [lats, biceps]
+        sets: 3
+        rep_range: [10, 15]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Wide grip, pull to upper chest, lean back slightly"
+
+      - name: Close-Grip Bench Press
+        category: barbell_compound
+        muscle_groups: [triceps, chest]
+        sets: 3
+        rep_range: [8, 12]
+        rest_seconds: 90
+        increment_kg: 2.5
+        form_cues: "Hands shoulder-width, elbows tucked, full lockout"
+
+      - name: Overhead Tricep Extension
+        category: cable
+        muscle_groups: [triceps]
+        sets: 3
+        rep_range: [10, 15]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Elbows fixed by ears, full stretch, squeeze at extension"
+
+      - name: Face Pull
+        category: cable
+        muscle_groups: [rear_delts, traps]
+        sets: 3
+        rep_range: [15, 20]
+        rest_seconds: 60
+        increment_kg: 2.5
+        form_cues: "Pull to face level, externally rotate at end, squeeze rear delts"
+
+      - name: Plank
+        category: bodyweight
+        muscle_groups: [abs, obliques]
+        sets: 3
+        rep_range: [30, 60]  # seconds, not reps
+        rest_seconds: 60
+        increment_kg: 0
+        form_cues: "Straight line head to heels, squeeze glutes, breathe normally"
+        unit: seconds
+
+      - name: Russian Twist
+        category: dumbbell
+        muscle_groups: [obliques, abs]
+        sets: 3
+        rep_range: [15, 25]
+        rest_seconds: 60
+        increment_kg: 1.0
+        form_cues: "Lean back 45 degrees, feet off floor, rotate from torso not arms"

@@ -59,3 +59,9 @@ repos:
     domain: ai-projects
     status: active
     description: LLM-based language learning assistant using Claude, starting with French
+
+  - name: iron
+    github: nanogareth/iron
+    domain: health
+    status: active
+    description: Mobile-first PWA fitness tracker with progressive overload intelligence
