@@ -90,3 +90,4 @@ From 2026-03-25 (day 2 without plan) / 2026-03-24:
 ## Session Log
 
 _No sessions logged via hooks today._
+- **[09:40]** language_tutor: merge: phase 7 GÇö real-world scenarios & competency tracking

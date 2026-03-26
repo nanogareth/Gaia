@@ -1,6 +1,6 @@
 ---
 domain: ai-projects
-updated: 2026-03-23T20:48:32Z
+updated: 2026-03-26T09:40:48Z
 updated_by: claude-code-hook
 status: active
 review_cycle: weekly
@@ -65,16 +65,18 @@ Regular research sessions scheduled within evening hobby rotation (see [calendar
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks â€” do not edit manually -->
+<!-- Auto-appended by hooks Ã¢â‚¬â€ do not edit manually -->
 
 - **[2026-03-23]** claudecodemeta: chore: release v1.0.0
+
+- **[2026-03-26]** language_tutor: merge: phase 7 ΓÇö real-world scenarios & competency tracking
 
 ## Next Actions
 
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
-<!-- Freeform â€” ideas, observations, things to revisit -->
+<!-- Freeform Ã¢â‚¬â€ ideas, observations, things to revisit -->
 - **[2026-02-21]** Testing inline notes
 - **[2026-02-21]** Second note
 - **[2026-02-21]** This note was added by clicking the +
