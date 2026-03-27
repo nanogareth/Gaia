@@ -90,3 +90,20 @@ From 2026-03-26 (0 of 5 completed):
 ## Session Log
 
 _No sessions logged via hooks today._
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities (no hook-confirmed sessions; manual tasks unverifiable)
+**Carry-forward:**
+- `claudecodemeta` README + secrets audit + make public (Gap 4 — Q1 ends 2026-03-31, 3 days)
+- Finances weekly transaction review (17+ days overdue if not done today)
+- Verify Task Scheduler (`setup-scheduler.ps1 -Status`) — 5th day if not done
+- "The Fragmented Claude Problem" — 300+ words (8th consecutive null week)
+- Define Q1 fitness target in `domains/health.md`
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` public release — Q1 deadline, do it Monday at latest
+2. Finances review — if not done today, Saturday is non-negotiable
+3. Task Scheduler verification — first thing, 5 minutes
