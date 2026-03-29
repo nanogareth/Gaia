@@ -93,3 +93,22 @@ From 2026-03-28 (0 of 5 completed — all items carry again):
 
 _No sessions logged via hooks today._
 - **[13:06]** claudecodemeta: feat: auto-generated architecture diagram via archviz
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities (partial progress on claudecodemeta — architecture diagram only)
+
+**Carry-forward:**
+- `claudecodemeta` README + secrets audit + make public (7th carry — **Q1 ends Tuesday, Monday is the last window**)
+- Finances transaction review (4th consecutive "non-negotiable" day — 19+ days overdue)
+- Verify Task Scheduler (7th carry — 5-minute check)
+- "The Fragmented Claude Problem" first 300+ words (10th consecutive null week — Gap Tracker fires Monday 08:00)
+- Define Q1 fitness/nutrition targets (1 day left — accept or define Monday)
+- `/gaia-review weekly` — not run
+
+**Tomorrow's preliminary focus:**
+1. claudecodemeta: README + audit + make public — before work if possible, mandatory
+2. Finances transaction review — browser only, first thing
+3. Task Scheduler verification — session start, terminal only, 5 minutes
