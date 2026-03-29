@@ -1,104 +1,111 @@
 ---
-week: 2026-W12
+week: 2026-W13
 type: weekly-review
-date_generated: 2026-03-22
+date_generated: 2026-03-29
 ---
 
-# Weekly Review — 2026-W12
+# Weekly Review — 2026-W13
 
 ## Highlights
 
-- **Scheduling layer v2 committed** (2026-03-16) — Windows Task Scheduler + Claude Code CLI infrastructure landed, completing the longest-standing carry-forward item. Includes `scheduling/` directory, updated CLAUDE.md, and automation backbone documentation.
-- **Gap Tracker automated run** — Monday 08:00 task fired successfully on its first scheduled run, confirming Task Scheduler setup works end-to-end.
-- **Three projects registered in manifest** — `claudecodemeta`, `eudaemon`, and `metis` added to `manifest.yaml` under ai-projects, expanding tracked project coverage to 9 repos.
-- **Automation reliability proven** — Morning plans and evening reflections ran consistently all week (except Saturday morning miss), demonstrating that the scheduling layer works in practice.
+- **language_tutor Phase 7 merged** (2026-03-26) — Real-world scenarios and competency tracking added to the French LLM assistant. The only confirmed code-producing session of the week.
+- **language_tutor registered in manifest** (2026-03-23) — Expanding tracked project coverage to 10 repos.
+- **Automation mostly reliable** — Morning plans generated 6 of 7 days (missed Wednesday 2026-03-25), evening reflections generated 6 of 7 days. The Wednesday miss suggests Task Scheduler may have intermittent issues, but the system is largely functional.
+- **Gap Tracker ran on schedule** (Monday 2026-03-23) — Produced a clear assessment: claudecodemeta v1.0.0 released but not yet public; Published Thinking (0/5 essays) is the most lagging gap at 3+ consecutive null weeks.
 
 ## Domain Summary
 
-### anthropic-application
-
-- Gap Tracker report generated on 2026-03-16: all five gaps (React/TS depth, frontend polish, consumer scale, public portfolio, published thinking) assessed as "needs attention"
-- **Published Thinking (Gap 5)** flagged as most critical: 0 of 5 planned essays have any draft content
-- **Public Portfolio (Gap 4):** claudecodemeta README — the single highest-leverage task — carried forward all 7 days without being started
-- Q1 ends 2026-03-31 (9 days remaining); minimum viable Q1 output (claudecodemeta public + 1 essay draft) remains unstarted
-- Domain review was due 2026-03-21 — not completed
-- GitHub data: unavailable
-
 ### ai-projects
 
-- 3 new repos registered (claudecodemeta, eudaemon, metis) — administrative progress
-- No code commits logged across any of the 6 tracked projects (MiniLang, SET, 3D-Viz-MCP, claudecodemeta, eudaemon, metis) during the review period
-- Domain last reviewed 2026-02-22 — 4 weeks overdue
+- **language_tutor:** Phase 7 merged (real-world scenarios & competency tracking) — the week's only non-automated code output
+- **claudecodemeta:** v1.0.0 release synced at week start; README + secrets audit + make-public carried forward all 7 days without progress
+- No activity on MiniLang, SET, 3D-Viz-MCP, eudaemon, or metis
+- Domain review overdue since 2026-02-22 (5 weeks)
 - GitHub data: unavailable
 
-### work-projects
+### anthropic-application
 
-- No activity during the review period
-- FlowForge and Edify both idle; last recorded activity was 2026-02-16 (FlowForge Express v5 fix)
-- Domain last reviewed 2026-02-22 — 4 weeks overdue
+- Gap Tracker report generated 2026-03-23: all five gaps still at "needs attention"
+- **Gap 4 (Public Portfolio):** claudecodemeta v1.0.0 exists but repo remains private — README not written despite being Priority 1 every day of W13
+- **Gap 5 (Published Thinking):** 0/5 essays, now the 9th consecutive null week. No draft words written. This is the single most stalled deliverable across the entire ecosystem
+- **Gap 1-3:** Zero progress on React/TS depth, frontend polish, or consumer scale documentation
+- Q1 ends 2026-03-31 — minimum viable Q1 output (claudecodemeta public + 1 essay draft) has had zero work applied with 2 days remaining
+- Domain review overdue since 2026-03-21 (8 days)
 - GitHub data: unavailable
 
 ### health
 
-- No recent activity entries
-- Q1 fitness target still undefined with 9 days remaining in Q1
-- Domain last reviewed 2026-02-22 — 4 weeks overdue
+- No recent activity entries in W13
+- Q1 fitness target remains undefined — carried forward every day this week, never addressed
+- Domain review overdue since 2026-02-22 (5 weeks)
 
 ### finances
 
-- Weekly transaction review was due 2026-03-16 (Monday) — not completed, now 9+ days overdue
-- No recent activity entries
-- Domain last reviewed 2026-02-22 — 4 weeks overdue
+- No recent activity entries in W13
+- Weekly transaction review now **18+ days overdue** — carried forward daily with escalating language ("non-negotiable", "no further deferrals") but still not completed
+- A 30-minute manual task requiring no Claude budget
+- Domain review overdue since 2026-02-22 (5 weeks)
+
+### work-projects
+
+- No activity during W13
+- FlowForge and Edify both idle; last recorded activity was 2026-02-16 (6+ weeks ago)
+- Domain review overdue since 2026-02-22 (5 weeks)
+- GitHub data: unavailable
 
 ### calendar
 
 - Google Calendar MCP still not configured
-- Automated morning plans generated without calendar data
+- Morning plans generated without calendar data
 
 ## Goal Progress
 
-### Q1 2026 (9 days remaining)
+### Q1 2026 (ends 2026-03-31 — 2 days remaining)
 
-All Q1 goals remain in their initial "define in [domain]" state — no concrete targets have been set in any domain file. The goals domain has no recent activity and serves only as a structural scaffold.
+All Q1 goals in the `goals.md` file remain in their initial "define in [domain]" placeholder state. No concrete targets were set in any domain during Q1.
 
 **Anthropic Application Programme (the only domain with defined goals):**
 
-| Gap | Target | W12 Progress | Status |
-|-----|--------|-------------|--------|
-| Gap 1: React/TS Depth | 1 deployed React project | No work started | Behind |
-| Gap 2: Frontend Polish | Dashboard + plugin UX | No work started | Behind |
-| Gap 3: Consumer Scale | Essay-documented experience | No drafts | Behind |
-| Gap 4: Public Portfolio | 6+ public repos with READMEs | 0 repos made public | Behind |
-| Gap 5: Published Thinking | 5 essays (1 draft minimum Q1) | 0/5 drafted | Behind |
+| Gap | Target | W13 Progress | Cumulative Status |
+|-----|--------|-------------|-------------------|
+| Gap 1: React/TS Depth | 1 deployed React project | No work | Not started |
+| Gap 2: Frontend Polish | Dashboard + plugin UX | No work | Not started |
+| Gap 3: Consumer Scale | Essay-documented experience | No drafts | Not started |
+| Gap 4: Public Portfolio | 6+ public repos | 0 repos made public | Behind — v1.0.0 exists but README not written |
+| Gap 5: Published Thinking | 5 essays (1 draft minimum Q1) | 0 words written | Behind — 9 consecutive null weeks |
+
+**Q1 will close with no gap meaningfully addressed.** The minimum viable deliverables (claudecodemeta made public, one essay draft started) were the stated Priority 1 every day of W13 and received zero work.
 
 ## Patterns & Observations
 
-### The planning-execution disconnect
+### The carry-forward ceiling: when planning becomes ritual
 
-The most striking pattern this week is the widening gap between planning quality and execution output. Morning plans were generated 6 of 7 days, evening reflections ran 6 of 7 days, priorities were clearly identified and consistently ranked — yet only 1 of 7 days produced any meaningful work output. The automation layer is functioning better than ever, making the execution deficit more visible, not less.
+W13 is the third consecutive week where the same five items (claudecodemeta README, finances review, essay draft, Task Scheduler verification, Q1 fitness target) were carried forward identically every day. The language in daily plans escalated from "priority" to "urgent" to "non-negotiable" to "last realistic day" — but the items remained untouched. This reveals a structural truth: the planning system has no mechanism to convert stated priority into initiated action. The plans are accurate, well-prioritised, and completely inert. When a carry-forward list is static for 14+ days, it is no longer a plan — it is a record of what isn't happening.
 
-### Carry-forward accumulation as a warning signal
+### One productive session reveals the actual execution pattern
 
-Six items (claudecodemeta README, essay draft, finances review, weekly review, health target, scheduler verification) were carried forward identically across all 7 days. When the same items appear unchanged for a full week, the issue is not prioritization but initiation. The planning system correctly identifies what matters but cannot cause the first action to happen.
+The language_tutor Phase 7 merge (2026-03-26) was the week's only real output. It happened during an evening hobby block — the lowest-pressure, most intrinsically motivated slot. Every high-priority, deadline-driven item went undone while the hobby project advanced. This isn't randomness: the execution pattern consistently rewards low-stakes, interest-driven work over high-stakes, deadline-driven obligations. The Anthropic application items carry the most pressure and receive the least action — a classic avoidance pattern around high-consequence deliverables.
 
-### Infrastructure displacement pattern
+### Automation as false progress signal
 
-This week continued a multi-week trend: infrastructure and tooling work (scheduling layer, manifest registrations, automation verification) absorbs available execution energy while higher-visibility output work (writing, React development, public releases) is deferred. The scheduling layer was valuable, but its completion did not unlock the output work it was meant to support.
+Gaia's automation layer produced 13 commits in W13: 6 morning plans, 6 evening reflections, 1 session sync. From the git log, the week looks active. But stripping out automation reveals one human-initiated session (language_tutor) producing one meaningful change. The automation is functioning well, but it risks masking inaction behind a steady stream of planning and reflection commits. The system is talking to itself about work that isn't being done.
 
-### Cross-domain stagnation
+### Q1 closes with zero goals addressed
 
-Every domain's `next_review` date is in February 2026 — 4+ weeks overdue. No domain file received a Recent Activity entry during W12 except anthropic-application (the automated Gap Tracker). The domains are structurally sound but operationally dormant: health has no fitness target, finances has no transaction review, languages/creative/social have no logged activity. The system is tracking stillness.
+Q1 2026 ends in 2 days. Not a single goal — across any domain — has a concrete target set, let alone met. The anthropic-application gaps were the closest to having defined targets, and all five are at "not started" or "behind". The goals domain file still contains only "define in [domain]" placeholders set in February. Q1 is a write-off for measurable goal progress.
 
-### Q1 deadline risk
+### Domain review debt is systemic
 
-With 9 days until Q1 ends, the minimum viable deliverables (claudecodemeta made public, one essay draft started) have had zero work applied. The window for meaningful Q1 output is closing — each additional null day reduces the scope of what's achievable.
+Every domain except anthropic-application has a `next_review` date of 2026-02-22 — now 5 weeks overdue. The domain files are structurally intact but operationally dormant. Health, finances, languages, creative, social, and business-ideas have no Recent Activity entries for W13 (or, in most cases, for any week in March). The system is maintaining state for domains that aren't being actively used.
 
 ## Next Week Focus
 
-1. **claudecodemeta README + publish** — This is a single-session task that converts 35+ commits of existing work into visible portfolio signal. It has been the #1 priority for 8 consecutive days. Ship it.
-2. **"The Fragmented Claude Problem" — first 500 words** — Lowest-friction essay entry point. Just start writing; polish later.
-3. **Finances weekly review** — Now 9+ days overdue. A 30-minute manual task that should not carry forward another week.
-4. **Define Q1 health target** — Even a rough target (e.g., "gym 3x/week for remaining 9 days") is better than leaving it undefined as Q1 closes.
-5. **Domain review sweep** — All 11 domains are 4+ weeks overdue for review. A single pass updating `next_review` dates and Current State sections would clear the backlog.
+W14 opens Q2 2026. The Q1 deadline will have passed.
 
-**Execution strategy:** The planning layer works. The problem is session initiation. The single most impactful change for W13 is opening `C:\GitHub\claudecodemeta` and starting the README — everything else follows from breaking the null-day streak.
+1. **Q1 post-mortem and Q2 goal setting** — Acknowledge Q1 as incomplete. Set 2-3 concrete, measurable Q2 targets per domain rather than the vague "define in [domain]" placeholders. Do this before any project work.
+2. **claudecodemeta README + make public** — This has been Priority 1 for 15+ consecutive days. It is a single-session task. The only remaining action is to sit down and do it.
+3. **"The Fragmented Claude Problem" — first 300 words** — Break the 9-week streak. Quality doesn't matter for a first draft. Just produce words.
+4. **Finances transaction review** — Now approaching 3 weeks overdue. Complete it Monday, first thing, before opening any Claude session.
+5. **Domain review sweep** — All 11 domains are 5+ weeks overdue. One pass updating `next_review`, Current State, and flagging stale goals.
+
+**Execution note:** W13 proved that the planning system works and the execution system doesn't. The bottleneck is session initiation on high-stakes items. Consider: start the claudecodemeta README as the very first action of Monday's first Claude Code session — before reading the morning plan, before checking email, before anything else. The plan is already known. The only variable is whether the session starts.
