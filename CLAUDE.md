@@ -200,11 +200,14 @@ Cowork scheduled tasks have two severe limitations: (1) no programmatic task cre
 ```
 scheduling/
   run-task.sh           # Bash wrapper: reads prompt, invokes claude -p, logs output
+  run-hidden.vbs        # VBS wrapper: runs bash with no visible console window
   prompts/              # One .md file per task — the prompt passed to claude -p
     morning-plan.md
     evening-reflect.md
     weekly-review.md
     gap-tracker.md
+    micro-commit.md     # Breaks #1 priority into 5-min starter (Layer 3)
+    noon-check.md       # Accountability check at noon (Layer 2)
   setup-scheduler.ps1   # PowerShell: registers/removes/queries Task Scheduler tasks
   logs/                 # gitignored — timestamped output logs per task run
 ```
@@ -213,10 +216,12 @@ scheduling/
 
 | Task | Cadence | Model | Budget | What It Does |
 |------|---------|-------|--------|-------------|
-| Morning Plan | Daily, 07:00 | Sonnet | $2.00 | Reads all domains + calendar, generates `temporal/today.md` with usage-aware work queue |
+| Morning Plan | Daily, 07:00 | Sonnet | $2.00 | Reads all domains + calendar + gamification, generates `temporal/today.md` with work queue |
+| Micro-Commitment | Daily, 07:15 | Haiku | $0.50 | Breaks #1 priority into a 5-minute concrete starter task |
+| Noon Check | Daily, 12:00 | Haiku | $0.50 | Accountability check — has any domain activity happened today? Sends notification |
 | Evening Reflect | Daily, 21:00 | Sonnet | $2.00 | Compares plan vs actual, flags carry-forwards, appends to journal |
 | Weekly Review | Sunday, 10:00 | Opus | $5.00 | Compiles week's journal entries into `temporal/weekly-review.md` |
-| Gap Tracker | Monday, 08:00 | Sonnet | $3.00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
+| Gap Tracker | Monday, 08:30 | Sonnet | $3.00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
 
 ### Setup & Management
 
@@ -248,9 +253,9 @@ scheduling/
 - **15-minute timeout** — tasks are killed if they exceed 15 minutes
 - **Log rotation** — logs older than 30 days are auto-pruned
 
-### Cowork (supplementary)
+### Cowork (deprecated)
 
-The 4 original Cowork scheduled tasks remain registered in Claude Desktop but are supplementary. The `gaia-tasks` and `gaia-test-task` Cowork entries are deprecated. To set up Cowork tasks, use `.claude/cowork-setup-prompt.md`.
+Cowork scheduled tasks have been removed. They were not fit for purpose (no programmatic creation, requires machine awake with Desktop open). The `.claude/cowork-setup-prompt.md` is preserved for reference only.
 
 ### Subscription constraints
 
@@ -260,6 +265,48 @@ Max 5x ($100/mo) has two interlocking constraints: ~225 messages per 5-hour roll
 - **Window 1 (morning):** Automated morning plan (cheap) → Claude Code deep work → Claude.ai ideation
 - **Window 2 (afternoon):** Second Claude Code dev block, front-loaded
 - **Window 3 (evening):** Light usage, personal projects, automated evening reflect
+
+## Gamification & Habit Building
+
+Gaia includes a gamification layer to drive engagement with dormant domains and build consistency. State is tracked in `temporal/gamification.json`, updated by hooks and scheduled tasks.
+
+### XP & Levels
+
+| Level | Name | Min XP |
+|-------|------|--------|
+| 1 | Novice | 0 |
+| 2 | Apprentice | 100 |
+| 3 | Journeyman | 300 |
+| 4 | Adept | 600 |
+| 5 | Expert | 1000 |
+| 6 | Master | 1500 |
+| 7 | Grandmaster | 2500 |
+| 8 | Legend | 4000 |
+
+XP sources: session sync (+10), dormant domain revival (+30), streak day (+5), carry-forward completion (+25).
+
+### Streaks & Domain Health
+
+- **Streaks** track consecutive days with any domain activity. Broken if no activity for a full day.
+- **Domain health scores** (0-100) combine recency, review status, goal progress, and engagement frequency. Shown in SessionStart context and morning plans.
+- **Weekly domain tracker**: counts unique domains touched per week. Touching all 11 in one week unlocks the "Well-Rounded" achievement.
+
+### Habit-Building Flow
+
+1. **07:00** Morning Plan — includes gamification section (XP opportunities, streak status, domain health sorted worst-first)
+2. **07:15** Micro-Commitment — breaks #1 priority into a 5-minute starter task
+3. **Session start** — SessionStart hook shows: #1 priority prominently, current XP/level/streak, domain health
+4. **12:00** Noon Check — if no domain activity today, sends notification with streak warning and micro-commitment suggestion
+5. **Session end** — SessionEnd hook awards XP, updates streak, checks achievements
+6. **21:00** Evening Reflect — compares plan vs actual, calculates daily score
+
+### Achievements
+
+Tracked in `gamification.json`. Examples: First Blood (first activity), On Fire (3-day streak), Unstoppable (7-day streak), Well-Rounded (all 11 domains in one week), Marathon (30-day streak).
+
+### Engine
+
+The gamification engine lives in `.claude/hooks/gamification.ps1`. It's sourced by the SessionEnd hook and provides functions: `Record-DomainActivity`, `Add-XP`, `Update-Streak`, `Check-Achievements`, `Get-DomainHealthScore`, `Get-StatsLine`.
 
 ## Obsidian Plugin
 

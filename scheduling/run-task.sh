@@ -91,6 +91,29 @@ EOF
     log "Wrote failure record to .pending/"
 fi
 
+# Send Windows toast notification with result
+notify() {
+    local title="$1"
+    local body="$2"
+    powershell.exe -NoProfile -Command "
+        Add-Type -AssemblyName System.Windows.Forms
+        \$n = New-Object System.Windows.Forms.NotifyIcon
+        \$n.Icon = [System.Drawing.SystemIcons]::Information
+        \$n.BalloonTipTitle = '$title'
+        \$n.BalloonTipText = '$body'
+        \$n.Visible = \$true
+        \$n.ShowBalloonTip(5000)
+        Start-Sleep -Seconds 6
+        \$n.Dispose()
+    " 2>/dev/null &
+}
+
+if [ "$EXIT_CODE" -eq 0 ]; then
+    notify "Gaia: $TASK_NAME" "Completed successfully"
+else
+    notify "Gaia: $TASK_NAME FAILED" "Check logs for details"
+fi
+
 log "=== Task complete ==="
 
 # Prune logs older than 30 days

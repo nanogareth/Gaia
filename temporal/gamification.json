@@ -1,0 +1,15 @@
+{
+  "xp": 0,
+  "level": 1,
+  "level_name": "Novice",
+  "current_streak": 0,
+  "longest_streak": 0,
+  "last_active_date": null,
+  "weekly_domains_touched": [],
+  "weekly_reset_date": null,
+  "total_sessions": 0,
+  "total_domains_touched": 0,
+  "achievements": [],
+  "domain_health": {},
+  "xp_log": []
+}

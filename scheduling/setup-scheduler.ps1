@@ -51,6 +51,22 @@ $Tasks = @(
         Model       = "sonnet"
         Budget      = "3.00"
         Trigger     = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 08:30
+    },
+    @{
+        Name        = "micro-commit"
+        TaskName    = "Gaia - Micro-Commitment"
+        Description = "Break #1 priority into a 5-minute starter task"
+        Model       = "haiku"
+        Budget      = "0.50"
+        Trigger     = New-ScheduledTaskTrigger -Daily -At 07:15
+    },
+    @{
+        Name        = "noon-check"
+        TaskName    = "Gaia - Noon Check"
+        Description = "Accountability check - has the top priority been touched?"
+        Model       = "haiku"
+        Budget      = "0.50"
+        Trigger     = New-ScheduledTaskTrigger -Daily -At 12:00
     }
 )
 
