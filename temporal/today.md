@@ -111,3 +111,7 @@ Day 1 of current streak. Any domain activity today extends it to day 2. Missing 
 - **Q2 goal setting is more important than Q1 regret.** Setting concrete, measurable targets today prevents Q2 from repeating Q1.
 - **The avoidance pattern is real.** Weekly review identified it: high-stakes items get avoided, low-stakes hobby work gets done. The micro-commitment system is new today — let it work. Start with the 5-minute task.
 - **Finances is the easiest win.** 30 minutes, no Claude, breaks a 19-day overdue streak. Do it before any screen with code on it.
+
+## Session Log
+
+- **[17:14]** claudecodemeta: chore: update docs for self-improvement release

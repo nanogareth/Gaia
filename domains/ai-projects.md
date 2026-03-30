@@ -1,6 +1,6 @@
 ---
 domain: ai-projects
-updated: 2026-03-30T10:04:01Z
+updated: 2026-03-30T16:14:41Z
 updated_by: claude-code-hook
 status: active
 review_cycle: weekly
@@ -65,24 +65,26 @@ Regular research sessions scheduled within evening hobby rotation (see [calendar
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â do not edit manually -->
+<!-- Auto-appended by hooks ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â do not edit manually -->
 
 - **[2026-03-23]** claudecodemeta: chore: release v1.0.0
 
-- **[2026-03-26]** language_tutor: merge: phase 7 ÃƒÅ½Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¡ÃƒÆ’Ã‚Â¶ real-world scenarios & competency tracking
+- **[2026-03-26]** language_tutor: merge: phase 7 ÃƒÆ’Ã…Â½ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶ real-world scenarios & competency tracking
 
 - **[2026-03-29]** claudecodemeta: feat: auto-generated architecture diagram via archviz
 
 - **[2026-03-30]** claudecodemeta: feat: test coverage, maintenance, self-improvement research
 
-- **[2026-03-30]** claudecodemeta: feat: self-improvement Phases 1-3 ΓÇö metrics, patterns, EWMA
+- **[2026-03-30]** claudecodemeta: feat: self-improvement Phases 1-3 Î“Ã‡Ã¶ metrics, patterns, EWMA
+
+- **[2026-03-30]** claudecodemeta: chore: update docs for self-improvement release
 
 ## Next Actions
 
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
-<!-- Freeform ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ideas, observations, things to revisit -->
+<!-- Freeform ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ideas, observations, things to revisit -->
 - **[2026-02-21]** Testing inline notes
 - **[2026-02-21]** Second note
 - **[2026-02-21]** This note was added by clicking the +
