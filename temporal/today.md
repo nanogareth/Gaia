@@ -1,117 +1,113 @@
 ---
-date: 2026-03-29
+date: 2026-03-30
 type: morning-plan
 ---
 
-# Today's Plan — 2026-03-29 (Sunday)
+# Today's Plan — 2026-03-30 (Monday)
 
 ## Schedule
 
 Calendar: unavailable (Google Calendar MCP not connected)
 
 - **Morning** Water & tablets, 5-min meditation, 10-min stretching, 15-min cardio
-- **~10:00** Finances transaction review — manual, browser/app only, <30 mins (**non-negotiable: 18+ days overdue, yesterday was also "non-negotiable"**)
-- **Sunday** Weekly review day — `/gaia-review weekly` (afternoon, after claudecodemeta)
+- **07:15** Automated micro-commitment (auto, ~2 msgs)
+- **08:30** Automated Gap Tracker (auto, Monday cadence)
+- **12:00** Automated noon check (auto, ~2 msgs)
 - **21:00** Automated evening reflect (auto, ~5 msgs)
 
 ## Priorities
 
-1. **[anthropic-application]** `claudecodemeta` README + secrets audit + make repo public — **Sunday is the LAST Q1 weekend window (Q1 ends Tuesday)**; 6th carry, no further deferrals
-2. **[finances]** Weekly transaction review — **18+ days overdue**, manual only, <30 mins, **do before any Claude work opens**
-3. **[anthropic-application]** "The Fragmented Claude Problem" — first 300+ words rough draft (Gap 5 — 0/5 essays, **9th consecutive null week**)
-4. **[goals/health]** Define Q1 fitness + nutrition targets in `domains/health.md` — **Q1 ends in 2 days**; accept incomplete or define now
-5. **[anthropic-application]** Verify Task Scheduler (`.\scheduling\setup-scheduler.ps1 -Status`) — **6th carry**, 5-minute terminal check, do at session start
+1. **[anthropic-application]** `claudecodemeta` README + make repo public — **Q1 ends TOMORROW**. 7th carry. Single-session task. No more deferrals exist.
+2. **[finances]** Weekly transaction review — **19+ days overdue**, manual/browser only, 30 mins. Do before opening any editor.
+3. **[anthropic-application]** "The Fragmented Claude Problem" — 300+ words rough draft. Gap 5 has had 0 words for **10 consecutive weeks**.
+4. **[goals]** Q2 goal setting — Q1 is a write-off (0 targets met). Set 2-3 concrete Q2 targets per domain rather than carrying placeholders into another quarter.
+5. **[health]** Morning routine — execute the defined routine (meditation, stretching, cardio). No Claude needed.
 
 ## Work Queue
 
 ### Window 1 (07:00–12:00)
 
-- **07:00** Automated morning plan (auto, ~5 msgs, this run)
-- **08:00** Quick: Verify Task Scheduler — `.\scheduling\setup-scheduler.ps1 -Status` — terminal only, 5 mins, ~0 Claude msgs (**6th day carried — do it first**)
-- **09:00** Claude Code: `claudecodemeta` — secrets audit + write README (problem / architecture / quick-start / install) + set repo public (~80–100 msgs, heavy — **Sunday is the last Q1 window; if not done today it ships Monday under work pressure**)
-- Budget: ~90/225 messages. claudecodemeta is the day's anchor.
+- **07:15** Auto: Micro-commitment (haiku, ~2 msgs)
+- **08:00** Manual: Finances transaction review — browser/app only, 30 mins, **19+ days overdue** (~0 Claude msgs)
+- **08:30** Auto: Gap Tracker (sonnet, ~$3, Monday cadence)
+- **09:00** Claude Code: `claudecodemeta` repo — write README, final secrets check, set repo public via `gh repo edit --visibility public` (~80-100 msgs, heavy)
+- Budget: ~100/225 messages. claudecodemeta is the anchor.
 
 ### Window 2 (12:00–17:00)
 
-- **12:00** Manual: Finances transaction review — browser/app only, no Claude, **18+ days overdue, non-negotiable** (~0 msgs)
-- **13:00** Writing: "The Fragmented Claude Problem" — 300+ words rough draft; use claude.ai for light assist (~15 msgs)
-- **14:30** Claude Code: Gaia — define Q1 fitness + nutrition targets in `domains/health.md` (~5 msgs)
-- **15:00** Claude Code: Gaia — `/gaia-review weekly` (Sunday weekly review, generates `temporal/weekly-review.md`) (~20 msgs)
-- Budget: ~40/225 messages.
+- **12:00** Auto: Noon check (haiku, ~2 msgs — will notify if no activity)
+- **12:30** Writing: "The Fragmented Claude Problem" — 300+ words rough draft. Use Claude.ai for light assist. (~15 msgs)
+- **14:00** Claude Code: Gaia — Q2 goal setting across domains. Update `domains/goals.md` with concrete targets. (~20 msgs)
+- **15:00** Claude Code: Gaia — domain review sweep. All 11 domains are 5+ weeks overdue. Quick pass updating `next_review` dates and flagging stale state. (~15 msgs)
+- Budget: ~50/225 messages.
 
 ### Window 3 (17:00–22:00)
 
-- **17:00** Personal/hobby — language_tutor session or Duolingo (light/no Claude); phase 7 merged, good momentum
-- **19:00** Light creative or social time
-- **21:00** Automated evening reflect (auto, ~5 msgs)
+- **17:00** Personal: language_tutor session or Duolingo (light/no Claude). Phase 7 momentum.
+- **19:00** Creative/social evening time
+- **21:00** Auto: Evening reflect (sonnet, ~5 msgs)
 - Budget: ~10/225 messages. Light window by design.
 
 ### Weekly Budget
 
 - Reset: unknown — check manually in Claude.ai account settings
-- Today: Auto plan (~5 msgs) + claudecodemeta README (~90 msgs) + essay + afternoon tasks (~40 msgs) + auto reflect (~5 msgs) ≈ 140 msgs
-- Estimated weekly consumption: ~350–400 msgs across daily automated tasks + dev sessions
-- Recommendation: Sonnet throughout — **Gap Tracker runs automatically Monday 08:00** (Sonnet, ~$3 budget); reserve Opus for next weekly review if warranted
+- Today: Automated tasks (~15 msgs) + claudecodemeta (~90 msgs) + essay + goals + review (~50 msgs) = ~155 msgs
+- Recommendation: Sonnet throughout. Gap Tracker fires 08:30 automatically.
 
 ## Carry-Forward
 
-From 2026-03-28 (0 of 5 completed — all items carry again):
+From 2026-03-29 (0 of 5 completed — **all items carry again**):
 
-- [ ] `claudecodemeta` README + secrets audit + make public (**Gap 4 — Q1 ends 2026-03-31, 2 days, 6th carry — last weekend window**)
-- [ ] Finances weekly transaction review — **18+ days overdue** (now 2nd "non-negotiable" Saturday that slipped)
-- [ ] Verify Task Scheduler (`setup-scheduler.ps1 -Status`) — 6th day carried, 5-minute check
-- [ ] "The Fragmented Claude Problem" — first 300+ words (**Gap 5 — 9th consecutive null week**)
-- [ ] Define Q1 fitness target in `domains/health.md` — **2 days left**
+- [ ] `claudecodemeta` README + make public (**7th carry — Q1 ends TOMORROW**)
+- [ ] Finances transaction review (**19+ days overdue — 4th "non-negotiable" day**)
+- [ ] "The Fragmented Claude Problem" — 300+ words (**10th consecutive null week**)
+- [ ] ~~Verify Task Scheduler~~ — **DONE** (completed this session, 2026-03-30)
+- [ ] ~~Define Q1 fitness target~~ — **EXPIRED** (Q1 ends tomorrow, roll into Q2 goal setting)
 
 ## Domain Snapshots
 
-| Domain | Status | Last Updated | Next Review | Key Note |
+| Domain | Health | Last Updated | Next Review | Key Note |
 |--------|--------|-------------|-------------|----------|
-| anthropic-application | active | 2026-03-23 | **OVERDUE** (2026-03-21) | 0/5 essays; claudecodemeta still private; **Q1 ends in 2 days** |
-| ai-projects | active | 2026-03-26 | **OVERDUE** (2026-02-22) | language_tutor phase 7 merged; claudecodemeta v1.0.0 still private |
-| work-projects | active | 2026-02-21 | **OVERDUE** (2026-02-22) | SmartLabs + Edify active, milestones still undefined |
-| goals | active | 2026-02-16 | **OVERDUE** (2026-02-22) | All Q1 targets still placeholders — **2 days to define or accept incomplete** |
-| health | active | 2026-02-21 | **OVERDUE** (2026-02-22) | No Q1 fitness target defined; gym membership review pending |
-| finances | active | 2026-02-21 | **OVERDUE** (2026-02-22) | Transaction review **18+ days overdue — do this morning** |
-| languages | active | 2026-02-16 | **OVERDUE** (2026-02-22) | language_tutor phase 7 complete; proficiency targets undefined |
-| social | active | 2026-02-16 | **OVERDUE** (2026-02-22) | Needs contact details |
-| creative | active | 2026-02-16 | **OVERDUE** (2026-02-22) | 7-discipline rotation defined |
-| calendar | active | 2026-02-16 | **OVERDUE** (2026-02-22) | Google Calendar MCP not yet configured |
-| business-ideas | active | 2026-02-16 | **OVERDUE** (2026-02-22) | Pipeline ready, no ideas captured |
+| ai-projects | 75 | 2026-03-30 | **OVERDUE** 5w | claudecodemeta active; language_tutor phase 7 done |
+| work-projects | 65 | 2026-03-30 | **OVERDUE** 5w | FlowForge active, Edify idle |
+| anthropic-application | 55 | 2026-03-23 | **OVERDUE** 9d | 0/5 essays; all repos still private; Q1 ends tomorrow |
+| health | 20 | 2026-02-21 | **OVERDUE** 5w | No activity since Feb. Morning routine defined but untracked |
+| finances | 20 | 2026-02-21 | **OVERDUE** 5w | Transaction review 19+ days overdue |
+| goals | 20 | 2026-02-16 | **OVERDUE** 5w | All Q1 targets still placeholders |
+| languages | 20 | 2026-02-16 | **OVERDUE** 5w | language_tutor active but domain not updated |
+| social | 20 | 2026-02-16 | **OVERDUE** 5w | No activity tracked |
+| creative | 20 | 2026-02-21 | **OVERDUE** 5w | 7-discipline rotation defined, no activity |
+| calendar | 20 | 2026-02-21 | **OVERDUE** 5w | Google Calendar MCP still not configured |
+| business-ideas | 20 | 2026-02-21 | **OVERDUE** 5w | Pipeline ready, 0 ideas captured |
+
+## Gamification
+
+**Lv1 Novice | XP: 10 (90 to next level) | Streak: 1d | Domains: 1/11 this week**
+
+Achievement unlocked: **First Blood** (first domain activity captured)
+
+### Domain Health Crisis
+
+8 of 11 domains are at health score **20** (critical). Each is a **+30 XP revival bonus** waiting to be claimed. Today's XP opportunities:
+
+| Action | XP | Effort |
+|--------|-----|--------|
+| Touch any dormant domain (8 available) | +30 each | Revival bonus |
+| Complete a session in any project | +10 | Standard |
+| Maintain streak (already day 1) | +5 | Just do anything |
+| Complete a carry-forward item | +25 | claudecodemeta or finances |
+| Touch all 11 domains this week | +100 | Achievement: Well-Rounded |
+
+**Maximum possible today:** 10 (session) + 30 (revival) + 5 (streak) + 25 (carry-forward) = **+70 XP** just from doing claudecodemeta.
+**If you touch 3 dormant domains too:** +70 + 90 = **+160 XP** → would reach **Lv2 Apprentice** today.
+
+### Streak Status
+
+Day 1 of current streak. Any domain activity today extends it to day 2. Missing today breaks it back to 0.
 
 ## Notes
 
-- **Q1 countdown: 2 days left** (ends 2026-03-31, Tuesday). Sunday + Monday are the remaining windows. Must-ship before Tuesday: `claudecodemeta` public + at least 1 essay draft.
-- **Sunday is now the last low-pressure Q1 window** — Monday has work obligations. claudecodemeta deferred again means it ships under pressure or not at all this quarter.
-- **Finances: this is the third "non-negotiable" day** — do it before opening any code editor or browser tab. No conditions.
-- **Task Scheduler at 6 days unverified** — morning plan automation cannot be confirmed working without this 5-minute check. No reason it has been deferred 6 days.
-- **Essay gap now 9 weeks** — even 300 rough words breaks the streak. "Fragmented Claude" is the strongest essay (most technical, directly relevant to the role).
-- **Weekly review due today** — Sunday cadence; run `/gaia-review weekly` after claudecodemeta work.
-- **Gap Tracker fires Monday 08:00** (automated) — it will report 0/5 essays and claudecodemeta still private unless today delivers.
-
-## Session Log
-
-_No sessions logged via hooks today._
-- **[13:06]** claudecodemeta: feat: auto-generated architecture diagram via archviz
-
----
-
-## Reflection (Evening)
-
-**Completed:** 0 of 5 planned priorities (partial progress on claudecodemeta — architecture diagram only)
-
-**Carry-forward:**
-- `claudecodemeta` README + secrets audit + make public (7th carry — **Q1 ends Tuesday, Monday is the last window**)
-- Finances transaction review (4th consecutive "non-negotiable" day — 19+ days overdue)
-- Verify Task Scheduler (7th carry — 5-minute check)
-- "The Fragmented Claude Problem" first 300+ words (10th consecutive null week — Gap Tracker fires Monday 08:00)
-- Define Q1 fitness/nutrition targets (1 day left — accept or define Monday)
-- `/gaia-review weekly` — not run
-
-**Tomorrow's preliminary focus:**
-1. claudecodemeta: README + audit + make public — before work if possible, mandatory
-2. Finances transaction review — browser only, first thing
-3. Task Scheduler verification — session start, terminal only, 5 minutes
-- **[08:27]** FlowForge: feat: add WSL2 sandbox provisioning to /flowforge-init
-- **[10:02]** claudecodemeta: feat: test coverage, maintenance, self-improvement research
-- **[11:04]** claudecodemeta: feat: self-improvement Phases 1-3 G�� metrics, patterns, EWMA
+- **Q1 ends tomorrow (2026-03-31).** Q1 is a write-off for measurable goals. Accept it. Focus today on the one thing that can still ship: claudecodemeta going public.
+- **Q2 goal setting is more important than Q1 regret.** Setting concrete, measurable targets today prevents Q2 from repeating Q1.
+- **The avoidance pattern is real.** Weekly review identified it: high-stakes items get avoided, low-stakes hobby work gets done. The micro-commitment system is new today — let it work. Start with the 5-minute task.
+- **Finances is the easiest win.** 30 minutes, no Claude, breaks a 19-day overdue streak. Do it before any screen with code on it.
