@@ -112,3 +112,4 @@ _No sessions logged via hooks today._
 1. claudecodemeta: README + audit + make public — before work if possible, mandatory
 2. Finances transaction review — browser only, first thing
 3. Task Scheduler verification — session start, terminal only, 5 minutes
+- **[08:27]** FlowForge: feat: add WSL2 sandbox provisioning to /flowforge-init

@@ -1,7 +1,7 @@
 ---
 domain: work-projects
-updated: 2026-02-21T15:55:19.670Z
-updated_by: gaia-plugin
+updated: 2026-03-30T07:27:57Z
+updated_by: claude-code-hook
 status: active
 review_cycle: weekly
 next_review: 2026-02-22
@@ -39,9 +39,11 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks — do not edit manually -->
+<!-- Auto-appended by hooks â€” do not edit manually -->
 
 - **[2026-02-16]** FlowForge: fix: use Express v5 wildcard syntax for OPTIONS handler
+
+- **[2026-03-30]** FlowForge: feat: add WSL2 sandbox provisioning to /flowforge-init
 
 ## Next Actions
 
@@ -49,7 +51,7 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Notes
 
-<!-- Freeform — ideas, observations, things to revisit -->
+<!-- Freeform â€” ideas, observations, things to revisit -->
 
 ## Links
 
