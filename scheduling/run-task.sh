@@ -9,50 +9,70 @@
 #
 # Called by Windows Task Scheduler. See setup-scheduler.ps1 to register tasks.
 
-set -euo pipefail
+set -uo pipefail
 
 TASK_NAME="${1:?Usage: run-task.sh <task-name> [model] [budget]}"
 MODEL="${2:-sonnet}"
 BUDGET="${3:-2.00}"
 
 GAIA_DIR="C:/GitHub/Gaia"
+CLAUDE_BIN="$HOME/.local/bin/claude"
 PROMPT_FILE="$GAIA_DIR/scheduling/prompts/$TASK_NAME.md"
 LOG_DIR="$GAIA_DIR/scheduling/logs"
 TIMESTAMP=$(date +%Y-%m-%d_%H%M%S)
 LOG_FILE="$LOG_DIR/$TASK_NAME-$TIMESTAMP.log"
 
-exec > >(tee -a "$LOG_FILE") 2>&1
+# Simple logging — no process substitution (avoids hang on Windows)
+log() { echo "[$(date +%H:%M:%S)] $*" >> "$LOG_FILE"; }
 
-echo "=== Gaia Task: $TASK_NAME ==="
-echo "Started: $(date -Iseconds)"
-echo "Model: $MODEL | Budget: \$$BUDGET"
-echo "---"
+mkdir -p "$LOG_DIR"
+
+log "=== Gaia Task: $TASK_NAME ==="
+log "Model: $MODEL | Budget: \$$BUDGET"
 
 if [ ! -f "$PROMPT_FILE" ]; then
-    echo "ERROR: Prompt file not found: $PROMPT_FILE"
+    log "ERROR: Prompt file not found: $PROMPT_FILE"
     exit 1
+fi
+
+if [ ! -f "$CLAUDE_BIN" ]; then
+    # Fallback to PATH
+    CLAUDE_BIN=$(which claude 2>/dev/null || true)
+    if [ -z "$CLAUDE_BIN" ]; then
+        log "ERROR: claude binary not found at ~/.local/bin/claude or in PATH"
+        exit 1
+    fi
 fi
 
 cd "$GAIA_DIR" || exit 1
 
-# Pull latest state before running
-echo "Pulling latest..."
-git pull --rebase 2>&1 || echo "WARNING: git pull failed, continuing with local state"
+# Wait for network (machine may have just woken from sleep)
+for i in 1 2 3; do
+    if ping -n 1 -w 2000 api.anthropic.com > /dev/null 2>&1; then
+        break
+    fi
+    log "Waiting for network (attempt $i/3)..."
+    sleep 5
+done
+
+# Pull latest state
+log "Pulling latest..."
+PULL_OUT=$(git pull --rebase 2>&1) || log "WARNING: git pull failed: $PULL_OUT"
 
 PROMPT=$(cat "$PROMPT_FILE")
 
-echo "Invoking Claude Code CLI..."
-claude -p "$PROMPT" \
+log "Invoking claude -p (${#PROMPT} chars)..."
+
+# Run claude and capture output to log file directly
+"$CLAUDE_BIN" -p "$PROMPT" \
     --model "$MODEL" \
     --max-budget-usd "$BUDGET" \
     --dangerously-skip-permissions \
-    2>&1
+    >> "$LOG_FILE" 2>&1
 
-EXIT_CODE=${PIPESTATUS[0]:-$?}
+EXIT_CODE=$?
 
-echo "---"
-echo "Finished: $(date -Iseconds)"
-echo "Exit code: $EXIT_CODE"
+log "claude exit code: $EXIT_CODE"
 
 if [ "$EXIT_CODE" -ne 0 ]; then
     PENDING_DIR="$GAIA_DIR/.pending"
@@ -65,10 +85,13 @@ exit_code: $EXIT_CODE
 log: scheduling/logs/$TASK_NAME-$TIMESTAMP.log
 ---
 
-Task $TASK_NAME failed. Check the log file for details.
+Task $TASK_NAME failed with exit code $EXIT_CODE.
+Check the log file for details.
 EOF
-    echo "Wrote failure record to .pending/$TASK_NAME-$TIMESTAMP.md"
+    log "Wrote failure record to .pending/"
 fi
+
+log "=== Task complete ==="
 
 # Prune logs older than 30 days
 find "$LOG_DIR" -name "*.log" -mtime +30 -delete 2>/dev/null || true

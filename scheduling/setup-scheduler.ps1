@@ -50,7 +50,7 @@ $Tasks = @(
         Description = "Track progress against Anthropic application gaps"
         Model       = "sonnet"
         Budget      = "3.00"
-        Trigger     = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 08:00
+        Trigger     = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 08:30
     }
 )
 
@@ -111,13 +111,17 @@ $Settings = New-ScheduledTaskSettingsSet `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
     -StartWhenAvailable `
-    -ExecutionTimeLimit (New-TimeSpan -Minutes 15)
+    -ExecutionTimeLimit (New-TimeSpan -Minutes 15) `
+    -Hidden
+
+# Use wscript to run bash hidden (no visible console window)
+$VBSWrapper = "$GaiaDir\scheduling\run-hidden.vbs"
 
 foreach ($task in $Tasks) {
-    $arguments = "-l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
+    $bashArgs = "-l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
     $action = New-ScheduledTaskAction `
-        -Execute $BashExe `
-        -Argument $arguments `
+        -Execute "wscript.exe" `
+        -Argument "`"$VBSWrapper`" `"$BashExe`" $bashArgs" `
         -WorkingDirectory $GaiaDir
 
     # Remove existing task if present (idempotent)
