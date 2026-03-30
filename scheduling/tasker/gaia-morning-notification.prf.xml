@@ -70,7 +70,7 @@ setLocal("micro", micro);
       <code>523</code>
       <Str sr="arg0" ve="3">Gaia Morning</Str>
       <Str sr="arg1" ve="3">#1: %priority
-Streak: %streakd | XP: %xp
+Streak: %streak days | XP: %xp
 %micro</Str>
       <Img sr="arg2" ve="2">hd_adb</Img>
       <Int sr="arg3" val="0"/>

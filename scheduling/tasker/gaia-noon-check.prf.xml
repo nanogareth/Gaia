@@ -76,7 +76,7 @@ setLocal("priority", priority);
       <code>523</code>
       <Str sr="arg0" ve="3">Gaia: On Track</Str>
       <Str sr="arg1" ve="3">Domains today: %weekly_domains
-Streak: %streakd</Str>
+Streak: %streak days</Str>
       <Img sr="arg2" ve="2">hd_adb</Img>
       <Int sr="arg3" val="0"/>
       <Int sr="arg4" val="0"/>
@@ -93,7 +93,7 @@ Streak: %streakd</Str>
       <code>523</code>
       <Str sr="arg0" ve="3">Gaia: Act Now</Str>
       <Str sr="arg1" ve="3">No activity yet. #1: %priority
-Streak at risk (%streakd)</Str>
+Streak at risk (%streak days)</Str>
       <Img sr="arg2" ve="2">hd_adb</Img>
       <Int sr="arg3" val="0"/>
       <Int sr="arg4" val="0"/>

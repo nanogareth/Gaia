@@ -17,8 +17,11 @@ try {
     $notify.Visible = $true
     $notify.ShowBalloonTip(10000)
 
-    # Must keep process alive long enough for the toast to render
-    Start-Sleep -Seconds 3
+    # Pump messages so the OS delivers the balloon tip event
+    for ($i = 0; $i -lt 30; $i++) {
+        [System.Windows.Forms.Application]::DoEvents()
+        Start-Sleep -Milliseconds 100
+    }
     $notify.Dispose()
 } catch {
     Write-Host "Toast notification failed: $_"

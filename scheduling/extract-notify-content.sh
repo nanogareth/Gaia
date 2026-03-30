@@ -22,7 +22,7 @@ json_field() {
 # Extract #1 priority text from today.md
 get_priority() {
     if [ -f "$TODAY_FILE" ]; then
-        grep -m1 '^1\.' "$TODAY_FILE" 2>/dev/null | sed 's/^1\.\s*//' | sed 's/\*\*\[.*\]\*\*\s*//' | cut -c1-80
+        grep -m1 '^1\.' "$TODAY_FILE" 2>/dev/null | sed 's/^1\.\s*//' | sed 's/\*\*\[[^]]*\]\*\*\s*//' | cut -c1-80
     fi
 }
 
@@ -32,8 +32,8 @@ XP=$(json_field "$GAM_FILE" "xp" 2>/dev/null || echo "0")
 LEVEL_NAME=$(json_field "$GAM_FILE" "level_name" 2>/dev/null || echo "")
 PRIORITY=$(get_priority)
 
-# Strip single quotes from all values for shell safety
-sanitize() { echo "$1" | tr "'" '"'; }
+# Strip single quotes, backticks, newlines for shell safety
+sanitize() { echo "$1" | tr "'\`\n\r" '    '; }
 
 case "$TASK_NAME" in
     morning-plan)
