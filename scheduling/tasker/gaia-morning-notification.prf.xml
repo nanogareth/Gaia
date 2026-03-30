@@ -1,0 +1,85 @@
+<TaskerData sr="" dvi="1" tv="6.3.13">
+  <Profile sr="prof1" ve="2">
+    <cdate>1711800000000</cdate>
+    <edate>1711800000000</edate>
+    <flags>8</flags>
+    <id>901</id>
+    <mid0>901</mid0>
+    <nme>Gaia Morning Priority</nme>
+    <Time sr="con0">
+      <fh>7</fh>
+      <fm>30</fm>
+      <th>7</th>
+      <tm>30</tm>
+    </Time>
+  </Profile>
+  <Task sr="task901" ve="2">
+    <cdate>1711800000000</cdate>
+    <edate>1711800000000</edate>
+    <id>901</id>
+    <nme>Gaia Morning Notify</nme>
+    <Action sr="act0" ve="7">
+      <code>129</code>
+      <Str sr="arg0" ve="3">gaia_gam</Str>
+      <Str sr="arg1" ve="3">/storage/emulated/0/Documents/Alexandria/Gaia/temporal/gamification.json</Str>
+    </Action>
+    <Action sr="act1" ve="7">
+      <code>129</code>
+      <Str sr="arg0" ve="3">gaia_today</Str>
+      <Str sr="arg1" ve="3">/storage/emulated/0/Documents/Alexandria/Gaia/temporal/today.md</Str>
+    </Action>
+    <Action sr="act2" ve="7">
+      <code>129</code>
+      <Str sr="arg0" ve="3">gaia_micro</Str>
+      <Str sr="arg1" ve="3">/storage/emulated/0/Documents/Alexandria/Gaia/temporal/today.md</Str>
+    </Action>
+    <Action sr="act3" ve="7">
+      <code>22</code>
+      <Str sr="arg0" ve="3">
+var gamRaw = global("gaia_gam");
+var todayRaw = global("gaia_today");
+
+var streak = 0;
+var xp = 0;
+var priority = "Check today.md";
+var micro = "";
+
+try {
+  var gam = JSON.parse(gamRaw);
+  streak = gam.current_streak || 0;
+  xp = gam.xp || 0;
+} catch(e) {}
+
+if (todayRaw) {
+  var pMatch = todayRaw.match(/^1\.\s+\*\*\[.*?\]\*\*\s+(.*?)(?:\s+\u2014|$)/m);
+  if (pMatch) priority = pMatch[1].substring(0, 80);
+
+  var mMatch = todayRaw.match(/\*\*Start here:\*\*\s+(.+)/);
+  if (mMatch) micro = mMatch[1].substring(0, 60);
+}
+
+setLocal("priority", priority);
+setLocal("streak", String(streak));
+setLocal("xp", String(xp));
+setLocal("micro", micro);
+      </Str>
+      <Int sr="arg1" val="1"/>
+      <Int sr="arg2" val="0"/>
+    </Action>
+    <Action sr="act4" ve="7">
+      <code>523</code>
+      <Str sr="arg0" ve="3">Gaia Morning</Str>
+      <Str sr="arg1" ve="3">#1: %priority
+Streak: %streakd | XP: %xp
+%micro</Str>
+      <Img sr="arg2" ve="2">hd_adb</Img>
+      <Int sr="arg3" val="0"/>
+      <Int sr="arg4" val="0"/>
+      <Int sr="arg5" val="3"/>
+      <Int sr="arg6" val="0"/>
+      <Int sr="arg7" val="0"/>
+      <Int sr="arg8" val="0"/>
+      <Str sr="arg9" ve="3">901</Str>
+    </Action>
+  </Task>
+</TaskerData>

@@ -21,6 +21,7 @@ PROMPT_FILE="$GAIA_DIR/scheduling/prompts/$TASK_NAME.md"
 LOG_DIR="$GAIA_DIR/scheduling/logs"
 TIMESTAMP=$(date +%Y-%m-%d_%H%M%S)
 LOG_FILE="$LOG_DIR/$TASK_NAME-$TIMESTAMP.log"
+OUTPUT_FILE="$LOG_DIR/$TASK_NAME-$TIMESTAMP.output"
 
 # Simple logging — no process substitution (avoids hang on Windows)
 log() { echo "[$(date +%H:%M:%S)] $*" >> "$LOG_FILE"; }
@@ -36,7 +37,6 @@ if [ ! -f "$PROMPT_FILE" ]; then
 fi
 
 if [ ! -f "$CLAUDE_BIN" ]; then
-    # Fallback to PATH
     CLAUDE_BIN=$(which claude 2>/dev/null || true)
     if [ -z "$CLAUDE_BIN" ]; then
         log "ERROR: claude binary not found at ~/.local/bin/claude or in PATH"
@@ -63,15 +63,17 @@ PROMPT=$(cat "$PROMPT_FILE")
 
 log "Invoking claude -p (${#PROMPT} chars)..."
 
-# Run claude and capture output to log file directly
+# Capture claude output separately for notification content extraction
 "$CLAUDE_BIN" -p "$PROMPT" \
     --model "$MODEL" \
     --max-budget-usd "$BUDGET" \
     --dangerously-skip-permissions \
-    >> "$LOG_FILE" 2>&1
+    > "$OUTPUT_FILE" 2>&1
 
 EXIT_CODE=$?
 
+# Append claude output to main log
+cat "$OUTPUT_FILE" >> "$LOG_FILE" 2>/dev/null
 log "claude exit code: $EXIT_CODE"
 
 if [ "$EXIT_CODE" -ne 0 ]; then
@@ -91,30 +93,31 @@ EOF
     log "Wrote failure record to .pending/"
 fi
 
-# Send Windows toast notification with result
-notify() {
-    local title="$1"
-    local body="$2"
-    powershell.exe -NoProfile -Command "
-        Add-Type -AssemblyName System.Windows.Forms
-        \$n = New-Object System.Windows.Forms.NotifyIcon
-        \$n.Icon = [System.Drawing.SystemIcons]::Information
-        \$n.BalloonTipTitle = '$title'
-        \$n.BalloonTipText = '$body'
-        \$n.Visible = \$true
-        \$n.ShowBalloonTip(5000)
-        Start-Sleep -Seconds 6
-        \$n.Dispose()
-    " 2>/dev/null &
-}
-
-if [ "$EXIT_CODE" -eq 0 ]; then
-    notify "Gaia: $TASK_NAME" "Completed successfully"
-else
-    notify "Gaia: $TASK_NAME FAILED" "Check logs for details"
+# Extract task-specific notification content
+NOTIFY_TITLE="Gaia: $TASK_NAME"
+NOTIFY_BODY="Completed."
+EXTRACT_SCRIPT="$GAIA_DIR/scheduling/extract-notify-content.sh"
+if [ -f "$EXTRACT_SCRIPT" ]; then
+    NOTIFY_CONTENT=$("$EXTRACT_SCRIPT" "$TASK_NAME" "$OUTPUT_FILE" 2>/dev/null) || true
+    if [ -n "$NOTIFY_CONTENT" ]; then
+        eval "$NOTIFY_CONTENT"
+    fi
 fi
+
+if [ "$EXIT_CODE" -ne 0 ]; then
+    NOTIFY_TITLE="Gaia: $TASK_NAME FAILED"
+    NOTIFY_BODY="Exit code $EXIT_CODE. Check scheduling/logs/."
+fi
+
+# Send Windows toast notification
+powershell.exe -NoProfile -NonInteractive -File \
+    "$GAIA_DIR/scheduling/notify-toast.ps1" \
+    -Title "$NOTIFY_TITLE" \
+    -Body "$NOTIFY_BODY" \
+    >> "$LOG_FILE" 2>&1 || true
 
 log "=== Task complete ==="
 
-# Prune logs older than 30 days
+# Prune logs and output files older than 30 days
 find "$LOG_DIR" -name "*.log" -mtime +30 -delete 2>/dev/null || true
+find "$LOG_DIR" -name "*.output" -mtime +30 -delete 2>/dev/null || true
