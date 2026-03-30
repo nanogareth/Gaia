@@ -114,3 +114,4 @@ _No sessions logged via hooks today._
 3. Task Scheduler verification â€” session start, terminal only, 5 minutes
 - **[08:27]** FlowForge: feat: add WSL2 sandbox provisioning to /flowforge-init
 - **[10:02]** claudecodemeta: feat: test coverage, maintenance, self-improvement research
+- **[11:04]** claudecodemeta: feat: self-improvement Phases 1-3 GÇö metrics, patterns, EWMA
