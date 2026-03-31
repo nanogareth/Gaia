@@ -10,3 +10,4 @@ Important constraints:
 - Focus the Patterns & Observations section on cross-domain themes.
 - Use today's actual date everywhere (no placeholders).
 - Commit and push when done. Use commit message: "review: weekly review for YYYY-Www"
+- Quarter awareness: If today's date is within 7 days of a quarter boundary, include a notice in the review output: "Quarter boundary approaching — run /gaia-quarter-close to transition goals."

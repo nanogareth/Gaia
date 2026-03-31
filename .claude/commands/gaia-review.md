@@ -100,3 +100,4 @@ Same structure but with broader scope and an additional "## Month-over-Month Tre
 - If no journal entries exist for the period, note that and work from domain file Recent Activity alone
 - Use real dates and week numbers, not template placeholders
 - GitHub activity provides concrete project metrics — use PR/issue data to enrich domain summaries
+- If today's date is within 7 days of a quarter boundary (Mar 31, Jun 30, Sep 30, Dec 31), include a prominent notice in the review: "⚠ Q[n] ends on [date] — run /gaia-quarter-close when ready to transition goals."
