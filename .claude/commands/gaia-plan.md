@@ -108,11 +108,26 @@ type: journal
 
 If it already exists, append a "## Morning Plan Summary" section.
 
-9. **Commit changes** — Stage `temporal/today.md` and the journal entry, then commit:
+9. **Commit plan** — Stage `temporal/today.md` and the journal entry, then commit:
    ```
    git add temporal/today.md journal/
    git commit -m "plan: morning plan for YYYY-MM-DD"
    ```
+
+10. **Write domain Next Actions** — For each priority in the Priorities section, group by `[domain]` tag. For each domain that has at least one priority:
+   - Read `domains/<domain>.md`
+   - Use `Edit` to replace the content between `## Next Actions` and the next `##` heading with clean priority text
+   - Strip from the priority text: `**bold markers**`, `+N XP` annotations, carry-forward counts, overdue warnings, and plan-specific language after em-dashes (e.g., "— 8th carry, Q1 ends TODAY")
+   - Keep only the actionable task description
+   - Do a fresh `git pull --rebase` before starting the batch of domain edits
+   - If an `Edit` fails for any domain (file not found, section not found), skip it and continue — Next Actions are transient and regenerated daily
+
+11. **Commit domain updates** — Stage and commit domain changes separately:
+   ```
+   git add domains/
+   git commit -m "plan: update domain next-actions for YYYY-MM-DD"
+   ```
+   Push both commits. If the push fails, the domain updates are lost — this is acceptable since they're transient.
 
 ## Guidelines
 

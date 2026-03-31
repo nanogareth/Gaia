@@ -17,4 +17,13 @@ Gamification integration:
 - If any carry-forward item has been carried for 3+ days, flag it prominently with the XP reward for completing it (+25 XP).
 - If the streak is at risk (last_active_date is yesterday), note "Streak at risk — any domain activity today keeps it alive."
 
-Commit and push when done. Use commit message: "plan: morning plan for YYYY-MM-DD"
+Commit today.md and journal with: "plan: morning plan for YYYY-MM-DD"
+
+Domain Next Actions write-back:
+- After committing today.md, also write each domain's Next Actions section.
+- Group the Priorities by their `[domain]` tag.
+- For each domain, Edit `domains/<domain>.md` replacing the `## Next Actions` section content with clean priority text (strip `**bold**`, `+N XP`, carry-forward annotations, overdue warnings, plan-specific em-dash suffixes).
+- Run `git pull --rebase` immediately before starting domain edits.
+- Commit domain changes separately: `git add domains/ && git commit -m "plan: update domain next-actions for YYYY-MM-DD"`
+- If any edit fails, skip and continue — these are transient and regenerated daily.
+- Push all commits when done.
