@@ -109,6 +109,12 @@ calendar (20), health (20), goals (20), finances (20), business-ideas (20), lang
 - **Finances is 30 mins and 0 Claude.** The only reason it hasn't been done is avoidance. Do it first, before any editor opens.
 - **The streak-breaking pattern:** high-stakes tasks get avoided, low-stakes projects get done. Acknowledge it, work around it by starting small.
 
+## Micro-Commitment (5 min)
+
+**Start here:** Open `C:\GitHub\claudecodemeta`, create `README.md` at the root, write the opening sentence: "claudecodemeta is a cross-interface memory system that persists Claude's knowledge across sessions, interfaces (Code/ai/Cowork), and projects." Save and close.
+
+**Why this works:** The hardest part is opening the editor and committing words to a blank file. Once the first sentence is there, momentum carries you into writing the full README.
+
 ## Session Log
 
 <!-- Appended automatically by SessionEnd hook -->
