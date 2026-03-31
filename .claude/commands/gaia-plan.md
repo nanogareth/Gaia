@@ -8,7 +8,8 @@ allowed-tools:
     "Glob",
     "Grep",
     "Bash",
-    "mcp__google-calendar__list_events",
+    "mcp__google-calendar__gcal_list_events",
+    "mcp__claude_ai_Google_Calendar__gcal_list_events",
   ]
 ---
 
