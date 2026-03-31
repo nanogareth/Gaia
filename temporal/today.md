@@ -17,12 +17,11 @@ Calendar: unavailable (Google Calendar MCP not configured)
 **Today is Q1's final day. Q2 starts tomorrow. No more deferrals on claudecodemeta or Q2 planning.**
 
 ## Priorities
-
 1. **[anthropic-application]** `claudecodemeta` README + make repo public — **8th carry, Q1 ends TODAY**. +25 XP carry-forward bonus. One session, ships or Q1 dies with 0 deliverables.
-2. **[finances]** Weekly transaction review — **20+ days overdue**, browser only, 30 mins. +25 XP carry-forward bonus. Do before opening any editor.
+2. ~~**[finances]** Weekly transaction review — **20+ days overdue**, browser only, 30 mins. +25 XP carry-forward bonus. Do before opening any editor.~~
 3. **[goals]** Q2 goal setting — Q1 ends today with 0 targets met. Set 2-3 concrete measurable Q2 targets per domain. Prevents Q2 repeating Q1.
 4. **[anthropic-application]** "The Fragmented Claude Problem" — 300+ words rough draft. Gap 5 has had 0 words for **11 consecutive weeks**.
-5. **[health]** Morning routine — execute meditation, stretching, cardio. No Claude needed.
+5. ~~**[health]** Morning routine — execute meditation, stretching, cardio. No Claude needed.~~
 
 ## Work Queue
 
@@ -118,3 +117,4 @@ calendar (20), health (20), goals (20), finances (20), business-ideas (20), lang
 ## Session Log
 
 <!-- Appended automatically by SessionEnd hook -->
+- **[10:33]** claudecodemeta: fix: resource exhaustion guards, atomic writes, and data integrity

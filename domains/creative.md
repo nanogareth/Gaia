@@ -1,10 +1,10 @@
 ---
 domain: creative
-updated: 2026-02-21T15:23:32.801Z
+updated: 2026-03-31T08:21:23.693Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
+next_review: 2026-04-07
 tags:
   - personal
   - hobbies
@@ -23,7 +23,6 @@ The list looks good. Need to include languages: imagine a creative project in an
 - Completed works to exhibit or share
 
 ## Habits & Routines
-
 - **Evening block:** 2-hour weekday sessions, cycling through:
   - Drawing
   - Painting
@@ -32,6 +31,7 @@ The list looks good. Need to include languages: imagine a creative project in an
   - Programming (personal)
   - Electronics
   - Modelling
+  - Coffee making course
 - **Flow states:** Dedicated uninterrupted periods scheduled via [calendar](calendar.md)
 
 ## Recent Activity

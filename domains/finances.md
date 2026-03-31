@@ -1,10 +1,10 @@
 ---
 domain: finances
-updated: 2026-02-21T15:59:13.941Z
+updated: 2026-03-31T08:58:18.107Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
+next_review: 2026-04-07
 tags:
   - personal
   - money
@@ -33,8 +33,7 @@ Overview of current financial position — savings, investments, debts, monthly 
 <!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
-
-<!-- Concrete next steps, ideally with dates -->
+- Weekly transaction review
 
 ## Notes
 

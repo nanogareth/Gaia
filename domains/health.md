@@ -1,10 +1,10 @@
 ---
 domain: health
-updated: 2026-02-21T15:52:55.099Z
+updated: 2026-03-31T08:22:57.581Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
+next_review: 2026-04-07
 tags:
   - personal
   - wellbeing
@@ -18,7 +18,6 @@ Need to improve flexibility
 Need to improve cardiovascular fitness
 
 ## Active Goals
-
 - Fitness targets (strength, endurance, body composition)
 - Nutrition targets (dietary goals, meal prep consistency)
 - Sleep and recovery goals

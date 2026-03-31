@@ -1,11 +1,13 @@
 ---
 domain: languages
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-03-31T08:29:43.663Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
-tags: [personal, learning]
+next_review: 2026-04-07
+tags:
+  - personal
+  - learning
 ---
 
 # Language Learning
@@ -21,8 +23,7 @@ Languages being studied, current proficiency levels, and learning methods in use
 - Conversation practice targets
 
 ## Habits & Routines
-
-- **Daily:** App-based practice (Duolingo, Anki, etc.)
+- **Daily:** App-based practice (my language app)
 - **Evening rotation:** Dedicated language sessions within the 2-hour hobby block (see [calendar](calendar.md))
 - **Immersion:** Podcasts, media, reading in target language
 

@@ -1,10 +1,10 @@
 ---
 domain: work-projects
-updated: 2026-03-30T07:27:57Z
-updated_by: claude-code-hook
+updated: 2026-03-31T09:19:37.007Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
+next_review: 2026-04-07
 tags:
   - professional
   - work

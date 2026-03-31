@@ -1,10 +1,10 @@
 ---
 domain: calendar
-updated: 2026-02-21T15:22:33.752Z
+updated: 2026-03-31T08:19:47.294Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
+next_review: 2026-04-07
 tags:
   - cross-cutting
   - scheduling
@@ -14,7 +14,7 @@ tags:
 
 ## Current State
 Google Calendar MCP is configured for automated reads via `/gaia-plan`. Calendar events are pulled into morning planning and reflected in `temporal/today.md`.
-the calendar MCP needs to be configured yet.
+the calendar MCP has been configured
 
 ## Active Goals
 

@@ -1,11 +1,13 @@
 ---
 domain: goals
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-03-31T08:28:42.280Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
-tags: [cross-cutting, reflection]
+next_review: 2026-04-07
+tags:
+  - cross-cutting
+  - reflection
 ---
 
 # Goals & Reflection

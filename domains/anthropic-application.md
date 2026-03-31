@@ -1,11 +1,14 @@
 ---
 domain: anthropic-application
-updated: 2026-03-23T08:00:00Z
-updated_by: claude-code-hook
+updated: 2026-03-31T08:08:17.670Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-03-21
-tags: [professional, career, meta]
+next_review: 2026-04-07
+tags:
+  - professional
+  - career
+  - meta
 ---
 
 # Anthropic Application — Education Labs

@@ -1,11 +1,13 @@
 ---
 domain: social
-updated: 2026-02-16T00:00:00Z
-updated_by: manual
+updated: 2026-03-31T08:29:07.074Z
+updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-02-22
-tags: [personal, relationships]
+next_review: 2026-04-07
+tags:
+  - personal
+  - relationships
 ---
 
 # Relationships & Social
