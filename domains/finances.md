@@ -33,7 +33,8 @@ Overview of current financial position — savings, investments, debts, monthly 
 <!-- Auto-appended by hooks — do not edit manually -->
 
 ## Next Actions
-- Weekly transaction review
+
+- Weekly transaction review (21+ days overdue — browser only, 30 mins)
 
 ## Notes
 

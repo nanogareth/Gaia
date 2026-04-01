@@ -76,12 +76,9 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 
 ## Next Actions
 
-- Wire Cowork scheduled tasks (morning plan, evening reflect, weekly review, gap tracker)
-- Wire SessionEnd hook in global settings
-- Begin claudecodemeta README and public release prep
-- Security audit repos targeted for Week 1 public release
-- Create `domains/anthropic-application.md` as Gaia domain — done
-- Reassess FlowForge scope (context bootstrapping vs mobile app)
+- Write claudecodemeta README and make repo public (Q2 #1 priority)
+- Write "The Fragmented Claude Problem" — 300+ word rough draft (Gap 5, 12 null weeks)
+- Security audit repos targeted for public release: claudecodemeta, Gaia, obsidian-gaia-plugin, latex-editor, MiniLang, FlowForge
 
 ## Notes
 

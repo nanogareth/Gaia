@@ -69,7 +69,7 @@ High-level overview of goal progress across all domains. Updated during weekly a
 
 ## Next Actions
 
-<!-- Concrete next steps, ideally with dates -->
+- Set Q2 2026 concrete measurable targets per domain in this file (replace all placeholder text)
 
 ## Notes
 
