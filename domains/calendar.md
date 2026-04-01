@@ -1,6 +1,6 @@
 ---
 domain: calendar
-updated: 2026-03-31T08:19:47.294Z
+updated: 2026-04-01T08:49:38.865Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
@@ -17,10 +17,10 @@ Google Calendar MCP is configured for automated reads via `/gaia-plan`. Calendar
 the calendar MCP has been configured
 
 ## Active Goals
-
 - Maintain consistent daily rhythm
 - Protect focus blocks from fragmentation
 - Balance work, personal, and creative time
+- Automate translation of ideas into project scheduling
 
 ## Habits & Routines
 

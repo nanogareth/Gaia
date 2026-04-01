@@ -1,6 +1,6 @@
 ---
 domain: health
-updated: 2026-03-31T08:22:57.581Z
+updated: 2026-04-01T08:44:06.765Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
@@ -21,6 +21,7 @@ Need to improve cardiovascular fitness
 - Fitness targets (strength, endurance, body composition)
 - Nutrition targets (dietary goals, meal prep consistency)
 - Sleep and recovery goals
+- Reach 80kg
 
 ## Habits & Routines
 

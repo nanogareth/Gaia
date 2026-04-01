@@ -1,6 +1,6 @@
 ---
 domain: creative
-updated: 2026-03-31T08:21:23.693Z
+updated: 2026-04-01T08:50:46.092Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
@@ -17,10 +17,11 @@ Active creative pursuits and their current status. Rotating through interests du
 The list looks good. Need to include languages: imagine a creative project in another language!
 
 ## Active Goals
-
 - Current project or piece in progress per discipline
 - Skills development targets (technique, tools, materials)
 - Completed works to exhibit or share
+- Learn to make flat whites
+- learn to make pizza dough
 
 ## Habits & Routines
 - **Evening block:** 2-hour weekday sessions, cycling through:

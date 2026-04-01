@@ -1,6 +1,6 @@
 ---
 domain: anthropic-application
-updated: 2026-03-31T08:08:17.670Z
+updated: 2026-04-01T08:46:15.702Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
@@ -28,7 +28,6 @@ Five gap areas identified against existing strengths (PhD materials science, 140
 The problem is visibility and stack alignment, not capability. See `vision-anthropic-programme.md` for the full programme design and `project-briefs-core-triad.md` for implementation briefs.
 
 ## Active Goals
-
 ### Gap 1: React/TypeScript Depth
 
 - **Gaia Web Dashboard** — from-scratch Next.js/React/TypeScript project (planned)
@@ -61,6 +60,8 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 3. "People Are the Key Enabling Technology" — DMSA/skills-4sight → Education Labs mission
 4. "Capability-Driven Design" — designing for skill development vs task completion
 5. "The Context Bootstrapping Problem" — FlowForge and the new project UX gap
+- Address gap 1
+- Set up innoglobal to address Gap 5
 
 ## Habits & Routines
 

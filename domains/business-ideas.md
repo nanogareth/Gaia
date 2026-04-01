@@ -1,6 +1,6 @@
 ---
 domain: business-ideas
-updated: 2026-03-31T08:15:58.337Z
+updated: 2026-04-01T08:48:04.685Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
@@ -18,10 +18,10 @@ Pipeline of business concepts at various stages — from raw ideas to validated 
 - CoffeeAmorcitos
 
 ## Active Goals
-
 - Capture and label ideas quickly (avoid distraction during focus time)
 - Evaluate ideas on a regular cycle (not in the moment)
 - Move promising ideas to validation stage with concrete next steps
+- Use Metis to set up passive income
 
 ## Habits & Routines
 

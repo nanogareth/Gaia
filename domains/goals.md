@@ -18,44 +18,82 @@ High-level overview of goal progress across all domains. Updated during weekly a
 
 ## Active Goals
 
-### Q1 2026 (Jan-Mar)
+### Q1 2026 (Archived)
+
+_All goals were placeholders — nothing concrete was set. Gaia infrastructure was being built._
+
+### Q2 2026 (Apr-Jun)
 
 **Health & Fitness**
 
-- Fitness target: _define in [health](health.md)_
-- Nutrition target: _define in [health](health.md)_
+- Fitness targets (strength, endurance, body composition)
+- Nutrition targets (dietary goals, meal prep consistency)
+- Sleep and recovery goals
+- Reach 80kg
 
 **Finances**
 
-- Savings target: _define in [finances](finances.md)_
-- Investment target: _define in [finances](finances.md)_
+- Savings targets (emergency fund, specific goals)
+- Investment strategy and portfolio targets
+- Debt reduction milestones (if applicable)
+- Budget adherence targets
 
 **Languages**
 
-- Proficiency target: _define in [languages](languages.md)_
+- Target proficiency levels per language (e.g., CEFR levels)
+- Vocabulary milestones
+- Conversation practice targets
 
 **Creative**
 
-- Project completion target: _define in [creative](creative.md)_
+- Current project or piece in progress per discipline
+- Skills development targets (technique, tools, materials)
+- Completed works to exhibit or share
+- Learn to make flat whites
+- Learn to make pizza dough
 
 **Work Projects**
 
-- FlowForge milestone: _define in [work-projects](work-projects.md)_
-- Edify milestone: _define in [work-projects](work-projects.md)_
+- Define next milestone for FlowForge
+- Define next milestone for Edify
 
 **AI Projects**
 
-- MiniLang milestone: _define in [ai-projects](ai-projects.md)_
-- SET milestone: _define in [ai-projects](ai-projects.md)_
-- 3D-Viz-MCP milestone: _define in [ai-projects](ai-projects.md)_
+- Define next milestone for MiniLang
+- Define next milestone for SET
+- Define next milestone for 3D-Viz-MCP
+- Add new projects
+- Make public-facing version of claudecodemeta by 15/04/2026
 
 **Social**
 
-- Relationship goal: _define in [social](social.md)_
+- Stay connected with key people (regular catch-ups)
+- Strengthen specific relationships
+- Social events and gatherings to plan/attend
 
 **Business Ideas**
 
-- Idea pipeline target: _define in [business-ideas](business-ideas.md)_
+- Capture and label ideas quickly (avoid distraction during focus time)
+- Evaluate ideas on a regular cycle (not in the moment)
+- Move promising ideas to validation stage with concrete next steps
+- Use Metis to set up passive income
+
+**Anthropic Application**
+
+- Gap 1: React/TypeScript depth — Gaia Web Dashboard (Next.js), latex-editor public
+- Gap 2: Frontend polish — dashboard interaction design, plugin mobile UX
+- Gap 3: Consumer scale — document InnoGlobal work via essays
+- Gap 4: Public portfolio — 6+ public repos with README, licence, secrets audit
+- Gap 5: Published thinking — 5 planned essays (see `vision-anthropic-programme.md`)
+- Address gap 1
+- Set up InnoGlobal to address Gap 5
+
+**Calendar**
+
+- Maintain consistent daily rhythm
+- Protect focus blocks from fragmentation
+- Balance work, personal, and creative time
+- Automate translation of ideas into project scheduling
 
 ## Habits & Routines
 
