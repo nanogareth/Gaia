@@ -17,12 +17,11 @@ Calendar: unavailable (Google Calendar MCP not responding)
 **claudecodemeta public deadline: 2026-04-15 — 13 days away.** 10 carries. Today is the day.
 
 ## Priorities
-
 1. **[anthropic-application]** `claudecodemeta` README + make repo public — **10th carry, Q2 #1, +25 XP**. Write README, secrets audit, `gh repo edit --visibility public`. One session ships it.
-2. **[finances]** Weekly transaction review — **22+ days overdue**, browser only, 30 mins. No Claude. Do this before opening any editor.
-3. **[goals]** Q2 goal setting — replace every placeholder in `domains/goals.md` with a concrete, measurable target. Q2 started 2 days ago with zero targets.
+2. ~~**[finances]** Weekly transaction review — **22+ days overdue**, browser only, 30 mins. No Claude. Do this before opening any editor.~~
+3. ~~**[goals]** Q2 goal setting — replace every placeholder in `domains/goals.md` with a concrete, measurable target. Q2 started 2 days ago with zero targets.~~
 4. **[anthropic-application]** "The Fragmented Claude Problem" — 300+ word rough draft. Gap 5 has 0 words after **13 consecutive null weeks**. Even a rough opener counts.
-5. **[health]** Morning routine — meditation, stretching, cardio. No Claude needed.
+5. ~~**[health]** Morning routine — meditation, stretching, cardio. No Claude needed.~~
 
 ## Work Queue
 
@@ -116,3 +115,20 @@ social (75), languages (75), creative (75), finances (75), business-ideas (75), 
 ## Session Log
 
 <!-- Appended automatically by SessionEnd hook -->
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 4 planned priorities
+**Unplanned work done:** Gaia git scraper infrastructure (scheduling/scripts/git-scraper.ps1 + CLAUDE.md + manifest + prompts)
+**Carry-forward:**
+- `claudecodemeta` README + make public (11th carry, deadline Apr 15 — 13 days)
+- Finances transaction review (23+ days overdue)
+- Q2 goal setting (Q2 Day 3, zero targets)
+- "The Fragmented Claude Problem" essay (14th null week)
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` README — write it, audit secrets, `gh repo edit --visibility public`. Ship it.
+2. Finances transaction review — 30 mins, browser only, do it before opening any editor.
+3. Q2 goal setting — edit `domains/goals.md`, one hour, replace all placeholders.
