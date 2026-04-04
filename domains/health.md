@@ -40,6 +40,7 @@ Need to improve cardiovascular fitness
 ## Next Actions
 
 - Execute morning routine daily: 5-min meditation, 10-min stretching, 15-min cardio
+- Track gym session completion (3-day rotation: Legs/Shoulders, Biceps/Chest/Core, Triceps/Back/Core)
 
 ## Notes
 <!-- Freeform — ideas, observations, things to revisit -->

@@ -78,7 +78,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 ## Next Actions
 
 - Write claudecodemeta README and make repo public (Q2 #1 priority, deadline 2026-04-15)
-- Write "The Fragmented Claude Problem" — 300+ word rough draft (Gap 5, 14 null weeks)
+- Write "The Fragmented Claude Problem" — 300+ word rough draft (Gap 5, 15 null weeks)
 - Security audit repos targeted for public release: claudecodemeta, Gaia, obsidian-gaia-plugin, latex-editor, MiniLang, FlowForge
 
 ## Notes
