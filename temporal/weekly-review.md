@@ -1,111 +1,138 @@
 ---
-week: 2026-W13
+week: 2026-W14
 type: weekly-review
-date_generated: 2026-03-29
+date_generated: 2026-04-05
 ---
 
-# Weekly Review — 2026-W13
+# Weekly Review — 2026-W14
+
+**Period:** 2026-03-30 (Mon) to 2026-04-05 (Sun)
+
+> Quarter boundary crossed this week — Q1 closed 2026-03-31, Q2 opened 2026-04-01. `/gaia-quarter-close` was run on 2026-04-01 (commit `463efc4`). Q1 archived with zero concrete targets met.
 
 ## Highlights
 
-- **language_tutor Phase 7 merged** (2026-03-26) — Real-world scenarios and competency tracking added to the French LLM assistant. The only confirmed code-producing session of the week.
-- **language_tutor registered in manifest** (2026-03-23) — Expanding tracked project coverage to 10 repos.
-- **Automation mostly reliable** — Morning plans generated 6 of 7 days (missed Wednesday 2026-03-25), evening reflections generated 6 of 7 days. The Wednesday miss suggests Task Scheduler may have intermittent issues, but the system is largely functional.
-- **Gap Tracker ran on schedule** (Monday 2026-03-23) — Produced a clear assessment: claudecodemeta v1.0.0 released but not yet public; Published Thinking (0/5 essays) is the most lagging gap at 3+ consecutive null weeks.
+- **Gaia infrastructure surge** — 35 commits to Gaia this week. Major additions: gamification engine + habit-building layers 2-4, Windows toast notifications + Android Tasker profiles, git scraper (`scheduling/scripts/git-scraper.ps1`), `/gaia-quarter-close` command, and morning plan → domain Next Actions writeback. The coordination layer is significantly more capable than a week ago.
+- **claudecodemeta active development** — Self-improvement system (Phases 1-3: metrics, patterns, EWMA) shipped 2026-03-30. Resource exhaustion guards and atomic writes on 2026-03-31. 14+ tidy-up commits on 2026-04-01. Substantial engineering quality work.
+- **obsidian-gaia-plugin fixes** — 7+ commits on 2026-04-01: cleanPriorityText, manifest-generated Current State handling. Plugin continues to mature.
+- **All 11 domains reviewed** via plugin on 2026-03-31 — first comprehensive domain review pass since February. XP awards across the board.
+- **Automation fully operational** — Morning plans generated 7/7 days. Evening reflections generated 6/6 eligible days (Apr 5 pending). Git scraper registered in Task Scheduler (AM 08:30, PM 20:30). Micro-commitment task produced output on 2026-03-31.
 
 ## Domain Summary
 
 ### ai-projects
 
-- **language_tutor:** Phase 7 merged (real-world scenarios & competency tracking) — the week's only non-automated code output
-- **claudecodemeta:** v1.0.0 release synced at week start; README + secrets audit + make-public carried forward all 7 days without progress
-- No activity on MiniLang, SET, 3D-Viz-MCP, eudaemon, or metis
-- Domain review overdue since 2026-02-22 (5 weeks)
+- **claudecodemeta:** Self-improvement Phases 1-3 shipped (2026-03-30), resource exhaustion + atomic write fixes (2026-03-31), 14+ tidy-up commits (2026-04-01). The repo is in strong shape technically — but the README still hasn't been written.
+- **obsidian-gaia-plugin:** 7+ commits on 2026-04-01 — cleanPriorityText, Current State handling, misc fixes. Active development.
+- **FlowForge:** WSL2 sandbox provisioning added to `/flowforge-init` (2026-03-30). One useful feature.
+- **Dormant:** language_tutor (last active W13), eudaemon, metis, MiniLang, SET, 3D-Viz-MCP — no activity.
+- Domain review completed 2026-03-31. Next review: 2026-04-07.
 - GitHub data: unavailable
 
 ### anthropic-application
 
-- Gap Tracker report generated 2026-03-23: all five gaps still at "needs attention"
-- **Gap 4 (Public Portfolio):** claudecodemeta v1.0.0 exists but repo remains private — README not written despite being Priority 1 every day of W13
-- **Gap 5 (Published Thinking):** 0/5 essays, now the 9th consecutive null week. No draft words written. This is the single most stalled deliverable across the entire ecosystem
-- **Gap 1-3:** Zero progress on React/TS depth, frontend polish, or consumer scale documentation
-- Q1 ends 2026-03-31 — minimum viable Q1 output (claudecodemeta public + 1 essay draft) has had zero work applied with 2 days remaining
-- Domain review overdue since 2026-03-21 (8 days)
+- No new Recent Activity entries in W14. Last Gap Tracker report was 2026-03-23 (W13).
+- **claudecodemeta README + make public:** Carried forward all 7 days (carry count: 8th → 13th). Not started once. Deadline: 2026-04-15 (10 days remaining).
+- **"The Fragmented Claude Problem" essay:** Zero words written. Null week count: 11 → 16. This is now four consecutive months without output on Gap 5.
+- **All five gaps remain at "not started" or "behind"** — no measurable progress on any gap during W14.
+- Domain review completed 2026-03-31. Next review: 2026-04-07.
 - GitHub data: unavailable
-
-### health
-
-- No recent activity entries in W13
-- Q1 fitness target remains undefined — carried forward every day this week, never addressed
-- Domain review overdue since 2026-02-22 (5 weeks)
-
-### finances
-
-- No recent activity entries in W13
-- Weekly transaction review now **18+ days overdue** — carried forward daily with escalating language ("non-negotiable", "no further deferrals") but still not completed
-- A 30-minute manual task requiring no Claude budget
-- Domain review overdue since 2026-02-22 (5 weeks)
 
 ### work-projects
 
-- No activity during W13
-- FlowForge and Edify both idle; last recorded activity was 2026-02-16 (6+ weeks ago)
-- Domain review overdue since 2026-02-22 (5 weeks)
+- **FlowForge:** WSL2 sandbox provisioning (2026-03-30). Single commit, but meaningful for WSL2 workflow support.
+- **Edify:** No activity. Last recorded: 2026-02-16 (7+ weeks ago).
+- Domain review completed 2026-03-31. Next review: 2026-04-07.
 - GitHub data: unavailable
+
+### goals
+
+- **Q1 closed** on 2026-04-01 — archived with zero concrete targets met across any domain. All Q1 goals were placeholders.
+- **Q2 opened** — goals.md now has Q2 section, but targets remain as generic placeholders copied from domain files (e.g., "Fitness targets (strength, endurance, body composition)"). No concrete, measurable targets have been set.
+- Next Actions correctly identifies this: "Set Q2 2026 concrete measurable targets per domain — replace all placeholder text."
+
+### finances
+
+- No activity in W14. Zero Recent Activity entries.
+- Weekly transaction review: now **27+ days overdue** (carried forward every single day since W12). A 30-minute browser-only task requiring no Claude budget.
+
+### health
+
+- No activity in W14. Zero Recent Activity entries.
+- Morning routine referenced in daily plans but never confirmed as executed.
+- Gym sessions, nutrition, sleep — no tracking data captured.
 
 ### calendar
 
-- Google Calendar MCP still not configured
-- Morning plans generated without calendar data
+- Google Calendar MCP confirmed as configured (state updated 2026-04-01).
+- Morning plans now pulling calendar events. This is a meaningful infrastructure improvement.
+
+### creative, languages, social, business-ideas
+
+- No activity in W14 across any of these four domains.
+- All four were reviewed via the Obsidian plugin on 2026-03-31 (earning XP) but had no substantive updates.
 
 ## Goal Progress
 
-### Q1 2026 (ends 2026-03-31 — 2 days remaining)
+### Q2 2026 (Apr–Jun) — Week 1
 
-All Q1 goals in the `goals.md` file remain in their initial "define in [domain]" placeholder state. No concrete targets were set in any domain during Q1.
+| Domain | Status | W14 Progress |
+|--------|--------|-------------|
+| Health | Placeholder targets | No activity |
+| Finances | Placeholder targets | No activity; transaction review 27+ days overdue |
+| Languages | Placeholder targets | No activity |
+| Creative | Placeholder targets | No activity |
+| Work Projects | "Define milestones" | FlowForge WSL2 feature |
+| AI Projects | claudecodemeta public by Apr 15 | Code work shipped; README not started (13th carry) |
+| Social | Placeholder targets | No activity |
+| Business Ideas | "Use Metis for passive income" | No activity |
+| Anthropic Application | 5 gaps defined | Zero progress on any gap |
+| Calendar | "Protect focus blocks" | MCP configured — infrastructure done |
+| Goals | "Set concrete targets" | Q1 closed, Q2 opened; targets still placeholders |
 
-**Anthropic Application Programme (the only domain with defined goals):**
+**The only domain with a concrete, dated target is ai-projects:** "Make public-facing version of claudecodemeta by 15/04/2026." It has 10 days remaining and has not been started.
 
-| Gap | Target | W13 Progress | Cumulative Status |
-|-----|--------|-------------|-------------------|
-| Gap 1: React/TS Depth | 1 deployed React project | No work | Not started |
-| Gap 2: Frontend Polish | Dashboard + plugin UX | No work | Not started |
-| Gap 3: Consumer Scale | Essay-documented experience | No drafts | Not started |
-| Gap 4: Public Portfolio | 6+ public repos | 0 repos made public | Behind — v1.0.0 exists but README not written |
-| Gap 5: Published Thinking | 5 essays (1 draft minimum Q1) | 0 words written | Behind — 9 consecutive null weeks |
+### Gamification
 
-**Q1 will close with no gap meaningfully addressed.** The minimum viable deliverables (claudecodemeta made public, one essay draft started) were the stated Priority 1 every day of W13 and received zero work.
+- **XP:** 270 (Lv2 Apprentice) — 30 XP from Lv3 Journeyman
+- **Streak:** Peaked at 4 days (Mar 30 → Apr 1), then broken. Last active date in gamification: Apr 1.
+- **Domains touched this week:** 2 of 11 (ai-projects, work-projects). "Well-Rounded" achievement requires all 11.
+- **Streak issue:** Activity on Apr 2–4 (Gaia infrastructure commits) wasn't captured by the gamification engine — the streak shows as broken despite daily commits. The engine may only track session syncs, not direct Gaia commits.
 
 ## Patterns & Observations
 
-### The carry-forward ceiling: when planning becomes ritual
+### Infrastructure as avoidance: a four-month pattern crystallises
 
-W13 is the third consecutive week where the same five items (claudecodemeta README, finances review, essay draft, Task Scheduler verification, Q1 fitness target) were carried forward identically every day. The language in daily plans escalated from "priority" to "urgent" to "non-negotiable" to "last realistic day" — but the items remained untouched. This reveals a structural truth: the planning system has no mechanism to convert stated priority into initiated action. The plans are accurate, well-prioritised, and completely inert. When a carry-forward list is static for 14+ days, it is no longer a plan — it is a record of what isn't happening.
+W14 produced genuinely valuable Gaia infrastructure — gamification, toast notifications, git scraper, quarter-close command, Next Actions writeback. Each piece is defensible on its own merits. But the pattern is now unmistakable: every day of W14, the journal records the same four carry-forwards (claudecodemeta README, finances, essay, Q2 goals) as untouched, while infrastructure work consumed each session. This is the same pattern W13 identified with language_tutor: interest-driven, low-stakes work displaces high-stakes, exposure-heavy deliverables. The infrastructure work is genuinely useful, but it's also genuinely comfortable — and it's consuming 100% of available sessions while the items that require personal exposure (publishing code, writing essays, declaring concrete goals) receive exactly 0% of time.
 
-### One productive session reveals the actual execution pattern
+### Q1 → Q2 transition exposed a goal-setting gap
 
-The language_tutor Phase 7 merge (2026-03-26) was the week's only real output. It happened during an evening hobby block — the lowest-pressure, most intrinsically motivated slot. Every high-priority, deadline-driven item went undone while the hobby project advanced. This isn't randomness: the execution pattern consistently rewards low-stakes, interest-driven work over high-stakes, deadline-driven obligations. The Anthropic application items carry the most pressure and receive the least action — a classic avoidance pattern around high-consequence deliverables.
+Q1 closed with zero targets met because zero concrete targets were ever set. Q2 opened and the same pattern immediately repeated: `goals.md` now has a Q2 section, but it contains the same placeholder language from February ("Fitness targets (strength, endurance, body composition)", "Savings targets (emergency fund, specific goals)"). The `/gaia-quarter-close` command archived Q1 and created Q2 structure, but it cannot generate concrete targets — that requires human decision-making. Six days into Q2, the targets remain undefined.
 
-### Automation as false progress signal
+### The carry-forward counter is now a metric
 
-Gaia's automation layer produced 13 commits in W13: 6 morning plans, 6 evening reflections, 1 session sync. From the git log, the week looks active. But stripping out automation reveals one human-initiated session (language_tutor) producing one meaningful change. The automation is functioning well, but it risks masking inaction behind a steady stream of planning and reflection commits. The system is talking to itself about work that isn't being done.
+The claudecodemeta README has been carried forward 13 times across W13–W14. The finances review has been overdue for 27+ days. The essay has had 16 consecutive null weeks. These aren't planning failures — the plans are consistently correct. They are execution failures, and the carry-forward counter has become the most honest metric in the system: it measures the gap between stated priority and actual behaviour. When a carry-forward hits double digits, the system should flag it differently — it's no longer a deferred task, it's an avoided one.
 
-### Q1 closes with zero goals addressed
+### Automation is mature; the human loop is the bottleneck
 
-Q1 2026 ends in 2 days. Not a single goal — across any domain — has a concrete target set, let alone met. The anthropic-application gaps were the closest to having defined targets, and all five are at "not started" or "behind". The goals domain file still contains only "define in [domain]" placeholders set in February. Q1 is a write-off for measurable goal progress.
+The scheduling layer is now comprehensive: 7/7 morning plans, 6/6 evening reflections, gamification tracking, git scraper, toast notifications, micro-commitments, noon checks. The automation produces reliable, useful output every day. But the human loop — initiating work on the identified priorities — has not executed once in 14 days on the top-4 items. The system is correctly identifying what to do and correctly reporting that it hasn't been done. The gap is not informational; it is motivational.
 
-### Domain review debt is systemic
+### Streak fragility reveals a gamification gap
 
-Every domain except anthropic-application has a `next_review` date of 2026-02-22 — now 5 weeks overdue. The domain files are structurally intact but operationally dormant. Health, finances, languages, creative, social, and business-ideas have no Recent Activity entries for W13 (or, in most cases, for any week in March). The system is maintaining state for domains that aren't being actively used.
+The streak peaked at 4 days and broke, even though Gaia received commits every day of W14. The gamification engine appears to only credit activity logged via session syncs or domain reviews, not direct commits to Gaia itself. This means a full day of productive Gaia infrastructure work (Apr 2, 3, 4) registers as inactivity. Either the engine's activity detection needs broadening, or "Gaia infrastructure" needs to count as domain activity for the domain it serves.
 
 ## Next Week Focus
 
-W14 opens Q2 2026. The Q1 deadline will have passed.
+W15 (2026-04-06 to 2026-04-12). claudecodemeta deadline is 2026-04-15 — this is the final full week before it.
 
-1. **Q1 post-mortem and Q2 goal setting** — Acknowledge Q1 as incomplete. Set 2-3 concrete, measurable Q2 targets per domain rather than the vague "define in [domain]" placeholders. Do this before any project work.
-2. **claudecodemeta README + make public** — This has been Priority 1 for 15+ consecutive days. It is a single-session task. The only remaining action is to sit down and do it.
-3. **"The Fragmented Claude Problem" — first 300 words** — Break the 9-week streak. Quality doesn't matter for a first draft. Just produce words.
-4. **Finances transaction review** — Now approaching 3 weeks overdue. Complete it Monday, first thing, before opening any Claude session.
-5. **Domain review sweep** — All 11 domains are 5+ weeks overdue. One pass updating `next_review`, Current State, and flagging stale goals.
+1. **claudecodemeta README + make public** — Deadline Apr 15. This is carry #13 and has been the stated #1 priority for 3 consecutive weeks. Write the README. Run `gh repo edit --visibility public`. One session, ~60 minutes. **Do this Monday morning before any other session.**
 
-**Execution note:** W13 proved that the planning system works and the execution system doesn't. The bottleneck is session initiation on high-stakes items. Consider: start the claudecodemeta README as the very first action of Monday's first Claude Code session — before reading the morning plan, before checking email, before anything else. The plan is already known. The only variable is whether the session starts.
+2. **Finances transaction review** — 27+ days overdue. Browser only, 30 minutes, zero Claude budget. Do it before opening any editor on Monday.
+
+3. **Q2 concrete goal setting** — Replace every placeholder in `goals.md` with a measurable target and a date. One focused hour. This is blocking all domain progress tracking.
+
+4. **"The Fragmented Claude Problem" — write 300+ words** — Break the 16-week streak of zero output. Quality is irrelevant. Produce words. Even one rough paragraph counts as progress.
+
+5. **Fix gamification streak detection** — The engine isn't crediting Gaia infrastructure work. Either broaden activity detection or ensure Gaia commits trigger domain activity recording.
+
+**Execution strategy:** The W13 and W14 reviews both identified the same insight — the plans are correct, the execution isn't happening. The bottleneck is session initiation on high-stakes items. Monday's first action must be the claudecodemeta README, not a morning plan review, not Gaia maintenance, not bug fixes. The plan is already known. The deadline is 8 days away.
