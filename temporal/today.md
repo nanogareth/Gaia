@@ -119,7 +119,9 @@ social (75), languages (75), creative (75), finances (75), business-ideas (75), 
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open `C:\GitHub\claudecodemeta`, create `README.md`, write one sentence. The rest follows.
+**Start here:** Open `C:\GitHub\claudecodemeta`, create `README.md`, write one sentence: "claudecodemeta is the cross-interface memory layer..."
+
+**Why this works:** README is the heaviest blocker. Writing the first sentence breaks paralysis — the rest (features list, usage, links) flows naturally. 5 mins → momentum → the rest of the session builds from there.
 
 ## Session Log
 
