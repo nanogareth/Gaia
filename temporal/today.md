@@ -104,6 +104,24 @@ From yesterday (0 of 4 planned manual priorities completed — streak now 6 days
 
 <!-- Appended automatically by SessionEnd hook -->
 
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+
+**Carry-forward:**
+- `claudecodemeta` README + make public (Q2 #1, deadline Apr 15 — 7 days)
+- Finances transaction review (30+ days overdue)
+- Q2 concrete goal setting (Day 10, all placeholders)
+- "The Fragmented Claude Problem" rough draft (19th null week)
+- Morning routine (untracked)
+
+**Tomorrow's preliminary focus:**
+1. claudecodemeta README + `gh repo edit --visibility public` — Window 1, ~90 mins, non-negotiable
+2. Finances transaction review — before opening any editor, 30 mins
+3. Q2 goals concrete targets — Window 2 slot if claudecodemeta ships
+
 ## Gamification
 
 **Lv2 Apprentice | XP: 270 (30 to Lv3 Journeyman) | Streak: ⚠ BROKEN (last active 2026-04-01, 6 days ago)**
