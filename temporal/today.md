@@ -105,6 +105,14 @@ From yesterday (0 of 5 planned manual priorities completed — streak broken 7 d
 
 <!-- Appended automatically by SessionEnd hook -->
 
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:** claudecodemeta README (⚠ 17th carry, deadline Apr 15 — 6 days), finances review (31+ days overdue), Q2 goal setting, essay draft
+**Tomorrow's preliminary focus:** (1) claudecodemeta README + make public — final warning zone, Window 1 is mandatory; (2) finances transaction review — browser, 30 mins, before opening any editor; (3) morning routine
+
 ## Gamification
 
 **Lv2 Apprentice | XP: 270 (30 to Lv3 Journeyman) | Streak: ⚠ BROKEN (last active 2026-04-01, 7 days ago)**
