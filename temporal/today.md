@@ -1,9 +1,9 @@
 ---
-date: 2026-04-08
+date: 2026-04-09
 type: morning-plan
 ---
 
-# Today's Plan — 2026-04-08 (Wednesday)
+# Today's Plan — 2026-04-09 (Thursday)
 
 ## Schedule
 
@@ -16,14 +16,14 @@ Calendar: unavailable (Google Calendar MCP not responding)
 - **20:30** Automated git scraper PM (no Claude msgs)
 - **21:00** Automated evening reflect (auto, ~5 msgs)
 
-**Wednesday — Q2 Day 8. claudecodemeta deadline 7 days out. All domain reviews overdue.**
+**Thursday — Q2 Day 9. claudecodemeta deadline 6 days out. Streak broken 8 days. All domain reviews overdue.**
 
 ## Priorities
 
-1. **[anthropic-application]** `claudecodemeta` README + make repo public — **⚠ 16th carry, Q2 #1, deadline Apr 15 (7 days), +25 XP**. Write README, secrets audit, `gh repo edit --visibility public`. Window 1 is the slot.
-2. **[finances]** Weekly transaction review — **⚠ 30+ days overdue**. Browser/app only, 30 mins, zero Claude. Do this before opening any editor.
-3. **[goals]** Q2 concrete goal setting — Day 8 with zero measurable targets. Edit `domains/goals.md`, replace all placeholder text with actual numbers/milestones.
-4. **[anthropic-application]** "The Fragmented Claude Problem" rough draft — **⚠ 19th null week**. 300+ words minimum. One rough paragraph breaks the pattern.
+1. **[anthropic-application]** `claudecodemeta` README + make repo public — **⚠ 17th carry, Q2 #1, deadline Apr 15 (6 days), +25 XP**. Write README, secrets audit, `gh repo edit --visibility public`. Window 1 is the mandatory slot.
+2. **[finances]** Weekly transaction review — **⚠ 31+ days overdue, +25 XP**. Browser/app only, 30 mins, zero Claude. Do before opening any editor.
+3. **[goals]** Q2 concrete goal setting — Day 9 with zero measurable targets. Edit `domains/goals.md`, replace all placeholder text with real numbers/milestones.
+4. **[anthropic-application]** "The Fragmented Claude Problem" rough draft — **⚠ 20th null week**. 300+ words minimum. One rough paragraph breaks the pattern.
 5. **[health]** Morning routine — 5-min meditation, 10-min stretching, 15-min cardio. No Claude.
 
 ## Work Queue
@@ -34,7 +34,7 @@ Calendar: unavailable (Google Calendar MCP not responding)
 - **08:00** Manual: Finances transaction review — browser/app only, 30 mins (~0 Claude msgs)
 - **08:30** Auto: Git scraper AM (no Claude msgs)
 - **09:00** Claude Code: `claudecodemeta` — write README, secrets audit, `gh repo edit --visibility public` (~80–100 msgs, heavy)
-- Budget: ~105/225 messages. Protect this slot — most important session of the week.
+- Budget: ~105/225 messages. This slot is mandatory — claudecodemeta deadline is 6 days away.
 
 ### Window 2 (12:00–17:00)
 
@@ -54,18 +54,18 @@ Calendar: unavailable (Google Calendar MCP not responding)
 
 ### Weekly Budget
 
-- Reset: 2026-04-05 (weekly reset ~7 days from prior) — check manually
+- Reset: ~2026-04-05 (check manually — 7-day rolling window)
 - Estimated weekly consumption: Automated tasks (~50 msgs) + claudecodemeta (~90 msgs) + goals + essay (~30 msgs) + optional (~15 msgs) = ~185 msgs
 - Recommendation: Budget healthy — burn Window 1 on claudecodemeta without hesitation.
 
 ## Carry-Forward
 
-From yesterday (0 of 5 planned manual priorities completed — streak broken 7 days):
+From yesterday (0 of 5 planned manual priorities completed — streak broken 8 days):
 
-- [ ] `claudecodemeta` README + make public — **⚠ 16th carry, Q2 #1, deadline Apr 15 (7 days), +25 XP**
-- [ ] Finances transaction review — **⚠ 30+ days overdue, +25 XP**
-- [ ] Q2 concrete goal setting — **⚠ Q2 Day 8, zero measurable targets**
-- [ ] "The Fragmented Claude Problem" rough draft — **⚠ 19th null week**
+- [ ] `claudecodemeta` README + make public — **⚠ 17th carry, Q2 #1, deadline Apr 15 (6 days), +25 XP**
+- [ ] Finances transaction review — **⚠ 31+ days overdue, +25 XP**
+- [ ] Q2 concrete goal setting — **⚠ Q2 Day 9, zero measurable targets**
+- [ ] "The Fragmented Claude Problem" rough draft — **⚠ 20th null week**
 - [ ] Morning routine (untracked)
 
 ## Domain Snapshots
@@ -73,10 +73,10 @@ From yesterday (0 of 5 planned manual priorities completed — streak broken 7 d
 | Domain | Health | Last Updated | Next Review | Key Note |
 |--------|--------|-------------|-------------|----------|
 | ai-projects | 100 | 2026-04-01 | 2026-04-07 ⚠ | claudecodemeta deadline Apr 15 |
-| anthropic-application | 85 | 2026-04-01 | 2026-04-07 ⚠ | 0/5 essays; portfolio all private; 19 null weeks |
+| anthropic-application | 85 | 2026-04-01 | 2026-04-07 ⚠ | 0/5 essays; portfolio all private; 20 null weeks |
 | work-projects | 80 | 2026-03-31 | 2026-04-07 ⚠ | FlowForge active |
-| goals | 75 | 2026-03-31 | 2026-04-07 ⚠ | Q2 targets all placeholders (Day 8) |
-| finances | 75 | 2026-03-31 | 2026-04-07 ⚠ | Transaction review 30+ days overdue |
+| goals | 75 | 2026-03-31 | 2026-04-07 ⚠ | Q2 targets all placeholders (Day 9) |
+| finances | 75 | 2026-03-31 | 2026-04-07 ⚠ | Transaction review 31+ days overdue |
 | health | 75 | 2026-04-01 | 2026-04-07 ⚠ | Morning routine defined; execution untracked |
 | calendar | 75 | 2026-04-01 | 2026-04-07 ⚠ | MCP unavailable |
 | business-ideas | 75 | 2026-04-01 | 2026-04-07 ⚠ | Lucentic + CoffeeAmorcitos ideas noted |
@@ -88,16 +88,16 @@ From yesterday (0 of 5 planned manual priorities completed — streak broken 7 d
 
 ## Notes
 
-- **claudecodemeta deadline: Apr 15.** 16 carries, 7 days left. Window 1 this morning is the best slot.
-- **Finances is 30 mins and 0 Claude.** Do it before opening any editor. Non-negotiable.
-- **Q2 targets still placeholders.** Day 8. Open `domains/goals.md` and replace each section with real numbers.
-- **19 null essay weeks.** One rough paragraph in a scratch doc breaks the pattern. Don't aim for perfect.
-- **Streak broken 7 days.** Any real action today begins a new streak.
+- **claudecodemeta deadline: Apr 15.** 17 carries, 6 days left. Window 1 this morning is the mandatory slot. No excuses.
+- **Finances is 30 mins and 0 Claude.** Do it before opening any editor. It is 31+ days overdue.
+- **Q2 targets still placeholders.** Day 9. Open `domains/goals.md` and put real numbers in.
+- **20 null essay weeks.** One rough paragraph breaks the pattern. The bar is 300 words, not a polished essay.
+- **Streak broken 8 days.** Any real action today starts a fresh streak. You need 30 more XP to hit Level 3.
 - **All domain next_reviews overdue** — flag for `/gaia-review weekly` this weekend.
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open `C:\GitHub\claudecodemeta`, create `README.md`, write the opening paragraph. Aim for: "claudecodemeta is the cross-interface memory layer for Claude Code — persisting corrections, patterns, and user profiles across sessions and interfaces."
+**Start here:** Open `C:\GitHub\claudecodemeta`, create `README.md`, write the opening paragraph. Target: "claudecodemeta is the cross-interface memory layer for Claude Code — persisting corrections, patterns, and user profiles across sessions and interfaces."
 
 **Why this works:** The README is the only blocker between private and public. Writing the first paragraph breaks paralysis — features list, usage, links, and the `gh repo edit` command all follow naturally.
 
@@ -105,29 +105,21 @@ From yesterday (0 of 5 planned manual priorities completed — streak broken 7 d
 
 <!-- Appended automatically by SessionEnd hook -->
 
----
-
-## Reflection (Evening)
-
-**Completed:** 0 of 5 planned priorities
-**Carry-forward:** claudecodemeta README (⚠ 17th carry, deadline Apr 15 — 6 days), finances review (31+ days overdue), Q2 goal setting, essay draft
-**Tomorrow's preliminary focus:** (1) claudecodemeta README + make public — final warning zone, Window 1 is mandatory; (2) finances transaction review — browser, 30 mins, before opening any editor; (3) morning routine
-
 ## Gamification
 
-**Lv2 Apprentice | XP: 270 (30 to Lv3 Journeyman) | Streak: ⚠ BROKEN (last active 2026-04-01, 7 days ago)**
+**Lv2 Apprentice | XP: 270 (30 to Lv3 Journeyman) | Streak: ⚠ BROKEN (last active 2026-04-01, 8 days ago)**
 
-Streak broken for 7 days. Any domain activity today starts a fresh streak at Day 1.
+⚠ **Streak at risk — any domain activity today keeps it alive (and starts a fresh streak at Day 1).**
 
 ### XP Opportunities Today
 
 | Action | XP | Note |
 |--------|----|------|
-| Complete claudecodemeta carry-forward | +25 | ⚠ 16th carry — claim it today |
-| Complete finances carry-forward | +25 | ⚠ 30+ days overdue |
+| Complete claudecodemeta carry-forward | +25 | ⚠ 17th carry — deadline in 6 days |
+| Complete finances carry-forward | +25 | ⚠ 31+ days overdue |
 | Touch a dormant domain (revival) | +30 | social/creative/languages/business-ideas |
 | Session activity (any project) | +10 | Standard |
-| Start fresh streak (day 1) | +5 | Just do anything |
+| Start fresh streak (day 1) | +5 | Any activity qualifies |
 
 **If you ship claudecodemeta + do finances + touch one dormant domain:**
 270 + 25 + 25 + 30 + 10 + 5 = **+95 XP → total 365 XP → Lv3 Journeyman unlocked**
