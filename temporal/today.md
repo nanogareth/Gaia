@@ -127,3 +127,20 @@ From yesterday (0 of 5 planned manual priorities completed — streak broken 8 d
 ### Domain Health (worst first)
 
 social (75) · languages (75) · creative (75) · finances (75) · business-ideas (75) · health (75) · calendar (75) · goals (75) → work-projects (80) → anthropic-application (85) → ai-projects (100)
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities (automated tasks only ran as expected)
+**Carry-forward:**
+- `claudecodemeta` README + make public — ⚠ 18th carry, deadline Apr 15 (5 days)
+- Finances transaction review — ⚠ 32+ days overdue
+- Q2 concrete goal setting — Day 10 of Q2, zero measurable targets
+- "The Fragmented Claude Problem" rough draft — 21st null week
+- Morning routine
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` README + make public (Window 1 — non-negotiable, 5 days to deadline)
+2. Finances transaction review (before any editor, 30 mins, browser only)
+3. Q2 concrete goal setting (edit `domains/goals.md`, replace placeholders with real numbers)
