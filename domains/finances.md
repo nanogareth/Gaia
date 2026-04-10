@@ -34,7 +34,7 @@ Overview of current financial position — savings, investments, debts, monthly 
 
 ## Next Actions
 
-- Weekly transaction review (browser only, 30 mins, no Claude needed) — overdue 31+ days
+- Weekly transaction review (browser only, 30 mins, no Claude needed) — overdue 33+ days
 
 ## Notes
 
