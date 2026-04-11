@@ -103,6 +103,22 @@ From yesterday (0 of 4 planned manual priorities completed — streak broken 10 
 
 <!-- Appended automatically by SessionEnd hook -->
 
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:**
+- `claudecodemeta` README + make public — ⚠ 21st carry, deadline Apr 15 (3 days)
+- Finances transaction review — ⚠ 35+ days overdue
+- "The Fragmented Claude Problem" rough draft — ⚠ 24th null week
+- Q2 concrete goal setting — Day 12 of Q2, all placeholders
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` README + make public — fresh weekly budget Sunday; final deadline window
+2. Finances transaction review — 30 mins, zero Claude, do it before opening any editor
+3. `/gaia-review weekly` — scheduled for Sunday with fresh budget
+
 ## Gamification
 
 **Lv2 Apprentice | XP: 270 (30 to Lv3 Journeyman) | Streak: ⚠ BROKEN (last active 2026-04-01, 10 days ago)**
