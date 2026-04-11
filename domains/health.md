@@ -39,8 +39,8 @@ Need to improve cardiovascular fitness
 
 ## Next Actions
 
-- Execute morning routine daily: 5-min meditation, 10-min stretching, 15-min cardio
-- Track gym session completion (3-day rotation: Legs/Shoulders, Biceps/Chest/Core, Triceps/Back/Core)
+- Execute morning routine: 5-min meditation, 10-min stretching, 15-min cardio
+- Complete gym session (3-day rotation: Legs/Shoulders, Biceps/Chest/Core, Triceps/Back/Core)
 - Set concrete Q2 fitness targets in goals.md (weight goal: 80kg, strength benchmarks, cardio targets)
 
 ## Notes
