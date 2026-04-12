@@ -1,10 +1,10 @@
 ---
 domain: social
-updated: 2026-03-31T08:29:07.074Z
+updated: 2026-04-11T20:19:36.330Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - personal
   - relationships

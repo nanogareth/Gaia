@@ -1,10 +1,10 @@
 ---
 domain: languages
-updated: 2026-03-31T08:29:43.663Z
+updated: 2026-04-11T20:19:32.238Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - personal
   - learning

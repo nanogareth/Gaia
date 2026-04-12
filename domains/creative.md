@@ -1,10 +1,10 @@
 ---
 domain: creative
-updated: 2026-04-01T08:50:46.092Z
+updated: 2026-04-11T19:10:46.200Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - personal
   - hobbies

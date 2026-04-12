@@ -1,10 +1,10 @@
 ---
 domain: ai-projects
-updated: 2026-04-01T09:22:34.396Z
+updated: 2026-04-11T19:10:27.297Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - professional
   - research

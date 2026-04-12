@@ -1,10 +1,10 @@
 ---
 domain: calendar
-updated: 2026-04-01T08:49:38.865Z
+updated: 2026-04-11T19:10:39.762Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - cross-cutting
   - scheduling

@@ -1,10 +1,10 @@
 ---
 domain: anthropic-application
-updated: 2026-04-01T08:46:15.702Z
+updated: 2026-04-11T19:10:32.511Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - professional
   - career

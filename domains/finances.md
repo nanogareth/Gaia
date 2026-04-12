@@ -1,10 +1,10 @@
 ---
 domain: finances
-updated: 2026-03-31T08:58:18.107Z
+updated: 2026-04-11T19:10:43.083Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - personal
   - money
@@ -34,7 +34,7 @@ Overview of current financial position — savings, investments, debts, monthly 
 
 ## Next Actions
 
-- Weekly transaction review (browser only, 30 mins, no Claude needed) — overdue 34+ days
+- Weekly transaction review (browser only, 30 mins, no Claude needed)
 
 ## Notes
 

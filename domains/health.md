@@ -1,10 +1,10 @@
 ---
 domain: health
-updated: 2026-04-01T08:44:06.765Z
+updated: 2026-04-11T20:19:28.385Z
 updated_by: gaia-plugin
 status: active
 review_cycle: weekly
-next_review: 2026-04-07
+next_review: 2026-04-18
 tags:
   - personal
   - wellbeing
@@ -22,6 +22,9 @@ Need to improve cardiovascular fitness
 - Nutrition targets (dietary goals, meal prep consistency)
 - Sleep and recovery goals
 - Reach 80kg
+- Reach 100 kg on flat and decline bench press
+- Muscle-up
+- 20 standing ab-wheel rollouts
 
 ## Habits & Routines
 
