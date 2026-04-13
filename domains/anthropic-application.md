@@ -75,6 +75,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 - **[2026-03-16]** Gap Tracker: Infrastructure week (35 claudecodemeta commits, FlowForge release prep); Published Thinking (0/5 essays) needs most urgent attention next week
 - **[2026-03-23]** Gap Tracker: claudecodemeta v1.0.0 released (11 commits), FlowForge Gaia integration added; Published Thinking (0/5 essays, 3rd consecutive null week) is most lagging gap — ship README today then essay 1
 - **[2026-04-06]** Gap Tracker: Gaia infrastructure week (42 commits), claudecodemeta security hardening + self-improvement pipeline (14 commits), FlowForge idle (0 commits); Public Portfolio (claudecodemeta README deadline Apr 14, 8 days) and Published Thinking (0/5 essays, 4th+ null week) jointly need most urgent attention
+- **[2026-04-13]** Gap Tracker: Gaia automation only (23 commits, all scheduling cycles), all other repos idle (claudecodemeta 0, FlowForge 0, obsidian-gaia-plugin 0); Public Portfolio (claudecodemeta deadline TOMORROW Apr 15, 22nd carry) and Published Thinking (0/5 essays, 5th+ null week) are critical — FlowForge already prepped for public release
 
 ## Next Actions
 
