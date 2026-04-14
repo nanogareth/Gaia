@@ -141,3 +141,4 @@ From 2026-04-12 (0 of 5 planned priorities completed):
 ### Domain Health (worst first)
 
 social (75) · languages (75) · creative (75) · finances (75) · business-ideas (75) · health (75) · calendar (75) · goals (75) → work-projects (80) → anthropic-application (85) → ai-projects (100)
+- **[07:30]** Edify: fix: add Windows native optional deps for Slidev deck
