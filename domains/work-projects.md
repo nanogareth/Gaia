@@ -1,6 +1,6 @@
 ---
 domain: work-projects
-updated: 2026-04-14T06:30:26Z
+updated: 2026-04-14T07:05:42Z
 updated_by: claude-code-hook
 status: active
 review_cycle: weekly
@@ -39,11 +39,13 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks Ã¢â‚¬â€ do not edit manually -->
+<!-- Auto-appended by hooks ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â do not edit manually -->
 
 - **[2026-02-16]** FlowForge: fix: use Express v5 wildcard syntax for OPTIONS handler
 
 - **[2026-03-30]** FlowForge: feat: add WSL2 sandbox provisioning to /flowforge-init
+
+- **[2026-04-14]** Edify: fix: add Windows native optional deps for Slidev deck
 
 - **[2026-04-14]** Edify: fix: add Windows native optional deps for Slidev deck
 
@@ -53,7 +55,7 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Notes
 
-<!-- Freeform Ã¢â‚¬â€ ideas, observations, things to revisit -->
+<!-- Freeform ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ideas, observations, things to revisit -->
 
 ## Links
 
