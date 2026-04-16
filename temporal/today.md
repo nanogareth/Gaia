@@ -124,3 +124,20 @@ Streak is broken — two days with no recorded activity (Apr 15 reflection confi
 ### Domain Health (worst first)
 
 social (75) · creative (75) · languages (75) · business-ideas (75) · calendar (75) · health (75) · finances (75) · goals (75) → work-projects (80) → anthropic-application (85) → ai-projects (100)
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:**
+- `claudecodemeta` README + make public (26th carry, 2 days past deadline)
+- Finances transaction review (40+ days overdue)
+- "The Fragmented Claude Problem" rough draft (8th null week)
+- Q2 concrete goal setting (Day 16, all placeholders)
+- Morning routine (untracked)
+
+**Tomorrow's preliminary focus:**
+1. `claudecodemeta` README → secrets audit → `gh repo edit --visibility public` — nothing else until shipped
+2. Finances transaction review — 30 mins, browser/app only, before opening any editor
+3. One paragraph of "The Fragmented Claude Problem" to break the 8-week null streak
