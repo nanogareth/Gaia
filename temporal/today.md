@@ -125,3 +125,20 @@ Streak is broken — three days with no recorded activity. Any domain activity t
 ### Domain Health (worst first)
 
 social (75) · creative (75) · languages (75) · business-ideas (75) · calendar (75) · health (75) · finances (75) · goals (75) → work-projects (80) → anthropic-application (85) → ai-projects (100)
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:**
+- `claudecodemeta` README + make public — ⚠ 27th carry, deadline passed
+- Finances transaction review — ⚠ 41+ days overdue (do before any editor tomorrow)
+- "The Fragmented Claude Problem" rough draft — ⚠ 9th null week, 300 words minimum
+- Q2 concrete goal setting — Day 17, still no measurable targets
+- Morning routine + gym (untracked)
+
+**Tomorrow's preliminary focus:**
+1. Finances transaction review — first, before anything else, no Claude needed
+2. claudecodemeta README + make public — minutes of actual work, 27 carries is enough
+3. "The Fragmented Claude Problem" — 300 words, lower the bar, break the pattern
