@@ -10,3 +10,10 @@ Important constraints:
 - If the Work Queue section exists in today.md, assess actual usage vs budgeted messages per window.
 - Use today's actual date everywhere (no placeholders).
 - Commit and push when done. Use commit message: "reflect: evening reflection for YYYY-MM-DD"
+
+Calendar-to-domain enrichment:
+- After reading domain files (step 3), check today.md's Schedule section for calendar events.
+- Match events to non-git domains (health, social, languages, creative, finances) using keyword matching.
+- For domains with matching calendar events but NO Recent Activity for today, append to that domain's Recent Activity:
+  `- **[YYYY-MM-DD]** <event summary> (from calendar)`
+- This ensures real-world activities (gym sessions, social events, language practice) create domain activity signals automatically.

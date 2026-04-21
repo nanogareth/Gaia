@@ -15,9 +15,22 @@ Summarize the day's accomplishments against the morning plan, flag incomplete it
 
 3. **Read all domain files** — Use `Glob` to find `domains/*.md`, then `Read` each one. Check "Recent Activity" for today's entries to understand what actually happened.
 
-4. **Generate reflection** — Assess accomplishments vs plan. For each planned priority, determine: completed, partially done, or not started.
+4. **Enrich non-git domains from calendar** — Look at today's Schedule section in `temporal/today.md` for calendar events. Match events to domains using these keywords:
+   - **health:** gym, workout, exercise, physio, doctor, dentist, meditation, yoga, stretching, cardio
+   - **social:** dinner, lunch, drinks, party, call with, catch up, birthday, meetup, friends, family
+   - **languages:** language, French, Spanish, lesson, tutor, practice, Duolingo
+   - **creative:** drawing, painting, music, craft, workshop, reading, sculpture, electronics
+   - **finances:** bank, accountant, tax, financial, budget
 
-5. **Append reflection to journal** — Add the following section to today's journal entry (`journal/YYYY/MM/YYYY-MM-DD.md`):
+   For each domain that had a matching calendar event but **no** Recent Activity entry for today, append to that domain file's Recent Activity:
+   ```
+   - **[YYYY-MM-DD]** <event summary> (from calendar)
+   ```
+   This gives non-git domains automatic activity signals from calendared events.
+
+5. **Generate reflection** — Assess accomplishments vs plan. For each planned priority, determine: completed, partially done, or not started.
+
+6. **Append reflection to journal** — Add the following section to today's journal entry (`journal/YYYY/MM/YYYY-MM-DD.md`):
 
 ```markdown
 ## Evening Reflection
@@ -39,7 +52,7 @@ Summarize the day's accomplishments against the morning plan, flag incomplete it
 <!-- Brief narrative: how the day went, energy, observations -->
 ```
 
-6. **Update today.md** — Append a reflection summary to `temporal/today.md`:
+7. **Update today.md** — Append a reflection summary to `temporal/today.md`:
 
 ```markdown
 ---
@@ -51,7 +64,7 @@ Summarize the day's accomplishments against the morning plan, flag incomplete it
 **Tomorrow's preliminary focus:** top 2-3 items
 ```
 
-7. **Commit changes** — Stage the updated files and commit:
+8. **Commit changes** — Stage the updated files and commit:
    ```
    git add temporal/today.md journal/
    git commit -m "reflect: evening reflection for YYYY-MM-DD"

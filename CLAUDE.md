@@ -66,7 +66,7 @@ Daily logs, append-only. Created during morning planning, extended during evenin
 
 ### Manifest (`manifest.yaml`)
 
-Registry of all connected project repos. Each entry has: name, github path, domain, status, description. Used by post-session hooks to map a project back to its domain file.
+Registry of all connected project repos. Each entry has: name, github path, domain, status, description, and optional `path` (local filesystem path — defaults to `C:\GitHub\<name>` if omitted). WSL repos use UNC paths: `\\wsl.localhost\Ubuntu\home\aidan\Github\<name>`. Used by the git scraper to scan repos for activity.
 
 ### Dashboards (`dashboards/`)
 
@@ -131,24 +131,29 @@ No need to run `/gaia-status` at session start — the hook provides awareness a
 
 A prompt-type hook that checks if an edit to a `domains/*.md` file removes or overwrites existing entries in the `## Recent Activity` section. Recent Activity is **append-only** — the hook blocks destructive edits and allows appends.
 
-### SessionEnd — Automatic post-session sync (global)
+### Git Scraper — Scheduled repo scanner (replaces SessionEnd hook)
+
+**Runs:** Twice daily (08:30, 20:30) via Windows Task Scheduler. No Claude API cost.
+
+The script (`scheduling/scripts/git-scraper.ps1`):
+
+1. Reads `manifest.yaml` for repo list + paths (supports both `C:\GitHub\` and WSL2 UNC paths)
+2. For each active repo, runs `git log` to find commits since last scan
+3. Appends new commit messages to `domains/<domain>.md` Recent Activity
+4. Updates frontmatter `updated` timestamp and `updated_by: git-scraper`
+5. Awards gamification XP via `Record-DomainActivity`
+6. Tracks per-repo last-seen commit hash in `scheduling/state/scraper-state.json`
+7. Commits and pushes Gaia changes
+
+This replaces the global SessionEnd hook (`~/.claude/hooks/gaia-session-sync.ps1`), which is being retired to avoid conflicts with claudecodemeta's hooks. The scraper has two advantages: it works with WSL2 repos (unreachable by hooks), and it costs zero API budget.
+
+### SessionEnd — Automatic post-session sync (global, being retired)
+
+**Status:** Still active during transition. Will be removed once the git scraper proves reliable.
 
 **Fires:** Every session end, in any repo. Configured in `~/.claude/settings.json` (global scope).
 
-The hook (`~/.claude/hooks/gaia-session-sync.ps1`):
-
-1. Reads `cwd` from the session input
-2. Checks `manifest.yaml` to see if `cwd` matches a registered project (by directory name or git remote)
-3. If no match → exits silently (not a Gaia project)
-4. If match:
-   - Pulls latest Gaia state (`git pull --rebase`)
-   - Appends to `domains/<domain>.md` Recent Activity: `- **[YYYY-MM-DD]** <project>: <last commit msg>`
-   - Updates frontmatter `updated` timestamp and `updated_by: claude-code-hook`
-   - Appends to `temporal/today.md` under `## Session Log`
-   - Commits and pushes
-5. On push failure → writes to `.pending/<timestamp>.md` for manual retry
-
-This automates what `/gaia-sync` does manually. Every project session automatically updates Gaia's state.
+The hook (`~/.claude/hooks/gaia-session-sync.ps1`) does the same job as the git scraper but event-driven rather than scheduled. Being retired because: (1) can't reach WSL2 work repos, (2) conflicts with claudecodemeta's Stop hook at global scope, (3) costs one hook execution per session.
 
 ### `.pending/` directory
 
@@ -208,6 +213,10 @@ scheduling/
     gap-tracker.md
     micro-commit.md     # Breaks #1 priority into 5-min starter (Layer 3)
     noon-check.md       # Accountability check at noon (Layer 2)
+  scripts/
+    git-scraper.ps1     # Standalone: scans manifest repos for new commits (no Claude API)
+  state/
+    scraper-state.json  # Per-repo last-seen commit hash for the git scraper
   setup-scheduler.ps1   # PowerShell: registers/removes/queries Task Scheduler tasks
   logs/                 # gitignored — timestamped output logs per task run
 ```
@@ -218,8 +227,10 @@ scheduling/
 |------|---------|-------|--------|-------------|
 | Morning Plan | Daily, 07:00 | Sonnet | $2.00 | Reads all domains + calendar + gamification, generates `temporal/today.md` with work queue |
 | Micro-Commitment | Daily, 07:15 | Haiku | $0.50 | Breaks #1 priority into a 5-minute concrete starter task |
+| Git Scraper (AM) | Daily, 08:30 | — | $0.00 | Scans manifest repos for new commits, updates domain Recent Activity + gamification |
 | Noon Check | Daily, 12:00 | Haiku | $0.50 | Accountability check — has any domain activity happened today? Sends notification |
-| Evening Reflect | Daily, 21:00 | Sonnet | $2.00 | Compares plan vs actual, flags carry-forwards, appends to journal |
+| Git Scraper (PM) | Daily, 20:30 | — | $0.00 | Same as AM scraper — ensures evening reflect sees today's activity |
+| Evening Reflect | Daily, 21:00 | Sonnet | $2.00 | Compares plan vs actual, enriches non-git domains from calendar, flags carry-forwards |
 | Weekly Review | Sunday, 10:00 | Opus | $5.00 | Compiles week's journal entries into `temporal/weekly-review.md` |
 | Gap Tracker | Monday, 08:30 | Sonnet | $3.00 | Reads `domains/anthropic-application.md`, checks recent commits, generates progress report |
 

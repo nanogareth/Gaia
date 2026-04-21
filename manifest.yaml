@@ -1,6 +1,13 @@
 # manifest.yaml — Registry of all connected repos
-# Only repos that exist locally and are actively tracked by Gaia.
-# Repos not cloned locally are listed under 'uncloned' for reference.
+#
+# Schema:
+#   name:        display name (also used as default directory name)
+#   github:      owner/repo on GitHub
+#   domain:      which domains/*.md this repo's activity feeds into
+#   status:      active | paused | archived
+#   description: one-line summary
+#   path:        (optional) local filesystem path. If omitted, defaults to C:\GitHub\<name>.
+#                WSL repos use UNC paths: \\wsl.localhost\Ubuntu\home\aidan\Github\<name>
 
 repos:
   - name: claudecodemeta
@@ -39,8 +46,15 @@ repos:
     status: active
     description: Personal investment research platform for advanced technology sectors
 
-# Repos not currently cloned locally — hook sync won't fire for these.
-# Clone them to C:\GitHub\ to enable automatic tracking.
+  - name: Edify
+    github: nanogareth/edify
+    domain: work-projects
+    path: '\\wsl.localhost\Ubuntu\home\aidan\Github\edify'
+    status: active
+    description: AI learning content generator
+
+# Repos not currently cloned locally — git scraper skips these.
+# Clone them and add to 'repos' above to enable automatic tracking.
 uncloned:
   - name: MiniLang
     github: nanogareth/minilang
@@ -56,8 +70,3 @@ uncloned:
     github: nanogareth/3d-viz-mcp
     domain: ai-projects
     description: 3D visualization MCP server for LLM agents
-
-  - name: Edify
-    github: nanogareth/edify
-    domain: work-projects
-    description: AI learning content generator

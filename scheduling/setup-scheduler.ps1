@@ -19,6 +19,8 @@ $BashExe  = "C:\Program Files\Git\bin\bash.exe"
 $Runner   = "$GaiaDir\scheduling\run-task.sh"
 
 # Task definitions: Name, TaskName (schedule label), Model, Budget, Trigger
+# Type: "claude" (default) runs via run-task.sh + claude -p
+#        "script" runs a PowerShell script directly (no API cost)
 $Tasks = @(
     @{
         Name        = "morning-plan"
@@ -67,6 +69,22 @@ $Tasks = @(
         Model       = "haiku"
         Budget      = "0.50"
         Trigger     = New-ScheduledTaskTrigger -Daily -At 12:00
+    },
+    @{
+        Name        = "git-scraper-morning"
+        TaskName    = "Gaia - Git Scraper (Morning)"
+        Description = "Scan manifest repos for new commits, update domain activity"
+        Type        = "script"
+        Script      = "$GaiaDir\scheduling\scripts\git-scraper.ps1"
+        Trigger     = New-ScheduledTaskTrigger -Daily -At 08:30
+    },
+    @{
+        Name        = "git-scraper-evening"
+        TaskName    = "Gaia - Git Scraper (Evening)"
+        Description = "Scan manifest repos for new commits, update domain activity"
+        Type        = "script"
+        Script      = "$GaiaDir\scheduling\scripts\git-scraper.ps1"
+        Trigger     = New-ScheduledTaskTrigger -Daily -At 20:30
     }
 )
 
@@ -134,11 +152,22 @@ $Settings = New-ScheduledTaskSettingsSet `
 $VBSWrapper = "$GaiaDir\scheduling\run-hidden.vbs"
 
 foreach ($task in $Tasks) {
-    $bashArgs = "-l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
-    $action = New-ScheduledTaskAction `
-        -Execute "wscript.exe" `
-        -Argument "`"$VBSWrapper`" `"$BashExe`" $bashArgs" `
-        -WorkingDirectory $GaiaDir
+    $taskType = if ($task.Type) { $task.Type } else { "claude" }
+
+    if ($taskType -eq "script") {
+        # Script tasks run PowerShell directly (no Claude API cost)
+        $action = New-ScheduledTaskAction `
+            -Execute "powershell.exe" `
+            -Argument "-ExecutionPolicy Bypass -NoProfile -File `"$($task.Script)`"" `
+            -WorkingDirectory $GaiaDir
+    } else {
+        # Claude tasks run via bash + run-task.sh + claude -p
+        $bashArgs = "-l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
+        $action = New-ScheduledTaskAction `
+            -Execute "wscript.exe" `
+            -Argument "`"$VBSWrapper`" `"$BashExe`" $bashArgs" `
+            -WorkingDirectory $GaiaDir
+    }
 
     # Remove existing task if present (idempotent)
     $existing = Get-ScheduledTask -TaskName $task.TaskName -ErrorAction SilentlyContinue
@@ -154,7 +183,11 @@ foreach ($task in $Tasks) {
         -Description $task.Description
 
     Write-Host "  Registered: $($task.TaskName)" -ForegroundColor Green
-    Write-Host "    Command: bash -l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
+    if ($taskType -eq "script") {
+        Write-Host "    Command: powershell -File `"$($task.Script)`""
+    } else {
+        Write-Host "    Command: bash -l `"$Runner`" $($task.Name) $($task.Model) $($task.Budget)"
+    }
     Write-Host "    Trigger: $($task.Trigger.ToString())"
     Write-Host ""
 }
