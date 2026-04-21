@@ -46,6 +46,7 @@ Need to improve cardiovascular fitness
 - Complete gym session — 3-day rotation: Legs/Shoulders, Biceps/Chest/Core, Triceps/Back/Core
 - Set concrete Q2 fitness targets in goals.md (weight: 80kg, bench: 100kg, muscle-up, 20 ab-wheel rollouts)
 - Track morning routine execution daily this week
+- Weigh in and log current weight toward 80kg target
 
 
 ## Notes

@@ -85,6 +85,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 - Security audit repos for public release: claudecodemeta, Gaia, obsidian-gaia-plugin, latex-editor, MiniLang, FlowForge
 - Set up InnoGlobal to address Gap 5 (Published Thinking)
 - Define concrete measurable targets for React/TypeScript depth and public portfolio (6+ repos)
+- Set Q2 concrete targets for all gap areas
 
 ## Notes
 

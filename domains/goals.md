@@ -107,7 +107,7 @@ _All goals were placeholders — nothing concrete was set. Gaia infrastructure w
 
 ## Next Actions
 
-- Set Q2 2026 concrete measurable targets per domain — replace all placeholder text with concrete numbers (Day 20, overdue)
+- Set Q2 2026 concrete measurable targets per domain — replace all placeholder text with concrete numbers (Day 21, overdue)
 - Weekly review Sunday Apr 26 — run /gaia-review weekly
 
 ## Notes
