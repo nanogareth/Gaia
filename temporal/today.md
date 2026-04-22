@@ -127,3 +127,4 @@ From 2026-04-21 (0 of 5 planned priorities completed):
 social (75) · creative (75) · languages (75) · business-ideas (75) · calendar (75) · health (75) · finances (75) · goals (75) → work-projects (80) → anthropic-application (85) → ai-projects (100)
 
 _Note: All scores stale since Apr 14. Actual health lower given 4-day overdue reviews across all domains._
+- **[12:23]** Edify: feat(v3): add DigiSkills batch generator script
