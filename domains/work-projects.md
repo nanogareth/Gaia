@@ -1,6 +1,6 @@
 ---
 domain: work-projects
-updated: 2026-04-22T11:23:48Z
+updated: 2026-04-22T11:24:15Z
 updated_by: claude-code-hook
 status: active
 review_cycle: weekly
@@ -39,7 +39,7 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Recent Activity
 
-<!-- Auto-appended by hooks ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â do not edit manually -->
+<!-- Auto-appended by hooks ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â do not edit manually -->
 
 - **[2026-02-16]** FlowForge: fix: use Express v5 wildcard syntax for OPTIONS handler
 
@@ -51,13 +51,15 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 - **[2026-04-22]** Edify: feat(v3): add DigiSkills batch generator script
 
+- **[2026-04-22]** Edify: feat(v3): add DigiSkills batch generator script
+
 ## Next Actions
 
 <!-- Concrete next steps, ideally with dates -->
 
 ## Notes
 
-<!-- Freeform ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ideas, observations, things to revisit -->
+<!-- Freeform ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ideas, observations, things to revisit -->
 
 ## Links
 
