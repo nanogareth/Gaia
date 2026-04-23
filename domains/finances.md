@@ -35,7 +35,7 @@ Overview of current financial position — savings, investments, debts, monthly 
 ## Next Actions
 
 - Weekly transaction review — browser/app only, 30 mins, no Claude needed
-- Set Q2 savings and budget adherence targets in goals.md
+- Set Q2 savings and investment targets in goals.md with concrete numbers
 
 ## Notes
 

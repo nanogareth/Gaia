@@ -87,6 +87,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 - Define concrete measurable targets for React/TypeScript depth and public portfolio (6+ repos)
 - Set Q2 concrete targets for all gap areas
 
+
 ## Notes
 
 - Core triad: Gaia (coordination) + claudecodemeta (cross-interface memory) + FlowForge (context bootstrapping)

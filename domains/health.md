@@ -49,6 +49,7 @@ Need to improve cardiovascular fitness
 - Weigh in and log current weight toward 80kg target
 
 
+
 ## Notes
 <!-- Freeform — ideas, observations, things to revisit -->
 - **[2026-02-21]** Need to review gym membership
