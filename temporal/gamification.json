@@ -1,16 +1,16 @@
-﻿{
-    "xp":  495,
+{
+    "xp":  530,
     "level":  3,
     "level_name":  "Journeyman",
     "current_streak":  1,
     "longest_streak":  4,
-    "last_active_date":  "2026-04-22",
+    "last_active_date":  "2026-04-24",
     "weekly_domains_touched":  [
                                    "work-projects"
                                ],
     "weekly_reset_date":  "2026-04-19",
-    "total_sessions":  11,
-    "total_domains_touched":  7,
+    "total_sessions":  14,
+    "total_domains_touched":  9,
     "achievements":  [
                          "first_blood",
                          "on_fire",
@@ -33,7 +33,7 @@
                    {
                        "date":  "2026-03-30 11:04",
                        "amount":  10,
-                       "reason":  "Session: claudecodemeta: feat: self-improvement Phases 1-3 â€” metrics, patterns, EWMA"
+                       "reason":  "Session: claudecodemeta: feat: self-improvement Phases 1-3 â€" metrics, patterns, EWMA"
                    },
                    {
                        "date":  "2026-03-30 17:14",
@@ -234,6 +234,26 @@
                        "date":  "2026-04-22 21:00",
                        "amount":  10,
                        "reason":  "Session: Gaia: reflect: evening reflection for 2026-04-22"
+                   },
+                   {
+                       "date":  "2026-04-24 15:39",
+                       "amount":  10,
+                       "reason":  "Session: Edify: feat(v3): add DigiSkills batch generator script"
+                   },
+                   {
+                       "date":  "2026-04-24 15:40",
+                       "amount":  10,
+                       "reason":  "Session: Edify: feat(v3): add DigiSkills batch generator script"
+                   },
+                   {
+                       "date":  "2026-04-24 21:00",
+                       "amount":  10,
+                       "reason":  "Session: Gaia: reflect: evening reflection for 2026-04-24"
+                   },
+                   {
+                       "date":  "2026-04-24 21:00",
+                       "amount":  5,
+                       "reason":  "Streak Day 1 maintained"
                    }
                ]
 }
