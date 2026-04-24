@@ -125,3 +125,4 @@ From 2026-04-23 (0/5 planned priorities completed):
 ### Domain Health (worst first)
 
 social (45) · creative (45) · languages (45) · business-ideas (45) · calendar (45) · health (45) · finances (45) · goals (45) → anthropic-application (55) → ai-projects (60) → work-projects (85)
+- **[15:39]** Edify: feat(v3): add DigiSkills batch generator script
