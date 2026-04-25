@@ -102,6 +102,14 @@ From 2026-04-24 (0/5 planned priorities completed):
 
 <!-- Appended automatically by SessionEnd hook -->
 
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities
+**Carry-forward:** claudecodemeta README (36th carry, 11 days past deadline), Finances review (50+ days overdue), Essay draft (13th null week), Q2 goal setting (Day 25 all placeholders), Morning routine (untracked)
+**Tomorrow's preliminary focus:** claudecodemeta README ships Sunday — open the file and write the paragraph. Finances review before any editor. Weekly review (Apr 27) resets all 11 overdue domain reviews.
+
 ## Gamification
 
 **Lv3 Journeyman | XP: 530 | Streak: Day 1 (last active 2026-04-24)**
