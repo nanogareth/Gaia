@@ -47,6 +47,7 @@ Need to improve cardiovascular fitness
 - Set concrete Q2 fitness targets in goals.md (weight: 80kg, bench: 100kg, muscle-up, 20 ab-wheel rollouts)
 - Track morning routine execution daily
 - Weigh in and log current weight toward 80kg target
+- Review gym membership status
 
 
 
