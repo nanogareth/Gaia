@@ -61,7 +61,9 @@ Work blocks scheduled during weekday working hours (see [calendar](calendar.md))
 
 ## Next Actions
 
-<!-- Concrete next steps, ideally with dates -->
+- Edify: define next milestone for DigiSkills batch generator (v3 feature shipped Apr 24)
+- SmartLabs: define next milestone for experiential learning platform
+- Review and update work-projects domain with current project status
 
 ## Notes
 

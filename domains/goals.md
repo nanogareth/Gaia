@@ -108,7 +108,7 @@ _All goals were placeholders — nothing concrete was set. Gaia infrastructure w
 ## Next Actions
 
 - Set Q2 2026 concrete measurable targets per domain — replace all placeholder text with concrete numbers
-- Run /gaia-review weekly — Sunday 2026-04-26 (today), resets all 11 overdue domain reviews
+- Run /gaia-review weekly to reset all 11 overdue domain reviews
 
 ## Notes
 

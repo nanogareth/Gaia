@@ -48,6 +48,7 @@ Need to improve cardiovascular fitness
 - Track morning routine execution daily
 - Weigh in and log current weight toward 80kg target
 - Review gym membership status
+- Establish habit of logging gym sessions and morning routine completion
 
 
 
