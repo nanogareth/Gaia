@@ -1,15 +1,16 @@
 {
-    "xp":  530,
+    "xp":  545,
     "level":  3,
     "level_name":  "Journeyman",
     "current_streak":  1,
     "longest_streak":  4,
-    "last_active_date":  "2026-04-24",
+    "last_active_date":  "2026-04-27",
     "weekly_domains_touched":  [
-                                   "work-projects"
+                                   "work-projects",
+                                   "anthropic-application"
                                ],
-    "weekly_reset_date":  "2026-04-19",
-    "total_sessions":  14,
+    "weekly_reset_date":  "2026-04-27",
+    "total_sessions":  15,
     "total_domains_touched":  9,
     "achievements":  [
                          "first_blood",
@@ -254,6 +255,16 @@
                        "date":  "2026-04-24 21:00",
                        "amount":  5,
                        "reason":  "Streak Day 1 maintained"
+                   },
+                   {
+                       "date":  "2026-04-27 21:00",
+                       "amount":  5,
+                       "reason":  "Streak Day 1 restart (3-day break Apr 25-26; gap tracker activity restarts streak)"
+                   },
+                   {
+                       "date":  "2026-04-27 21:00",
+                       "amount":  10,
+                       "reason":  "Session: Gaia: reflect: evening reflection for 2026-04-27"
                    }
                ]
 }
