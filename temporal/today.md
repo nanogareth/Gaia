@@ -125,3 +125,20 @@ From 2026-04-27 (1/5 priorities completed — automated tasks only):
 ### Domain Health (worst first)
 
 social (45) · creative (45) · languages (45) · business-ideas (45) · calendar (45) · health (45) · finances (45) · goals (45) → anthropic-application (55) → ai-projects (60) → work-projects (85)
+
+---
+
+## Reflection (Evening)
+
+**Completed:** 0 of 5 planned priorities (automated tasks only)
+**Carry-forward:**
+- claudecodemeta README + make public — **41st carry**, CRITICAL. Open the file tomorrow first.
+- Finances transaction review — **55+ days overdue**. Do before any editor tomorrow.
+- "The Fragmented Claude Problem" first sentence — **16th null week**. One sentence minimum.
+
+**Tomorrow's preliminary focus:**
+1. Finances (30 min, zero Claude) — before anything else
+2. claudecodemeta README → secrets audit → make public
+3. Essay first sentence — already written, just needs a home
+
+**Streak:** Day 2 (kept alive by this evening reflect). **XP:** +15 today → 560 total (Journeyman; Level 4 threshold: 600).

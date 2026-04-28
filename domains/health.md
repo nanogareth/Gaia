@@ -39,6 +39,7 @@ Need to improve cardiovascular fitness
 ## Recent Activity
 
 <!-- Auto-appended by hooks — do not edit manually -->
+- **[2026-04-28]** Morning routine: water & tablets, 5-min meditation, 10-min stretching, 15-min cardio (from calendar)
 
 ## Next Actions
 
