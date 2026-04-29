@@ -82,7 +82,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 ## Next Actions
 
 - Write claudecodemeta README and make repo public — README draft → secrets audit → gh repo edit --visibility public
-- Write "The Fragmented Claude Problem" rough draft — 300 words minimum, one sentence to start
+- Write "The Fragmented Claude Problem" rough draft — one sentence minimum, 300 words target
 - Security audit repos for public release: claudecodemeta, Gaia, obsidian-gaia-plugin, latex-editor, MiniLang, FlowForge
 - Set up InnoGlobal to address Gap 5 (Published Thinking)
 - Define concrete measurable targets for React/TypeScript depth and public portfolio (6+ repos)
