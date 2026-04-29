@@ -93,9 +93,9 @@ From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open your banking app and check transactions for 30 minutes. This is the fastest +25 XP available and requires zero Claude. Do it before opening any code editor.
+**Start here:** Open your banking app, screenshot this week's transactions, and paste into a note. That's it.
 
-**Then:** Open `C:\GitHub\claudecodemeta`, create `README.md`, paste the opening paragraph from yesterday's micro-commitment, and keep writing.
+**Why this works:** You've crossed the activation barrier. The full 30-minute review happens next, but starting is the only hard part.
 
 ## Session Log
 
