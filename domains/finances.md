@@ -37,7 +37,7 @@ Overview of current financial position — savings, investments, debts, monthly 
 - Weekly transaction review — browser/app only, 30 mins, no Claude needed
 - Set Q2 savings and investment targets in goals.md with concrete numbers
 - Review Q2 budget adherence and update financial position in Current State
-- Review and reconcile outstanding transactions (55+ days since last review)
+- Review and reconcile outstanding transactions (57+ days since last review)
 
 ## Notes
 

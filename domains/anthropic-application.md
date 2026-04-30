@@ -88,6 +88,7 @@ Five planned essays (see `vision-anthropic-programme.md` §4.1):
 - Define concrete measurable targets for React/TypeScript depth and public portfolio (6+ repos)
 - Set Q2 concrete targets for all gap areas
 - Address Gap 1: React/TypeScript depth via Gaia Web Dashboard (Next.js) or latex-editor public release
+- Complete thursday work session and define next Edify milestone
 
 ## Notes
 
