@@ -1,9 +1,9 @@
 ---
-date: 2026-04-29
+date: 2026-04-30
 type: morning-plan
 ---
 
-# Today's Plan — 2026-04-29 (Wednesday)
+# Today's Plan — 2026-04-30 (Thursday)
 
 ## Schedule
 
@@ -15,14 +15,14 @@ Calendar: unavailable (Google Calendar MCP not responding)
 - **20:30** Automated git scraper PM (no Claude msgs)
 - **21:00** Automated evening reflect (sonnet, ~5 msgs)
 
-**Wednesday — Q2 Day 29. Weekly budget Day 3 (reset 2026-04-27). Streak: BROKEN — restart with any activity today.**
+**Thursday — Q2 Day 30. Weekly budget Day 4 (reset 2026-04-27). Streak: BROKEN — restart with any activity today.**
 
 ## Priorities
 
-1. **[finances]** Weekly transaction review — **⚠ 55+ days overdue, +25 XP**. Browser/app only, 30 mins, zero Claude. Do before opening any editor.
-2. **[anthropic-application]** claudecodemeta README + make repo public — **⚠ 41st carry, +25 XP**. README draft → secrets audit → `gh repo edit --visibility public`. Still the single most-carried item.
-3. **[anthropic-application]** "The Fragmented Claude Problem" rough draft — **⚠ 16th null week, +25 XP**. One sentence minimum. The opening line is already written — just put it in a file.
-4. **[work-projects]** Edify/SmartLabs session — Wednesday is a work day. InnoGlobal subscription handles this.
+1. **[finances]** Weekly transaction review — **⚠ 57+ days overdue, +25 XP**. Browser/app only, 30 mins, zero Claude. Do before opening any editor.
+2. **[anthropic-application]** claudecodemeta README + make repo public — **⚠ 43rd carry, +25 XP**. README draft → secrets audit → `gh repo edit --visibility public`. The single most-carried item — do it today.
+3. **[anthropic-application]** "The Fragmented Claude Problem" rough draft — **⚠ 17th null week, +25 XP**. One sentence minimum. Opening line: "claudecodemeta is the cross-interface memory layer for Claude Code — persisting corrections, patterns, and user profiles across sessions and interfaces." Put it in a file.
+4. **[work-projects]** Edify/SmartLabs session — Thursday is a work day. InnoGlobal subscription handles this.
 5. **[health]** Morning routine + gym session — 5-min meditation, 10-min stretching, 15-min cardio, then gym rotation.
 
 ## Work Queue
@@ -32,7 +32,7 @@ Calendar: unavailable (Google Calendar MCP not responding)
 - **07:00** Manual: Finances transaction review — browser/app only, 30 mins (~0 Claude msgs)
 - **07:15** Auto: Micro-commitment (haiku, ~2 msgs)
 - **09:00** Claude Code: claudecodemeta — write README, run secrets audit, `gh repo edit --visibility public` (~80–100 msgs, heavy)
-- Budget: ~105/225 messages. Day 3 of fresh weekly quota — front-load the 41st-carry item now.
+- Budget: ~105/225 messages. Day 4 of fresh weekly quota — front-load the 43rd-carry item now.
 
 ### Window 2 (12:00–17:00)
 
@@ -51,18 +51,18 @@ Calendar: unavailable (Google Calendar MCP not responding)
 
 ### Weekly Budget
 
-- Reset: **2026-04-27 (Monday)** — Day 3 of fresh weekly quota
+- Reset: **2026-04-27 (Monday)** — Day 4 of fresh weekly quota
 - Domains touched this week: work-projects, anthropic-application (from Monday gap tracker)
 - Estimated weekly consumption: ~135–150 msgs if all tasks run + standard sessions
 - Recommendation: claudecodemeta session in Window 1 while budget is fresh. Well within weekly capacity.
 
 ## Carry-Forward
 
-From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
+From 2026-04-29 (0 of 5 priorities completed — automated tasks only):
 
-- [ ] Finances transaction review — **⚠ 55+ days overdue, +25 XP**
-- [ ] claudecodemeta README + make repo public — **⚠ 41st carry, +25 XP**
-- [ ] "The Fragmented Claude Problem" first sentence — **⚠ 16th null week, +25 XP**
+- [ ] Finances transaction review — **⚠ 57+ days overdue, +25 XP**
+- [ ] claudecodemeta README + make repo public — **⚠ 43rd carry, +25 XP**
+- [ ] "The Fragmented Claude Problem" first sentence — **⚠ 17th null week, +25 XP**
 - [ ] Health tracking — log morning routine and gym execution
 
 ## Domain Snapshots
@@ -71,9 +71,9 @@ From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
 |--------|--------|-------------|-------------|----------|
 | work-projects | 85 | 2026-04-24 | ⚠ 2026-04-18 | Edify DigiSkills batch script shipped Apr 24 |
 | ai-projects | 60 | 2026-04-11 | ⚠ 2026-04-18 | claudecodemeta 15 days past public deadline |
-| anthropic-application | 55 | 2026-04-11 | ⚠ 2026-04-18 | 0/5 essays; all portfolio repos private; 16th null week |
-| goals | 45 | 2026-04-11 | ⚠ 2026-04-18 | Q2 targets all placeholders (Day 29) |
-| finances | 45 | 2026-04-11 | ⚠ 2026-04-18 | Transaction review 55+ days overdue |
+| anthropic-application | 55 | 2026-04-11 | ⚠ 2026-04-18 | 0/5 essays; all portfolio repos private; 17th null week |
+| goals | 45 | 2026-04-11 | ⚠ 2026-04-18 | Q2 targets all placeholders (Day 30) |
+| finances | 45 | 2026-04-11 | ⚠ 2026-04-18 | Transaction review 57+ days overdue |
 | health | 45 | 2026-04-11 | ⚠ 2026-04-18 | Morning routine defined; execution untracked |
 | calendar | 45 | 2026-04-11 | ⚠ 2026-04-18 | MCP unavailable |
 | business-ideas | 45 | 2026-04-11 | ⚠ 2026-04-18 | Lucentic + CoffeeAmorcitos ideas noted |
@@ -85,11 +85,11 @@ From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
 
 ## Notes
 
-- **claudecodemeta is 15 days past deadline.** 41 carries. Open `C:\GitHub\claudecodemeta`, write README.md first paragraph, then features, usage, `gh repo edit`. The only blocker is starting.
-- **Finances is 30 mins and 0 Claude.** Do before opening any editor. 55+ days is embarrassing — just open the app.
-- **16th null essay week.** One sentence. The opening line is already written in yesterday's plan: "claudecodemeta is the cross-interface memory layer for Claude Code — persisting corrections, patterns, and user profiles across sessions and interfaces." Put it in a file and ship it.
+- **claudecodemeta is 16 days past deadline.** 43 carries. Open `C:\GitHub\claudecodemeta`, write README.md first paragraph, then features, usage, `gh repo edit`. The only blocker is starting.
+- **Finances is 30 mins and 0 Claude.** Do before opening any editor. 57+ days is past embarrassing — just open the app.
+- **17th null essay week.** One sentence. The opening line is already written: "claudecodemeta is the cross-interface memory layer for Claude Code — persisting corrections, patterns, and user profiles across sessions and interfaces." Put it in a file and ship it.
 - **Streak broken.** gamification.json shows last_active: 2026-04-27. Any domain activity today restarts at Day 1. The automated evening reflect keeps it alive if nothing else happens.
-- **Wednesday = work day.** Edify/SmartLabs on InnoGlobal subscription doesn't touch personal budget.
+- **Thursday = work day.** Edify/SmartLabs on InnoGlobal subscription doesn't touch personal budget.
 
 ## Micro-Commitment (5 min)
 
@@ -101,22 +101,6 @@ From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
 
 <!-- Appended automatically by SessionEnd hook -->
 
----
-
-## Reflection (Evening)
-
-**Completed:** 0 of 5 planned priorities (automated tasks ran; work session presumed on InnoGlobal)
-**Carry-forward:**
-- Finances transaction review — now 56+ days overdue
-- claudecodemeta README + make repo public — 42nd carry
-- "The Fragmented Claude Problem" first sentence — 17th null week begins
-- Health tracking — log morning routine and gym execution
-
-**Tomorrow's preliminary focus:**
-1. Finances transaction review — open the app before any editor (56+ days, 30 mins, zero Claude)
-2. claudecodemeta README — write one paragraph, then secrets audit, then `gh repo edit --visibility public`
-3. Essay first sentence — put the opening line in a file and commit it
-
 ## Gamification
 
 **Lv3 Journeyman | XP: 545 | Streak: BROKEN (last active 2026-04-27)**
@@ -127,9 +111,9 @@ From 2026-04-28 (0 of 5 priorities completed — automated tasks only):
 
 | Action | XP | Note |
 |--------|----|------|
-| Complete finances carry-forward | +25 | ⚠ 55+ days overdue |
-| Complete claudecodemeta carry-forward | +25 | ⚠ 41st carry — 15 days past deadline |
-| Complete essay draft carry-forward | +25 | ⚠ 16th null week |
+| Complete finances carry-forward | +25 | ⚠ 57+ days overdue — 3+ day carry |
+| Complete claudecodemeta carry-forward | +25 | ⚠ 43rd carry — 3+ day carry |
+| Complete essay draft carry-forward | +25 | ⚠ 17th null week — 3+ day carry |
 | Touch a dormant domain (revival) | +30 | social/creative/languages/business-ideas |
 | Session activity (any project) | +10 | Standard |
 | Streak Day 1 restart | +5 | Any activity qualifies |
