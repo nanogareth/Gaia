@@ -124,3 +124,4 @@ From 2026-04-29 (0 of 5 priorities completed — automated tasks only):
 ### Domain Health (worst first)
 
 social (45) · creative (45) · languages (45) · business-ideas (45) · calendar (45) · health (45) · finances (45) · goals (45) → anthropic-application (55) → ai-projects (60) → work-projects (85)
+- **[17:13]** Edify: chore: add zoom-interactives-deck lockfile
