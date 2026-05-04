@@ -1,9 +1,9 @@
 ---
-date: 2026-04-30
+date: 2026-05-04
 type: morning-plan
 ---
 
-# Today's Plan — 2026-04-30 (Thursday)
+# Today's Plan — 2026-05-04 (Sunday)
 
 ## Schedule
 
@@ -93,9 +93,9 @@ From 2026-04-29 (0 of 5 priorities completed — automated tasks only):
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open your banking app, screenshot this week's transactions, and paste into a note. That's it.
+**Start here:** Open your banking app. Look at the last 7 days of transactions. Screenshot or note down the three biggest spends. That's it — you've crossed the activation barrier.
 
-**Why this works:** You've crossed the activation barrier. The full 30-minute review happens next, but starting is the only hard part.
+**Why this works:** You're 58 days overdue. The full review is 30 minutes, but this 3-minute snapshot resets the shame spiral and gets momentum going. Starting beats perfection.
 
 ## Session Log
 
