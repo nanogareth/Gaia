@@ -134,3 +134,14 @@ social (45) · creative (45) · languages (45) · business-ideas (45) · calenda
 **Completed:** 1 of 5 planned priorities (work-projects: Edify session)
 **Carry-forward:** Finances transaction review (58+ days overdue), claudecodemeta README (44th carry), essay first sentence (18th null week), health tracking
 **Tomorrow's preliminary focus:** (1) Finances review — 30 mins, zero Claude, open app before any editor; (2) claudecodemeta README → secrets audit → go public; (3) Essay first sentence into a file
+
+---
+
+## Reflection (2026-05-04 — Minimal, stale plan)
+
+_Note: today.md was not regenerated for 2026-05-04. This is a minimal reflection from domain Recent Activity only._
+
+**Completed:** 0 of 0 (no plan generated today — Sunday)
+**Domain activity today:** None recorded across all 11 domains
+**Carry-forward:** Finances review (61+ days overdue), claudecodemeta README (47th+ carry), essay 1 rough draft (19th null week), health tracking
+**Tomorrow's preliminary focus:** (1) Finances review before opening any editor; (2) claudecodemeta README → public; (3) Run `/gaia-plan` to regenerate today.md
