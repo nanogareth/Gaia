@@ -1,126 +1,143 @@
 ---
-week: 2026-W17
+week: 2026-W18
 type: weekly-review
-date_generated: 2026-04-26
+date_generated: 2026-05-04
 ---
 
-# Weekly Review — 2026-W17
+# Weekly Review — 2026-W18
 
-**Period:** 2026-04-20 (Mon) to 2026-04-26 (Sun)
+**Period:** 2026-04-27 (Mon) to 2026-05-03 (Sun)
+**Generated:** 2026-05-04 (Mon — start of W19, Q2 Day 34)
 
 ## Highlights
 
-- **Edify productive sessions on 2 of 7 days** (Apr 22, Apr 24) — DigiSkills batch generator script, 5 commits captured by the git scraper. Only substantive human work this week.
-- **Gap Tracker ran 2026-04-20** — confirmed Published Thinking is the most lagging gap (9th null week on essay 1) and Public Portfolio is blocked (0/6 repos public, claudecodemeta deadline blown by 5+ days at the time).
-- **claudecodemeta carry counter went from 29 → 37** in seven days — eight more carries with the Apr 15 deadline now 11 days past. README still not started.
-- **W16 was skipped entirely** — the prior weekly review covered 2026-W15 (Apr 06–12). No `/gaia-review` ran on Apr 19; the morning of Apr 20 noted a 3-day plan gap (no plan/reflect Apr 18–19). This is the second weekly review in 14 days, not the third.
-- **Three streak resets, three breaks** — streak reset Apr 22 (Day 1) → broken Apr 23 → reset Apr 24 (Day 1) → broken Apr 25–26. The streak mechanic is no longer producing continuity.
-- **Zero of the five recurring carry-forwards completed** (claudecodemeta README, finances review, essay rough draft, Q2 goal setting, morning routine). Identical to W15.
+- **The daily cycle stopped on 2026-04-30.** No morning plan, no evening reflection, no journal entry for May 1, 2, or 3 — and none yet today (May 4). Four consecutive days with zero Gaia automation output, including today's morning plan window. The scheduling layer that ran reliably for weeks went silent over the weekend.
+- **One Edify work-day:** Thursday 2026-04-30, two lockfile commits at 17:13–17:14 (`chore: add zoom-interactives-deck lockfile`). The only human-driven git activity anywhere this week.
+- **One genuine health-domain entry — the first in weeks.** On 2026-04-28 the morning-routine signal was captured into `domains/health.md` Recent Activity (water & tablets, 5-min meditation, 10-min stretching, 15-min cardio). This is a small but real signal: a non-work-projects domain received a real-world entry for the first time since the W15 review identified the absence of exactly this.
+- **claudecodemeta carry counter went from 37 → 44 over the four logged days, with a 4-day silent extension since.** The Apr 15 deadline is now 19 days past. README still not started. Repo still private.
+- **Essay 1 "The Fragmented Claude Problem" — 17th null week closed, 18th now in progress.** Opening line written into a daily plan but never copied to a file.
+- **Finances transaction review: 62+ days overdue.** Last review per the journal trail was on/before 2026-03-03. Now spans more than two full Q2 budget cycles.
+- **Zero of three chronic carry-forwards closed** (claudecodemeta README, finances review, essay 1 first sentence). Identical to W17, W16, W15, W14, W13. Six consecutive weeks.
+- **Domains touched this week (gamification tracker):** 2 of 11 — work-projects and anthropic-application (both via automation, not direct human edits).
 
 ## Domain Summary
 
 ### work-projects
 
-- **Edify — 5 git-scraped commits across Apr 22 (3) and Apr 24 (2):** `feat(v3): add DigiSkills batch generator script`. Genuine production work.
-- Domain health: 85 (highest of all 11 domains). XP earned: +50 from Edify session syncs across the week.
-- Edify is the only domain with consistent human activity in W17; work-projects pattern (productive, unplanned, off-roadmap) is now identical to W15/W16.
+- **Edify — 2 git-scraped commits on 2026-04-30:** `chore: add zoom-interactives-deck lockfile`. Routine maintenance commits, not feature work; the ZoomInteractives deck content itself is the actual deliverable and is not git-tracked.
+- This is the only repo with human-authored commits anywhere in the manifest this week.
+- Domain health: **85** (still highest; unchanged).
+- Pattern: identical to W13–W17. Edify produces verifiable activity exactly on the contracted work-day(s) and zero activity outside them. Predictable and bounded — but it is the *only* dependable production signal in the system.
 - GitHub data: unavailable
 
 ### ai-projects
 
-- **No new commits in any registered repo in W17.** Last activity in `domains/ai-projects.md` Recent Activity is 2026-04-01 (claudecodemeta + obsidian-gaia-plugin). 25 days since the last code commit.
-- claudecodemeta: README not started. 37th carry. 11 days past Apr 15 deadline.
-- Dormant repos (language_tutor, eudaemon, metis, MiniLang, SET, 3D-Viz-MCP, FlowForge, obsidian-gaia-plugin): no activity.
+- **Zero commits across all six registered repos** (claudecodemeta, language_tutor, obsidian-gaia-plugin, FlowForge, eudaemon, metis). Recent Activity in `domains/ai-projects.md` still ends at 2026-04-01 — now 33 days since the last code commit landed in any AI-projects repo.
+- claudecodemeta: 44+ carries on the README. Repo unchanged since 2026-04-01. The Apr 15 self-imposed deadline is 19 days past as of today.
+- All other registered repos remain dormant with no commits, issues, or visible motion.
 - GitHub data: unavailable
 
 ### anthropic-application
 
-- **Gap Tracker (2026-04-20):** Gap 4 (Public Portfolio) blocked — 0/6 repos public, claudecodemeta blown deadline. Gap 5 (Published Thinking) blocked — 0/5 essays, 9th null week on essay 1. Gaps 1–3: zero progress.
-- No new gap-closing actions taken across W17. The report from Apr 20 predicted (1) ship claudecodemeta, (2) essay 1 rough draft, (3) FlowForge public release. None happened.
+- **Gap Tracker (2026-04-27):** ran on schedule. Diagnosis: Published Thinking remains the most chronically lagging gap (10th null week on essay 1); Public Portfolio remains blocked (0/6 repos public). Three of the five gaps marked "needs attention", two marked "blocked". All five gaps had zero progress between 2026-04-21 and 2026-04-27, and no progress is visible in the four logged days afterward.
+- The Monday gap tracker is now consistently the only entry written to `domains/anthropic-application.md` Recent Activity each week — a meta-pattern: the gap tracker is the only thing closing the gap-tracker loop.
 - GitHub data: unavailable
 
-### goals
+### health
 
-- **Q2 Day 26 with all targets still placeholders.** `domains/goals.md` carries the same generic text from February. The claudecodemeta deadline (the only concrete dated target in the system) was missed 11 days ago and has not been formally rescheduled or descoped.
-- Q2 is now 28% elapsed (26 of ~91 days) with zero measurable progress on any domain.
+- **2026-04-28 entry — first non-trivial domain entry from this domain in over a month.** Single line, sourced from the calendar morning-routine signal rather than direct logging. Not yet repeated on Apr 29 or Apr 30 despite the explicit carry-forward to do so.
+- One signal is not yet a habit, but it is the first piece of W17's "structural change to attempt" that produced any output. Worth noting because nothing else from the W17 recommendations did.
+
+### finances
+
+- **Zero activity.** Recent Activity section still empty. Transaction review now 62+ days overdue. Carries forward in every daily reflection for 38+ consecutive days without progress.
 
 ### calendar
 
-- Google Calendar MCP functioning — events pulled into morning plans daily.
-- 14 automated commits this week (morning plans, micro-commitments, evening reflections, plan updates, sync entries).
+- Google Calendar MCP appears to have functioned through 2026-04-30 (calendar pulls feed the morning plans and the Apr 28 health entry sourced from a calendar event). After 2026-04-30, no morning plans ran, so MCP availability for May 1–4 is untested.
+- Apr 29 evening reflection notes "Calendar was unavailable" — at least one transient MCP failure during the week.
 
-### finances, health, creative, languages, social, business-ideas
+### goals
 
-- **Zero Recent Activity entries across all six** in W17. No transactions reviewed, no gym sessions logged, no language practice, no creative work, no social engagement recorded.
-- Finances transaction review now 51+ days overdue. The 30-minute browser task carries forward 51 times.
-- Health: no morning routine confirmation any day this week. No weight log, no gym sessions logged.
+- **No edits.** The same placeholder text from February remains in `domains/goals.md`. Q2 is now 34 of ~91 days elapsed (37%) with zero measurable targets defined for any domain except the (missed) claudecodemeta deadline.
+
+### creative, languages, social, business-ideas
+
+- **Zero Recent Activity entries across all four** for the seventh consecutive week. No journal mentions, no XP events, no domain-file motion.
 
 ## Goal Progress
 
-### Q2 2026 (Apr–Jun) — Week 4
+### Q2 2026 (Apr–Jun) — Week 5 (Day 34 of 91)
 
-| Domain | Target | W17 Progress |
+| Domain | Target | W18 Progress |
 |--------|--------|--------------|
-| Health | Reach 80kg (only semi-concrete target) | No activity, no baseline weight logged |
-| Finances | Placeholder | No activity; transaction review 51+ days overdue |
-| Languages | Placeholder | No activity |
-| Creative | Flat whites, pizza dough | No activity |
-| Work Projects | "Define milestones" | Edify shipped DigiSkills generator (5 commits, off-roadmap) |
-| AI Projects | claudecodemeta public by Apr 15 | Deadline 11 days past; README still not started (37th carry) |
+| Health | 80kg target | One morning-routine entry logged Apr 28 (first in weeks) — still no weight log, no gym sessions tracked |
+| Finances | Placeholder | 62+ days since last transaction review; no activity |
+| Languages | Placeholder | No activity (7th consecutive week) |
+| Creative | Flat whites, pizza dough | No activity (7th consecutive week) |
+| Work Projects | "Define milestones" | Edify lockfile maintenance Apr 30 (2 commits, off-roadmap) |
+| AI Projects | claudecodemeta public by 2026-04-15 | Deadline 19 days past; README still not started (44+ carries) |
 | Social | Placeholder | No activity |
 | Business Ideas | Use Metis for passive income | No activity |
-| Anthropic Application | 5 gaps defined | All five still blocked or needs attention |
-| Calendar | "Protect focus blocks" | Automation running; human rhythm fragmented (3-day plan gap Apr 18–20) |
-| Goals | "Set concrete targets" | Day 26, zero measurable targets set |
+| Anthropic Application | 5 gaps defined | Gap Tracker ran Apr 27; all 5 gaps remain blocked or needs-attention |
+| Calendar | "Protect focus blocks" | Automation ran Apr 27–30; silent Apr 30 evening through today |
+| Goals | "Set concrete targets" | Day 34, zero measurable targets set |
 
 ### Gamification
 
-- **XP:** 530 (Lv3 Journeyman — 70 XP from Lv4 Adept threshold of 600)
-- **Streak:** Broken (last active 2026-04-24). Three Day-1 resets in 14 days; longest streak this week was 2 days (Apr 22 → Apr 23 was a break).
-- **Domains touched (weekly tracker):** 1 of 11 (work-projects only). No reset has occurred since 2026-04-19.
-- **Achievements:** first_blood, on_fire, journeyman — no new achievements this week.
-- **Engine note:** the Lv3 auto-level happened (state shows level 3 since Apr 22 Edify activity pushed past 495 XP). The earlier W15 levelling drift has been resolved.
+- **XP:** 545 (Lv3 Journeyman — 55 XP from Lv4 Adept threshold of 600). Unchanged from start of week; no XP earned beyond the Apr 27 evening-reflect session.
+- **Streak:** Broken. State file shows `current_streak: 1`, `last_active_date: 2026-04-27`. Six full days without a recorded active day.
+- **Domains touched (weekly tracker):** 2 of 11 (work-projects, anthropic-application). Reset 2026-04-27.
+- **Achievements:** first_blood, on_fire, journeyman — no new achievements.
+- **Engine note:** The XP log shows no entries at all for Apr 28, 29, 30 — the automated reflect runs did not award their +10 session XP. The gamification engine may not have been invoked when the daily-reflect task fired (or the task fired but the engine path was not taken). Worth checking.
 
 ## Patterns & Observations
 
-### The execution gap has now been the defining pattern for five consecutive weeks
+### The W17 falsification test has resolved — and the answer is the one W17 anticipated
 
-W13 → W14 → W15 → W16 (skipped review) → W17. Five weekly cycles of: planning layer produces correct output, automation runs flawlessly, human execution layer delivers zero progress on stated priorities. The W15 review's structural recommendation — "if W16 repeats the pattern, consider reducing the priority list to one item, scheduling a 60-minute calendar block, or pairing for accountability" — was not adopted. W16 and W17 both repeated the pattern. Adding more weeks of the same review is producing the same observation with no behavioural change.
+The W17 review wrote, explicitly, that if W18 read the same way, the conclusion was no longer "the system needs more accountability" but "the planning system as currently designed is incapable of triggering the human-side action loop, and the time spent generating these reviews would be better redirected." W18 reads the same way on every chronic carry — claudecodemeta, finances, essay 1, dormant domains — and worse on cycle integrity (the daily cycle itself stopped Apr 30). The prediction has been borne out. The next change should not be another priority list inside the same daily-plan template. It should be a structural change to *what runs at all*.
 
-### Edify functions as a structured escape valve
+### The cycle stopped, and that is the most important signal of the week
 
-The two days with substantive human activity (Apr 22, Apr 24) were both Edify sessions — unplanned, off-roadmap, work-IP work. They produced legitimate value (DigiSkills batch generator) and generated XP through the git scraper. But they also displaced every planned priority. The pattern is: Edify is available, well-defined, externally accountable, and entirely outside the carry-forward stack. The five recurring carry-forwards are the opposite — unaccountable, undefined start states, no external pressure. The system has accidentally optimised for the wrong path because the only productive path has no friction.
+Apr 30 evening reflect committed at 16:14 UTC. Then nothing — no morning plan May 1, 2, 3, 4; no evening reflect May 1, 2, 3; no journal entries; no scraper appends after 2026-04-30. For the first time in months, the automation layer also fell silent. Possible causes (in rough order of likelihood): machine asleep over a long weekend with wake-timer not firing, Task Scheduler tasks expired or paused, claude CLI auth or budget interruption, or a deliberate pause by the user that wasn't recorded anywhere. None of these have been investigated yet because the system that would normally catch this — the morning plan checking domain freshness — is the same system that stopped running. **Diagnosing why the schedule went quiet is the highest-priority W19 action.**
 
-### The carry-forward counter is no longer producing urgency
+### The one exception this week is the only thing worth scaling
 
-claudecodemeta has been carried 37 times. The deadline is 11 days past. Each daily plan and reflection labels it "non-negotiable", "must ship today", "the bar is on the floor". None of this language is producing action because the language has been used for 21 consecutive days without consequence. The carry-forward mechanism, as currently structured, has exhausted its motivational range. Continued use is now actively counterproductive — it generates noise that masks the absence of real signal about what is actually changing.
+The 2026-04-28 health-domain entry — a single line capturing the morning-routine calendar event — is the first non-work-projects, non-meta domain entry in seven weeks of reviews. It happened because the calendar enrichment pathway in the morning-plan/evening-reflect cycle wrote it, not because of a manual log. The mechanism worked: a real-world event surfaced as a domain entry without human intervention. **The asymmetry is striking** — every chronic carry-forward that requires *direct human action* failed again this week; the one entry that required only *automated calendar interpretation* succeeded. The lever is not exhortation; it is wiring more domain entries to events that already happen. This points at a productive direction: turn calendar events, gym-app exports, banking-app CSVs, etc. into domain entries automatically rather than asking the user to log them.
 
-### The skipped W16 review is the most informative signal of the week
+### claudecodemeta has crossed from "deferred" to "abandoned in place"
 
-The morning plan for 2026-04-20 noted a 3-day gap since the last plan (Apr 17). Apr 18 (Sat) and Apr 19 (Sun) had no morning plan, no evening reflection, and no weekly review. The automation can be skipped if the machine is asleep or the wake timer fails. But more importantly: the user did not run `/gaia-review weekly` on Sunday Apr 19 — a manual command — even though the system was specifically designed to prompt for it. The infrastructure surfaces actions; it does not cause them. Two months of weekly-review evidence now confirms this.
+44 carries, 19 days past deadline, repo unchanged since Apr 1 (33 days), README never started despite "the only blocker is starting" appearing in five separate evening reflections. The honest read is that this work, in its current framing, will not happen. Continuing to put it on every daily plan as Priority 1 is now active noise: it pre-empts the Priority slot for items that *might* move and signals that the carry-forward column has no consequence. The W17 recommendation — set a hard calendar block or formally descope — was not adopted. W19's Q2 goal-setting (see below) should resolve this one way or the other.
 
-### Cross-domain: 9 of 11 domains have zero recorded activity for the week
+### The gap tracker's diagnosis has been correct for six weeks running, and acted on zero times
 
-Only work-projects (Edify) and (in a metadata sense) ai-projects/anthropic-application/goals/calendar via the Gap Tracker report and morning plans had any signal. Health, finances, creative, languages, social, business-ideas — all six domains went a full 7 days with no journal mention, no domain-file entry, no XP event. This is broader than the carry-forward priorities. The current Gaia setup measures Gaia activity, not life activity. Until the domain files themselves are receiving real-world entries (a weight log, a transaction review note, a phone call, a coffee technique attempt), the domain map is a static placeholder that the planning layer reasons about but the execution layer does not interact with.
+Every weekly gap-tracker output for 6+ weeks has named the same two priority gaps (Public Portfolio, Published Thinking) and the same two priority actions (claudecodemeta README, essay 1 rough draft). Both have moved zero. The gap tracker is functioning correctly as a measurement instrument; what it is measuring is the absence of execution, not the absence of a plan. Six weeks of accurate diagnosis with zero action means the diagnosis is no longer the bottleneck — and continuing to refine it is unlikely to change anything.
+
+### Cross-domain: the engagement floor has dropped, not held
+
+W17 had Edify twice (Apr 22, Apr 24) plus daily automation. W18 had Edify once (Apr 30) plus four days of automation, then silence. The trend across W13 → W18 is monotonic: fewer human-touch days, fewer domain entries, fewer XP events, more chronic carries. Adding more daily-plan structure on top of this declining base is not producing a recovery.
 
 ## Next Week Focus
 
-W18 (2026-04-27 to 2026-05-03). Q2 will be 35% elapsed by week's end.
+W19 (2026-05-04 to 2026-05-10). Q2 will be 41% elapsed by week's end.
 
-The previous five weeks of "Next Week Focus" sections have prescribed the same five priorities and produced no action. Continuing in the same form is not useful. This section is therefore restructured around what to *change*, not what to *do*.
+The previous six "Next Week Focus" sections prescribed actions that produced no execution. This section therefore narrows to two diagnostic actions and one structural decision — all small, all verifiable, none assuming the daily-plan loop will reliably run.
 
-### Structural changes to attempt this week
+### Diagnostic actions (do regardless of priority discipline)
 
-1. **Remove four of the five recurring carry-forwards from the daily plan template.** Keep only one: claudecodemeta. The other four (finances review, essay draft, Q2 goal setting, morning routine) are not deferring usefully — they are crowding out attention. Either complete claudecodemeta first or formally descope it (an explicit "I am choosing not to do this in Q2" entry in `goals.md`). Ambiguity is the problem.
+1. **Diagnose why the daily cycle stopped 2026-04-30.** Today (May 4) is a manually-triggered review run — the scheduled morning-plan task did not fire. Check: `Get-ScheduledTaskInfo` on the registered Gaia tasks (`scheduling/setup-scheduler.ps1 -Status`); review `scheduling/logs/` for last successful run; check Task Scheduler history for missed runs and reasons (machine asleep, wake-timer not honoured, auth expiry on `claude -p`); check if budget caps were hit. If the cycle is recoverable in <30 minutes, recover it. If it is not, accept that the schedule has decayed and redesign rather than restore.
 
-2. **Schedule one 30-minute hard calendar block** — non-negotiable, on the actual Google Calendar — for Monday 2026-04-27 morning. Title: "claudecodemeta README + visibility flip." If this block is honoured, claudecodemeta ships and the 37-carry pattern ends. If it is not honoured, the structural recommendation has been falsified and a fundamentally different mechanism is required (pairing, public commitment, or explicit descope).
+2. **Investigate why XP did not log for Apr 28–30 reflect runs.** The xp_log shows the last entry on 2026-04-27. The Apr 28 and Apr 30 evening-reflect commits ran (visible in git log) but produced no `Session: …` XP entries. Either the gamification engine isn't being invoked from the scheduled-task code path, or the +10 session reward has a guard that's silently skipping. This is a cheap one-evening fix that would restore the only dopamine signal in the system.
 
-3. **Add a domain-file activity floor.** For the rest of W18, target writing one real-world entry to a non-work-projects domain file each day — a weight, a transaction note, a relationship update, a coffee attempt. The metric is "did a non-Gaia thing get logged?" not "did Gaia run?". This is the only way to test whether the domain map can be made to reflect real life rather than its own metadata.
+### Structural decision (single binary call)
 
-4. **Run the gap tracker on Monday Apr 27 as scheduled.** It will show six consecutive null weeks on essay 1. That is the truth of the situation; let the report state it plainly.
+3. **Decide claudecodemeta's status by 2026-05-10.** Two acceptable outcomes; one unacceptable.
+   - *Ship it:* one calendar block, README + secrets audit + `gh repo edit --visibility public`. Total time: ~90 minutes if started.
+   - *Descope it:* edit `domains/goals.md` Q2 section to remove the public-by-Apr-15 line; edit `domains/anthropic-application.md` Gap 4 to remove claudecodemeta from the public-portfolio list; commit with message "decision: claudecodemeta de-scoped from Q2 public portfolio".
+   - *Unacceptable:* a 45th, 46th, 50th carry on the daily plan. The "shipping today" framing has lost all signalling power and is now actively damaging — it teaches the daily-plan template that its priority section can be ignored without consequence.
 
-### One concrete decision to make this week
+### What is deliberately NOT in this list
 
-The claudecodemeta deadline is gone. Either set a new deadline (with a calendar block, as in #2 above) or remove it from the goal list entirely. Letting it persist as a carried-forward "broken deadline" is the worst of the three options.
+No new chronic-carry priorities. The existing three (claudecodemeta, finances, essay 1) are not added back as W19 priorities — diagnosing the cycle failure (#1) and the binary claudecodemeta decision (#3) take precedence. Finances and essay 1 will not improve while the daily cycle is silent and while the priority slot is dominated by a 44-carry item; addressing the upstream issues first is the only path that has not yet been tried.
 
-**Note on this review:** This is the third consecutive weekly review identifying the same execution gap and the second to recommend reducing priorities to one item. If W18's review reads the same way, the conclusion is no longer "the system needs more accountability" — it is "the planning system as currently designed is incapable of triggering the human-side action loop, and the time spent generating these reviews would be better redirected." That is worth saying explicitly so the next review can test it.
+**Note on this review:** This is the fourth consecutive weekly review identifying the execution gap, and the third to recommend either reducing priorities or making a hard descoping decision. The W17 review wrote a falsification condition; W18 falsified it. If W19 also reads this way, the meaningful next step is not another weekly review — it is a 30-minute design review on whether the daily-plan + weekly-review cadence is still earning its execution cost, given that the scheduling layer that drives it has now been silent for four days.
