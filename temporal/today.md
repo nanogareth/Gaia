@@ -95,9 +95,9 @@ From 2026-05-04 (0 of 5 manual priorities completed — only automated tasks ran
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open `C:\GitHub\claudecodemeta` and create a blank README.md with just one line: the opening sentence. That's the only task.
+**Start here:** Open your banking app, screenshot this week's transactions, and paste into a note. That's it.
 
-**Why this works:** 49 carries means the activation barrier is entirely psychological. The repo is already cloned. One sentence breaks the seal.
+**Why this works:** 64+ days means the activation barrier is psychological, not practical. The app is already on your phone. Do this before touching any editor or IDE.
 
 ## Session Log
 
