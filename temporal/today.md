@@ -95,9 +95,9 @@ From 2026-05-05 (0 of 5 manual priorities completed — only automated tasks ran
 
 ## Micro-Commitment (5 min)
 
-**Start here:** Open your banking app, screenshot this week's transactions, and paste into a note. That's it.
+**Start here:** Open your banking app, screenshot this week's transactions, paste into a note.
 
-**Why this works:** 65+ days means the activation barrier is psychological, not practical. The app is already on your phone. Do this before touching any editor or IDE.
+**Why this works:** 65+ days overdue — psychological barrier, not practical. The app is on your phone. Do this before any editor. One screenshot. Done.
 
 ## Session Log
 
