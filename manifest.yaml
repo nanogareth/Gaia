@@ -1,0 +1,72 @@
+# manifest.yaml — Registry of all connected repos
+#
+# Schema:
+#   name:        display name (also used as default directory name)
+#   github:      owner/repo on GitHub
+#   domain:      which domains/*.md this repo's activity feeds into
+#   status:      active | paused | archived
+#   description: one-line summary
+#   path:        (optional) local filesystem path. If omitted, defaults to C:\GitHub\<name>.
+#                WSL repos use UNC paths: \\wsl.localhost\Ubuntu\home\aidan\Github\<name>
+
+repos:
+  - name: claudecodemeta
+    github: nanogareth/claudecodemeta
+    domain: ai-projects
+    status: active
+    description: Cross-interface persistent memory for Claude Code
+
+  - name: language_tutor
+    github: nanogareth/language_tutor
+    domain: ai-projects
+    status: active
+    description: LLM-based language learning assistant using Claude, starting with French
+
+  - name: obsidian-gaia-plugin
+    github: nanogareth/obsidian-gaia-plugin
+    domain: ai-projects
+    status: active
+    description: Obsidian plugin providing visual UI for Gaia ecosystem
+
+  - name: FlowForge
+    github: nanogareth/flowforge
+    domain: ai-projects
+    status: active
+    description: Project scaffolding and context bootstrapping for Claude Code
+
+  - name: eudaemon
+    github: nanogareth/eudaemon
+    domain: ai-projects
+    status: active
+    description: EU research funding intelligence tool
+
+  - name: metis
+    github: nanogareth/metis
+    domain: ai-projects
+    status: active
+    description: Personal investment research platform for advanced technology sectors
+
+  - name: Edify
+    github: nanogareth/edify
+    domain: work-projects
+    path: '\\wsl.localhost\Ubuntu\home\aidan\Github\edify'
+    status: active
+    description: AI learning content generator
+
+# Repos not currently cloned locally — git scraper skips these.
+# Clone them and add to 'repos' above to enable automatic tracking.
+uncloned:
+  - name: MiniLang
+    github: nanogareth/minilang
+    domain: ai-projects
+    description: Compositional generalization research
+
+  - name: SET
+    github: nanogareth/spatial-equivariant-transformer
+    domain: ai-projects
+    description: Spatial Equivariant Transformer for 3D reasoning
+
+  - name: 3D-Viz-MCP
+    github: nanogareth/3d-viz-mcp
+    domain: ai-projects
+    description: 3D visualization MCP server for LLM agents
